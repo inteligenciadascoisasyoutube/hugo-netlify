@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>prototipação on inteligência das coisas</title>
-    <link>https://sad-knuth-e7a56d.netlify.app/tags/prototipa%C3%A7%C3%A3o/</link>
+    <link>https://inteligenciadascoisas.netlify.app/tags/prototipa%C3%A7%C3%A3o/</link>
     <description>Recent content in prototipação on inteligência das coisas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 28 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sad-knuth-e7a56d.netlify.app/tags/prototipa%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://inteligenciadascoisas.netlify.app/tags/prototipa%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OpenCV e Dlib no Raspberry Pi</title>
-      <link>https://sad-knuth-e7a56d.netlify.app/post/opencv-post-1-raspberry/</link>
+      <link>https://inteligenciadascoisas.netlify.app/post/opencv-post-1-raspberry/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sad-knuth-e7a56d.netlify.app/post/opencv-post-1-raspberry/</guid>
+      <guid>https://inteligenciadascoisas.netlify.app/post/opencv-post-1-raspberry/</guid>
       <description>UPDATE: Adicionei o processo fácil de instalação. Veja abaixo em INSTALAÇÃO SIMPLES.
 Introdução Assim como muita gente, tive problemas para instalar o OpenCV e a bilioteca Dlib pra trabalhar com visão computacional no Raspberry Pi.
 Exatamente por isso decidir ajudar, dei uma bela lida nos tutoriais disponíveis e documentação oficial e resolvi compartilhar este processo com alguns scripts pra facilitar e a automatizar bastante esta instalação, deixando quase fácil.
@@ -25,10 +25,10 @@ Testei com algumas versões diferentes (de hardware e software) com sucesso.</de
     
     <item>
       <title>Utilizando botão de forma correta com Arduino</title>
-      <link>https://sad-knuth-e7a56d.netlify.app/post/arduino-post-1-pullup/</link>
+      <link>https://inteligenciadascoisas.netlify.app/post/arduino-post-1-pullup/</link>
       <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sad-knuth-e7a56d.netlify.app/post/arduino-post-1-pullup/</guid>
+      <guid>https://inteligenciadascoisas.netlify.app/post/arduino-post-1-pullup/</guid>
       <description>Para fazer um aproveitamento total dos recursos interativos, acesse pelo computador 😄
 Introdução Este artigo parte do princípio que você já começou a fazer alguns experimentos com Arduino.
 Se você não conhece nada sobre Arduino, dá uma olhada neste material sensacional sobre o assunto no Manual do Mundo.
@@ -38,10 +38,10 @@ Se você não conhece nada sobre Arduino, dá uma olhada neste material sensacio
     
     <item>
       <title>O Arduino Uno tem 2 microcontroladores!</title>
-      <link>https://sad-knuth-e7a56d.netlify.app/post/arduino-post-2-hoodloader/</link>
+      <link>https://inteligenciadascoisas.netlify.app/post/arduino-post-2-hoodloader/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sad-knuth-e7a56d.netlify.app/post/arduino-post-2-hoodloader/</guid>
+      <guid>https://inteligenciadascoisas.netlify.app/post/arduino-post-2-hoodloader/</guid>
       <description>Introdução O Arduino é uma plataforma de eletrônica de baixo custo, open source, baseada em hardware e software fáceis de usar.
 As placas do Arduino são capazes de ler entradas - luz em um sensor, um dedo em um botão, uma mensagem no Twitter - e transformá-las em uma saída - ativando um motor, ligando um LED, publicando algo online.
 Por padrão, a programação é feita utilizando uma linguagem baseada em C/C++, sem a necessidade de equipamentos extras além de um cabo USB.</description>
