@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="inteligência das coisas">
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="Utilizando botão de forma correta com Arduino" />
+<meta property="og:description" content="Para fazer um aproveitamento total dos recursos interativos, acesse pelo computador 😄
+Introdução Este artigo parte do princípio que você já começou a fazer alguns experimentos com Arduino.
+Se você não conhece nada sobre Arduino, dá uma olhada neste material sensacional sobre o assunto no Manual do Mundo.
+  Placa Arduino Uno. Clique sobre os números para ver o nome do componente.
+ Botão Imagine que eu tenho uma lâmpada ligada a uma bateria através de fios." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://inteligenciadascoisas.github.io/post/arduino-post-1-pullup/" /><meta property="article:published_time" content="2020-05-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-17T00:00:00+00:00" />
+
+    
+    <meta property="og:image" content="https://inteligenciadascoisas.github.io/img/arduino-post-001/thumb.jpg">
+    <meta property="twitter:image" content="https://inteligenciadascoisas.github.io/img/arduino-post-001/thumb.jpg" />
+    
+
+    
+    <meta name="title" content="Utilizando botão de forma correta com Arduino" />
+    <meta property="og:title" content="Utilizando botão de forma correta com Arduino" />
+    <meta property="twitter:title" content="Utilizando botão de forma correta com Arduino" />
+    
+
+    
+    <meta name="description" content="Artigo explicando porque se deve utilizar um resistor ao ligar um botão ao Arduino (input pull-up).">
+    <meta property="og:description" content="Artigo explicando porque se deve utilizar um resistor ao ligar um botão ao Arduino (input pull-up)." />
+    <meta property="twitter:description" content="Artigo explicando porque se deve utilizar um resistor ao ligar um botão ao Arduino (input pull-up)." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword" content="blog, iot, internet das coisas, desenvolvimento, frontend, algoritmos, eletrônica, embarcados, protótipos, visão computacional, automação, design, motion graphics">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Utilizando botão de forma correta com Arduino-inteligência das coisas</title>
+
+    <link rel="canonical" href="/post/arduino-post-1-pullup/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css" />
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+
+    
+    <link rel="stylesheet" href="/css/web-post-001.css">
+
+    <link rel="stylesheet" href="/css/my.css">
+
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+</head>
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+            </button>
+
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/" style="color: white;">Início</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/arduino" style="color: white;">arduino</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/vis%C3%A3o-computacional" style="color: white;">visão-computacional</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/web" style="color: white;">web</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/arduino-post-001/arduino-post-1-pullup.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+  
+  <a class="tag" href="/tags/arduino" title="arduino">
+    arduino
+  </a>
+  
+  <a class="tag" href="/tags/tutorial" title="tutorial">
+    tutorial
+  </a>
+  
+  <a class="tag" href="/tags/iniciante" title="iniciante">
+    iniciante
+  </a>
+  
+  <a class="tag" href="/tags/prototipa%C3%A7%C3%A3o" title="prototipação">
+    prototipação
+  </a>
+  
+  <a class="tag" href="/tags/eletr%C3%B4nica" title="eletrônica">
+    eletrônica
+  </a>
+  
+  <a class="tag" href="/tags/iot" title="iot">
+    iot
+  </a>
+  
+  <a class="tag" href="/tags/interativo" title="interativo">
+    interativo
+  </a>
+  
+</div>
+<h1>Utilizando botão de forma correta com Arduino</h1>
+<h2 class="subheading">O que é, e pra que serve o input pull-up?</h2>
+
+<div class="post__meta tags">
+  
+  Alexandre Alvaro
+  
+  |
+  
+  
+  17
+
+ de 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+    Maio, 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+2020
+  
+  
+  
+  
+  
+  em
+  
+  
+  <a class="tag" href="/categories/arduino">ARDUINO</a>
+  
+  
+  
+  
+
+  <br />
+  <i class="fa fa-clock-o"></i> 5 min de leitura
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h4>Tópicos neste artigo</h4>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introdução">Introdução</a></li>
+    <li><a href="#botão">Botão</a></li>
+    <li><a href="#arduino">Arduino</a></li>
+    <li><a href="#estado-flutuante">Estado flutuante</a></li>
+    <li><a href="#curto-circuito">Curto Circuito</a></li>
+    <li><a href="#resistores-pull-up">Resistores Pull-up</a></li>
+    <li><a href="#fluxo-dos-elétrons">Fluxo dos Elétrons</a></li>
+    <li><a href="#conclusão">Conclusão</a>
+      <ul>
+        <li><a href="#dica-final-de-ouro">Dica final de ouro!</a></li>
+      </ul>
+    </li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav>
+                
+
+                <hr>
+
+                <p><strong>Para fazer um aproveitamento total dos recursos interativos, acesse pelo computador 😄</strong></p>
+<h1 id="introdução">Introdução</h1>
+<p>Este artigo parte do princípio que você já começou a fazer alguns experimentos com Arduino.<br>
+Se você não conhece nada sobre Arduino, dá uma olhada <a href="https://youtu.be/sv9dDtYnE1g">neste material sensacional sobre o assunto no Manual do Mundo</a>.</p>
+
+
+    <iframe width="100%" height="400" title="Sketchfab Viewer" class="c-viewer__iframe" src="https://sketchfab.com/models/de0a040ba21c4d9a82412e042edb904a/embed?autostart=1&amp;internal=1&amp;ui_infos=0&amp;ui_snapshots=1&amp;ui_stop=0&amp;ui_watermark=0" id="api-frame" allow="autoplay;fullscreen;vr" allowfullscreen="" frameborder="0"></iframe>
+
+<blockquote>
+<p>Placa Arduino Uno. Clique sobre os números para ver o nome do componente.</p>
+</blockquote>
+<h1 id="botão">Botão</h1>
+<p>Imagine que eu tenho uma lâmpada ligada a uma bateria através de fios. Se eu cortar um desses fios, interrompendo a passagem de energia, consequentemente a lâmpada irá apagar.<br>
+Se eu reconectar do fio rompido a lâmpada volta a acender.</p>
+<p>O botão é um componente de acionamento mecânico que encosta o contato de fios quando pressionado, fechando o circuito e fazendo com que os elétrons possam atuar nos componentes envolvidos.</p>
+<p>No exemplo a seguir temos um circuito elétrico representando uma fonte de energia, uma lâmpada e um botão.<br>
+Clique sobre o botão para fechar o circuito e ver como ele se comporta:</p>
+
+
+    <iframe width="100%" height="400" src="https://lushprojects.com/circuitjs/circuitjs.html?cct=$+1+0.000005+10.20027730826997+50+5+50%0Aw+-176+64+-128+64+0%0As+-256+64+-176+64+0+1+false%0A162+-128+64+-16+64+2+default-led+1+0+0+0.01%0Av+-16+144+-256+144+0+0+40+5+0+0+0.5%0Aw+-256+64+-256+144+0%0Aw+-16+144+-16+64+0%0Ax+-246+28+-184+31+4+24+Bot%C3%A3o%0Ax+-127+27+-27+30+4+24+L%C3%A2mpada%0Ax+-219+191+-38+194+4+24+Fonte%5Csde%5Csenergia%0A" frameborder="0"></iframe>
+
+<h1 id="arduino">Arduino</h1>
+<p>Quando montamos um circuito com Arduino, o botão se mostra um componente muito útil, pois através dele podemos acionar as entradas digitais e fazer com que ao receber esta informação um comando de programação possa ser executado.<br>
+O acionamento da porta digital de um Arduino Uno, por exemplo, é ligada ou desligada conforme recebe ZERO Volts ou 5 Volts, alterando seu nível lógico.<br>
+<img src="img/arduino-post-001/logic-level.gif" alt=""></p>
+<ul>
+<li>Botão pressionado, 5V na entrada digital: nível lógico Alto</li>
+<li>Botão solto, 0V (teórico) na entrada digital: nível lógico Baixo</li>
+</ul>
+<p>*Além do botão, chaves, relés, transistores e outros componenetes podem acionar as entradas digitais utilizando o mesmo princípio.</p>
+<h1 id="estado-flutuante">Estado flutuante</h1>
+<p>Até então expliquei como a coisa funciona na teoria, mas na verdade, quando o botão está solto o circuito fica aberto e eu não estou enviando realmente ZERO Volts, mas sim um valor flutuante.<br>
+Isso porque o fio solto conetado a porta digital se comporta como uma antena e capta as interferências, enviando estes valores flutuantes para o Arduino.<br>
+<img src="img/arduino-post-001/antena.gif" alt=""><br>
+Tanto o próprio campo eletromagnético dos outros fios e componentes no circuito, quanto eletricidade estática e outros fatores podem ser captados por esse fio que se tornou uma antena indesejada.</p>
+<p>No circuito abaixo segure o Botão para enviar 5 Volts pressionado por alguns instantes.. Observe que o Voltímetro não vai mostrar ZERO Volts com o Botão solto:</p>
+<p><strong>Para funcionar, clique em Iniciar simulação:</strong>
+
+
+    <iframe width="100%" height="453" src="https://www.tinkercad.com/embed/lXHLrQseyzi?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</p>
+<blockquote>
+<p>Se preferir ajuste o Zoom com a roda do mouse</p>
+</blockquote>
+<p>Como na vida real a mudança do nível lógico do Arduino não é exato, mas APROXIMADAMENTE 0 Volts e 5 Volts, pode ser que a mudança do nível lógico ALTO já aconteça com 3,5 Volts, por exemplo. Causando várias leituras erradas com essa flutuação.</p>
+<h1 id="curto-circuito">Curto Circuito</h1>
+<p>Quando existe uma conexão direta entre os polos da fonte, existe pouquíssima resistência a passagem dos elétrons causando um curto-circuito, ou seja uma sobrecarga nos componentes e fiações que podem causar problemas como rompimentos e incêndios.<br>
+Então sempre que utilizamos um botão para fechar um circuito, precisamos ter uma resistência para que não ocorra o curto circuito.<br>
+Esta resistência a passagem dos elétrons pode ser oferecida por um componente, como a lâmpada no circuito acima, ou um resistor, que nada mais é que um componente feito exatamente para oferecer resistência a passagem dos elétrons.<br>
+Até o final você vai entender porque estou explicando isso. 😄</p>
+<h1 id="resistores-pull-up">Resistores Pull-up</h1>
+<p>Por motivo de simplicidade, vamos nos focar neste tutorial em resistores de pull-up, pois eles são mais comuns que os resistores de pull-down. Eles operam usando os mesmos princípios, exceto que o resistor de pull-up é conectado a um nível alto de tensão (no nosso caso 5V), e o resistor de pull-down é conectado ao terra, ou nível baixo.</p>
+<p>Para termos um circuito sempre fechado e poder enviar ZERO Volts e 5 Volts pra valer, utilizamos o resistor de pull-up para nos ajudar.<br>
+Observe que mesmo quando o botão está aberto, o circuito como um todo está sempre com o posistivo e negativo conectados e chegando a entrada do voltímetro. Sem antenas.</p>
+<p><strong>Para funcionar, clique em Iniciar simulação:</strong>
+
+
+    <iframe width="100%" height="453" src="https://www.tinkercad.com/embed/baQQc3kwZ5v?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</p>
+<blockquote>
+<p>Se preferir ajuste o Zoom com a roda do mouse</p>
+</blockquote>
+<p>Percebeu que agora o botão funciona ao contrário? Com ele aberto temos 5 Volts e com ele fechado temos ZERO Volts.<br>
+Mas isso não tem problema algum, pois basta considerarmos isto no código fonte do programa na memória do Arduino.</p>
+<h1 id="fluxo-dos-elétrons">Fluxo dos Elétrons</h1>
+<p>Observe o fluxo dos elétrons no exemplo a seguir. Eles sempre pegam o caminho com menor resistência.<br>
+A entrada digital do Arduino (ou a lâmpada no exemplo abaixo) possui uma certa resistência, por isso os elétrons vão no sentido contrário a eles quando o botão está fechado.<br>
+
+
+    <iframe width="100%" height="400" src="https://lushprojects.com/circuitjs/circuitjs.html?cct=$+1+0.000005+10.20027730826997+50+5+50%0Aw+-288+32+-240+32+0%0As+-288+192+-16+192+0+1+false%0A162+-240+32+-16+32+2+default-led+1+0+0+0.01%0Av+-16+112+-240+112+0+0+40+5+0+0+0.5%0Aw+-16+32+-16+112+0%0Ax+-184+226+-122+229+4+24+Bot%C3%A3o%0Ax+-177+8+-77+11+4+24+L%C3%A2mpada%0Ax+-207+147+-26+150+4+24+Fonte%5Csde%5Csenergia%0Ar+-240+32+-240+112+0+1000%0Aw+-288+32+-288+192+0%0Aw+-16+192+-16+112+0%0Ax+-283+20+-195+23+4+24+Resistor%0A" frameborder="0"></iframe>
+</p>
+<h1 id="conclusão">Conclusão</h1>
+<p>Mantendo o circuito com a fonte de energia sempre fechado, garantimos a chegada de ZERO e 5 Volts quando precisamos. Apenas direcionando os elétrons.<br>
+Utilizando um resistor de pull-up fazemos isso sem causar um curto-circuito, pois independentemente do direcionamento do fluxo de elétrons, sempre haverá uma carga (resistência) no caminho de volta até a fonte.</p>
+<h2 id="dica-final-de-ouro">Dica final de ouro!</h2>
+<p>Prevendo tudo isso algumas placas (como o Arduino Uno) adicionaram resistores de pull-up diretamente em seus circuitos.<br>
+Para habilitar basta inicializar o pino de entrada conforme a seguir:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#6272a4">//Supondo que seja o pino 8
+</span><span style="color:#6272a4"></span>pinMode(<span style="color:#bd93f9">8</span>, INPUT_PULLUP);
+</code></pre></div><p>E fazer a ligação do botão entre o pino de entrada digital e o GND:<br>
+<img src="img/arduino-post-001/input-pull-up.gif" alt=""></p>
+<p><strong>Agora você realmente sabe como e porquê utilizamos o resistor de pull-up para entradas digitais no Arduino.</strong></p>
+<h1 id="referências">Referências</h1>
+<p><a href="https://portal.vidadesilicio.com.br/entradas-e-saidas-digitais/">https://portal.vidadesilicio.com.br/entradas-e-saidas-digitais/</a><br>
+<a href="https://www.embarcados.com.br/arduino-uno/">https://www.embarcados.com.br/arduino-uno/</a><br>
+<a href="https://www.embarcados.com.br/pinos-digitais-do-arduino/https://www.embarcados.com.br/pinos-digitais-do-arduino/">https://www.embarcados.com.br/pinos-digitais-do-arduino/https://www.embarcados.com.br/pinos-digitais-do-arduino/</a><br>
+<a href="http://www.bosontreinamentos.com.br/eletronica/curso-de-eletronica/eletronica-o-que-sao-resistores-de-pull-up/">http://www.bosontreinamentos.com.br/eletronica/curso-de-eletronica/eletronica-o-que-sao-resistores-de-pull-up/</a><br>
+<a href="https://www.youtube.com/watch?v=85JBpY0lBaQ">https://www.youtube.com/watch?v=85JBpY0lBaQ</a><br>
+<a href="https://www.youtube.com/watch?v=CVJtWZqZ18I">https://www.youtube.com/watch?v=CVJtWZqZ18I</a><br>
+<a href="https://www.arduino.cc/en/Tutorial/InputPullupSerial">https://www.arduino.cc/en/Tutorial/InputPullupSerial</a></p>
+
+
+                <hr>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="list-inline ">
+    <li><b>Compartilhar publicação: </b></li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('http://www.facebook.com/share.php?href=https:\/\/inteligenciadascoisas.github.io\/post\/arduino-post-1-pullup\/', 'sharer', 'width=626,height=436');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('http://twitter.com/share?text=Utilizando botão de forma correta com Arduino&url=https:\/\/inteligenciadascoisas.github.io\/post\/arduino-post-1-pullup\/&hashtags=arduino,tutorial,iniciante,prototipação,eletrônica,iot,interativo');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/inteligenciadascoisas.github.io\/post\/arduino-post-1-pullup\/ &title=Utilizando botão de forma correta com Arduino &summary=O que é, e pra que serve o input pull-up?&source=inteligencia-das-coisas');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('mailto:?&body=Olha que interessante este artigo: https:\/\/inteligenciadascoisas.github.io\/post\/arduino-post-1-pullup\/&subject=Artigo: Utilizando botão de forma correta com Arduino - O que é, e pra que serve o input pull-up?');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+</ul>
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/web-post-1-greensock/" data-toggle="tooltip" data-placement="top"
+                            title="Animações leves e fáceis para Web">&larr;
+                            Post Anterior</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/opencv-post-1-raspberry/" data-toggle="tooltip" data-placement="top"
+                            title="OpenCV e Dlib no Raspberry Pi">Próximo
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "inteligenciadascoisas" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">TAGS EM DESTAQUE</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/arduino" title="arduino">
+                            arduino
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/eletr%C3%B4nica" title="eletrônica">
+                            eletrônica
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/iniciante" title="iniciante">
+                            iniciante
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/interativo" title="interativo">
+                            interativo
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/iot" title="iot">
+                            iot
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/prototipa%C3%A7%C3%A3o" title="prototipação">
+                            prototipação
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tutorial" title="tutorial">
+                            tutorial
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<hr>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div style="text-align: center;">
+                        <img height="200px" src="/img/mascot-2.gif" alt="ia" />
+                    </div>
+                
+                <h3 class="copyright text-muted">Tá empolgado? Não consegue dormir? Aproveita pra dar uma conferida nas minhas redes sociais:</h3>
+                <br>
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a href='https://alexandremendoncaalvaro.github.io' title="Resume/ Portifolio" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:alexandre.alvaro@hotmail.com"  title="e-mail">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/peritto"  title="Facebook">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/alexandremendoncaalvaro"  title="Github">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/alexandre-mendon%C3%A7a-%C3%A1lvaro-273b0050"  title="Linkedin">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/alemendalvaro"  title="Instagram">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.deviantart.com/peritto/gallery" title="DeviantArt">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-deviantart fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://soundcloud.com/peritto-1"  title="Soundcloud">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-soundcloud fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5547991512508&amp;amp;text=Site"  title="Whatsapp">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; inteligência das coisas 2020
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a
+                        href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if ($('#tag_cloud').length !== 0) {
+        async("/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                
+                color: { start: '#bbbbee', end: '#0085a1' },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165857578-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+    
+    
+</body>
+
+</html>

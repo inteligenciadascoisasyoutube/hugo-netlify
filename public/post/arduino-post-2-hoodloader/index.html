@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="inteligência das coisas">
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="O Arduino Uno tem 2 microcontroladores!" />
+<meta property="og:description" content="Introdução O Arduino é uma plataforma de eletrônica de baixo custo, open source, baseada em hardware e software fáceis de usar.
+As placas do Arduino são capazes de ler entradas - luz em um sensor, um dedo em um botão, uma mensagem no Twitter - e transformá-las em uma saída - ativando um motor, ligando um LED, publicando algo online.
+Por padrão, a programação é feita utilizando uma linguagem baseada em C/C&#43;&#43;, sem a necessidade de equipamentos extras além de um cabo USB." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://inteligenciadascoisas.github.io/post/arduino-post-2-hoodloader/" /><meta property="article:published_time" content="2020-04-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-07T00:00:00+00:00" />
+
+    
+    <meta property="og:image" content="https://inteligenciadascoisas.github.io/img/arduino-post-002/thumb.jpg">
+    <meta property="twitter:image" content="https://inteligenciadascoisas.github.io/img/arduino-post-002/thumb.jpg" />
+    
+
+    
+    <meta name="title" content="O Arduino Uno tem 2 microcontroladores!" />
+    <meta property="og:title" content="O Arduino Uno tem 2 microcontroladores!" />
+    <meta property="twitter:title" content="O Arduino Uno tem 2 microcontroladores!" />
+    
+
+    
+    <meta name="description" content="Artigo explicando como utilizar independentemente os dois microcontroladores que os Arduinos Uno e Mega possuem.">
+    <meta property="og:description" content="Artigo explicando como utilizar independentemente os dois microcontroladores que os Arduinos Uno e Mega possuem." />
+    <meta property="twitter:description" content="Artigo explicando como utilizar independentemente os dois microcontroladores que os Arduinos Uno e Mega possuem." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword" content="blog, iot, internet das coisas, desenvolvimento, frontend, algoritmos, eletrônica, embarcados, protótipos, visão computacional, automação, design, motion graphics">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>O Arduino Uno tem 2 microcontroladores!-inteligência das coisas</title>
+
+    <link rel="canonical" href="/post/arduino-post-2-hoodloader/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css" />
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+
+    
+    <link rel="stylesheet" href="/css/web-post-001.css">
+
+    <link rel="stylesheet" href="/css/my.css">
+
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+</head>
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+            </button>
+
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/" style="color: white;">Início</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/arduino" style="color: white;">arduino</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/vis%C3%A3o-computacional" style="color: white;">visão-computacional</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/web" style="color: white;">web</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/arduino-post-002/arduino-post-2-hoodloader.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+  
+  <a class="tag" href="/tags/arduino" title="arduino">
+    arduino
+  </a>
+  
+  <a class="tag" href="/tags/tutorial" title="tutorial">
+    tutorial
+  </a>
+  
+  <a class="tag" href="/tags/intermedi%C3%A1rio" title="intermediário">
+    intermediário
+  </a>
+  
+  <a class="tag" href="/tags/prototipa%C3%A7%C3%A3o" title="prototipação">
+    prototipação
+  </a>
+  
+  <a class="tag" href="/tags/eletr%C3%B4nica" title="eletrônica">
+    eletrônica
+  </a>
+  
+  <a class="tag" href="/tags/iot" title="iot">
+    iot
+  </a>
+  
+</div>
+<h1>O Arduino Uno tem 2 microcontroladores!</h1>
+<h2 class="subheading">E vou te mostrar como usá-los :)</h2>
+
+<div class="post__meta tags">
+  
+  Alexandre Alvaro
+  
+  |
+  
+  
+  07
+
+ de 
+
+
+  
+
+  
+
+  
+
+  
+    Abril, 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+2020
+  
+  
+  
+  
+  
+  em
+  
+  
+  <a class="tag" href="/categories/arduino">ARDUINO</a>
+  
+  
+  
+  
+
+  <br />
+  <i class="fa fa-clock-o"></i> 5 min de leitura
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h4>Tópicos neste artigo</h4>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introdução">Introdução</a></li>
+    <li><a href="#bom-bora-começar">Bom… bora começar!</a></li>
+    <li><a href="#instalação-do-hoodloader2">Instalação do Hoodloader2</a></li>
+    <li><a href="#utilizando-os-2-microcontroladores">Utilizando os 2 microcontroladores</a>
+      <ul>
+        <li><a href="#sobre-o-hardware-como-fica-a-pinagem">Sobre o Hardware.. Como fica a pinagem?</a></li>
+      </ul>
+    </li>
+    <li><a href="#certo-e-como-descarrego-meus-sketches">Certo! E como descarrego meus Sketches?</a></li>
+    <li><a href="#alguns-exemplos-de-aplicação">Alguns exemplos de aplicação:</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav>
+                
+
+                <hr>
+
+                <h1 id="introdução">Introdução</h1>
+<p>O Arduino é uma plataforma de eletrônica de baixo custo, open source, baseada em hardware e software fáceis de usar.</p>
+<p>As placas do Arduino são capazes de ler entradas - luz em um sensor, um dedo em um botão, uma mensagem no Twitter - e transformá-las em uma saída - ativando um motor, ligando um LED, publicando algo online.</p>
+<p>Por padrão, a programação é feita utilizando uma linguagem baseada em C/C++, sem a necessidade de equipamentos extras além de um cabo USB.</p>
+<p>O que vamos tratar neste artigo demanda um conhecimento intermediário de Arduíno, mas se você se interessou e quiser entender mais sobre o assunto, dá uma olhada <a href="https://youtu.be/sv9dDtYnE1g">nesse material sensacional sobre o assunto no Manual do Mundo</a>.</p>
+<p>&hellip;</p>
+<h1 id="bom-bora-começar">Bom… bora começar!</h1>
+<p>As vezes focamos em algo principal e nos esquecemos dos detalhes.<br>
+O Arduino Uno tem como microcontrolador principal o ATmega328p, assim como o Mega tem o Mega2560, certo?<br>
+Mas eles também têm um outro microcontrolador, o 16u2, que geralmente ignoramos, pois achamos que “ele só serve pra fazer a comunicação USB com o computador”.<br>
+Bom… na verdade se olharmos para o Arduino Pro Micro e o Leonardo por exemplo, notamos que eles usam o 32u4, que é um microcontrolador similar ao 16u2 que vem com o Uno/ Mega, sendo que este último tem menos memória, pinos, e outros recursos, porém é um microcontrolador totalmente funcional e também podemos usá-lo!<br>
+O que quero dizer é que é possível ter 2 microcontroladores trabalhando ao mesmo tempo e de forma independente na mesma placa. É como se tivéssemos uma versão mais simples do Arduino Leonardo/ Micro embutido no Arduino Uno/ Mega!!!<br>
+Pra ter acesso a esse microcontrolador (16u2) pela IDE do Arduino vamos precisar alterar o Bootloader padrão (que é o DFU no Uno/Mega e CDC no Leonardo/Micro) por um Bootloader CDC + Fast USB-Serial tudo junto, o <a href="https://github.com/NicoHood/HoodLoader2">Hoodloader2</a>.<br>
+<img src="img/arduino-post-002/1.jpg" alt=""></p>
+<blockquote>
+<p>*Só verifique, pois, alguns Arduinos usam o CH340G, que é apenas conversor serial para ser mais barato.<br>
+Aí não funciona 🙁</p>
+</blockquote>
+<h1 id="instalação-do-hoodloader2">Instalação do Hoodloader2</h1>
+<p>Para fazer uso do 16u2 usamos o próprio ATmega328p para configurá-lo. Mudando o bootloader, não o firmware. Pra isso basta usar o próprio Arduino, 1 cabo USB, 4 fios e um capacitor de 100nF.</p>
+<ol>
+<li>
+<p>Prepare o seu arduino: Não deixe nenhum componente ou fiação.</p>
+</li>
+<li>
+<p>Faça download do sketch de instalação clicando no link.</p>
+</li>
+</ol>
+
+
+    <div style="width:210px">
+       <a href="https://drive.google.com/file/d/1-7QA6vro2y2pgKnfFBE6pauRNGdwlwL6/view?usp=sharing"><img src="img/arduino-post-002/2.png" style="cursor: pointer;" /></a>
+    </div>
+
+<ol start="3">
+<li>
+<p>Descompacte o conteúdo e abra o sketch Installation_Sketch.ino na IDE do Arduino.</p>
+</li>
+<li>
+<p>Se necessário mude a configuração HEXFILE para a sua placa.</p>
+</li>
+</ol>
+<p><img src="img/arduino-post-002/3.png" alt=""></p>
+<ol start="5">
+<li>
+<p>Conecte o cabo USB, selecione a sua placa normalmente (como faz para descarregar qualquer sketch) e carregue o sketch para a placa.</p>
+</li>
+<li>
+<p>Espere até aparecer “Done uploading“. Vai demorar um tempinho.</p>
+</li>
+<li>
+<p>Desconecte o cabo USB do Arduino.</p>
+</li>
+<li>
+<p>Conecte os cabos e componentes no Arduino conforme imagem:</p>
+</li>
+</ol>
+<p><img src="img/arduino-post-002/4.jpg" alt=""></p>
+<blockquote>
+<p>*É a mesma configuração para o Mega2560</p>
+</blockquote>
+<pre><code>Capacitor 100nF:
+328/2560 RESET - GND
+
+Conexões dos pinos:
+328/2560 - 16u2
+MOSI     - MOSI
+MISO     - MISO
+SCK      - SCK
+PIN 10   - 16u2 RESET
+</code></pre><ol start="9">
+<li>Sobrescreva o bootloader:</li>
+</ol>
+<p>Uma vez que o microcontrolador principal estiver com o sketch, nós estamos aptos a sobrescrever o bootloader para o 16u2.</p>
+<p>Este processo acontece sem a interação do usuário!</p>
+<p>Verifique novamente se as conexões estão corretas, plugue o arduino na porta USB e espere.</p>
+<p>O led vai piscar lentamente por 10 segundos, tentar sobrescrever o bootloader e depois piscar rapidamente (a cada 100ms). Espere pelo menos 30 segundos antes de remover o cabo USB, para ter certeza que tudo ocorreu como deveria.</p>
+<p>Caso tenha problemas, consulte o <a href="https://github.com/NicoHood/HoodLoader2/wiki/Troubleshoot-FAQ">FAQ oficial</a> (em inglês).</p>
+<p>Desconecte o capacitor e fiações e pode começar a utilizar os 2 microcontroladores!</p>
+<h1 id="utilizando-os-2-microcontroladores">Utilizando os 2 microcontroladores</h1>
+<h2 id="sobre-o-hardware-como-fica-a-pinagem">Sobre o Hardware.. Como fica a pinagem?</h2>
+<p><img src="img/arduino-post-002/5.jpg" alt=""></p>
+<p>No 16u2 Nós passamos a ter acesso a 7 pinos (fundo cor creme na imagem acima):</p>
+<p>D1 – PB1 PCINT1 SCLK
+D2 – PB2 PCINT2 MOSI
+D3 – PB3 PCINT3 MISO
+D4 – PB4 PCINT4
+D5 – PB5 PCINT5
+D6 – PB6 PCINT6
+~D7 – PB7 PCINT7 TIMER1C PWM
+…</p>
+<p>Dica: Para facilitar o uso, gosto de soldar conectores nos pinos PB4, PB5, PB6 e PB7:</p>
+<p><img src="img/arduino-post-002/6.jpg" alt=""></p>
+<p>Configurando a IDE do Arduino
+A instalação de novos drivers não é necessária para Windows10/ MacOS/ Linux. Mas se estiver usando Windows 7/ 8 siga as <a href="https://github.com/NicoHood/HoodLoader2/wiki/Software-Installation#1-cdc-driver-installation-windows-78-only">etapas de instalação dos drivers CDC</a>.</p>
+<ol>
+<li>Abra as preferências da IDE e adicione o endereço a seguir no campo “URLs Adicionais para Gerenciadores de Placas”</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/NicoHood/HoodLoader2/master/package_NicoHood_HoodLoader2_index.json
+</code></pre><p><img src="img/arduino-post-002/7.png" alt=""></p>
+<ol start="2">
+<li>Instale o Hoodloader2 pelo Gerenciador de Placas (Ferramentas &gt; Placa &gt; Gerenciador de Placas)</li>
+</ol>
+<p><img src="img/arduino-post-002/8.png" alt=""></p>
+<h1 id="certo-e-como-descarrego-meus-sketches">Certo! E como descarrego meus Sketches?</h1>
+<p>Depois de configurado na IDE do Arduino e alterado o Bootloader do 16u2, basta selecionar se quer descarregar o Sketch para o 16u2 ou para o ATmega328p (ou Mega2560).</p>
+<p><img src="img/arduino-post-002/9.jpg" alt=""></p>
+<p>Para ter os 2 sketches rodando descarregue primeiro do ATmega328p/ Mega2560 e somente depois o do 16u2. Se descarregar ao contrário ele vai considerar apenas o que foi pro ATmega328p/ Mega2560.</p>
+<p>Ah!… e uma coisa bacana do 16u2 é que, assim como os Arduinos Leonardo e Pro Micro, ele pode funcionar como uma conexão plug n’ play com o USB do PC, da TV, do Android, do videogame (Conhecido como HID – Human interface Device), … Ou seja, sem precisar de driver de instalação, assim como os teclados, mouses e joysticks fazem.</p>
+<p>Pronto! Agora utilize sua criatividade para tirar vantagem do uso dos 2 microcontroladores simultaneamente!</p>
+<h1 id="alguns-exemplos-de-aplicação">Alguns exemplos de aplicação:</h1>
+<p><a href="https://github.com/NicoHood/HID">HID-Project</a></p>
+<p><a href="https://github.com/NicoHood/HoodLoader2/tree/master/avr/examples/HID-Bridge">Simple HID Bridge</a></p>
+<p><a href="https://github.com/NicoHood/HoodLoader2/blob/master/avr/examples/USB-Serial/USB-Serial.ino">USB-Serial</a></p>
+<p><a href="https://github.com/NicoHood/HoodLoader2/blob/master/avr/examples/RunBootloader/RunBootloader.ino">Run Bootloader</a></p>
+<p><a href="https://github.com/NicoHood/HoodLoader2/blob/master/avr/examples/Blink/Blink.ino">Blink</a></p>
+<p><a href="https://github.com/NicoHood/HoodLoader2/blob/master/avr/examples/PWM_Fade/PWM_Fade.ino">PWM Fade</a></p>
+<p><a href="https://github.com/NicoHood/HoodLoader2/blob/master/avr/examples/SerialKeyboard/SerialKeyboard.ino">Serial Keyboard</a></p>
+<h1 id="referências">Referências</h1>
+<p><a href="https://github.com/NicoHood/HoodLoader2">https://github.com/NicoHood/HoodLoader2</a></p>
+
+
+                <hr>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="list-inline ">
+    <li><b>Compartilhar publicação: </b></li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('http://www.facebook.com/share.php?href=https:\/\/inteligenciadascoisas.github.io\/post\/arduino-post-2-hoodloader\/', 'sharer', 'width=626,height=436');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('http://twitter.com/share?text=O Arduino Uno tem 2 microcontroladores!&url=https:\/\/inteligenciadascoisas.github.io\/post\/arduino-post-2-hoodloader\/&hashtags=arduino,tutorial,intermediário,prototipação,eletrônica,iot');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/inteligenciadascoisas.github.io\/post\/arduino-post-2-hoodloader\/ &title=O Arduino Uno tem 2 microcontroladores! &summary=E vou te mostrar como usá-los :)&source=inteligencia-das-coisas');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('mailto:?&body=Olha que interessante este artigo: https:\/\/inteligenciadascoisas.github.io\/post\/arduino-post-2-hoodloader\/&subject=Artigo: O Arduino Uno tem 2 microcontroladores! - E vou te mostrar como usá-los :)');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+</ul>
+
+                <hr>
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/post/web-post-1-greensock/" data-toggle="tooltip" data-placement="top"
+                            title="Animações leves e fáceis para Web">Próximo
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "inteligenciadascoisas" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">TAGS EM DESTAQUE</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/arduino" title="arduino">
+                            arduino
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/eletr%C3%B4nica" title="eletrônica">
+                            eletrônica
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/iniciante" title="iniciante">
+                            iniciante
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/interativo" title="interativo">
+                            interativo
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/iot" title="iot">
+                            iot
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/prototipa%C3%A7%C3%A3o" title="prototipação">
+                            prototipação
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tutorial" title="tutorial">
+                            tutorial
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<hr>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div style="text-align: center;">
+                        <img height="200px" src="/img/mascot-2.gif" alt="ia" />
+                    </div>
+                
+                <h3 class="copyright text-muted">Tá empolgado? Não consegue dormir? Aproveita pra dar uma conferida nas minhas redes sociais:</h3>
+                <br>
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a href='https://alexandremendoncaalvaro.github.io' title="Resume/ Portifolio" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:alexandre.alvaro@hotmail.com"  title="e-mail">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/peritto"  title="Facebook">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/alexandremendoncaalvaro"  title="Github">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/alexandre-mendon%C3%A7a-%C3%A1lvaro-273b0050"  title="Linkedin">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/alemendalvaro"  title="Instagram">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.deviantart.com/peritto/gallery" title="DeviantArt">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-deviantart fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://soundcloud.com/peritto-1"  title="Soundcloud">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-soundcloud fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5547991512508&amp;amp;text=Site"  title="Whatsapp">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; inteligência das coisas 2020
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a
+                        href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if ($('#tag_cloud').length !== 0) {
+        async("/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                
+                color: { start: '#bbbbee', end: '#0085a1' },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165857578-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+    
+    
+</body>
+
+</html>
