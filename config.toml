@@ -1,4 +1,4 @@
-baseURL = "https://inteligenciadascoisas.github.io/"
+baseURL = "https://sad-knuth-e7a56d.netlify.app/"
 title = "inteligência das coisas"
 theme =  "hugo-theme-cleanwhite"
 languageCode = "pt-br"
