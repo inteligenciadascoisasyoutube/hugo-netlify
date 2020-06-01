@@ -48,17 +48,17 @@ collections:
 
       - label: "Thumbnail"
         name: "thumbnail"
-        required: false
+        required: true
         widget: "image"
 
       - label: "Categorias"
         name: "categories"
-        required: false
+        required: true
         widget: "list"
 
       - label: "Tags"
         name: "tags"
-        required: false
+        required: true
         widget: "list"
 
       - label: "Body"
