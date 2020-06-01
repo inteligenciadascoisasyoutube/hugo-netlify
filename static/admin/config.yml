@@ -4,8 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/img/upload" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/img/upload" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
 
@@ -16,16 +16,42 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
 
-      - label: "Title"
+      - label: "Titulo"
         name: "title"
+        required: true
         widget: "string"
 
-      - label: "Publish Date"
+      - label: "Subtitulo"
+        name: "subtitle"
+        required: true
+        widget: "string"
+
+      - label: "Descrição"
+        name: "description"
+        required: true
+        widget: "string"
+
+      - label: "Data"
         name: "date"
-        required: false
+        required: true
         widget: "datetime"
 
-      - label: "Categories"
+      - label: "Autor"
+        name: "author"
+        required: true
+        widget: "list"
+
+      - label: "Capa"
+        name: "image"
+        required: true
+        widget: "image"
+
+      - label: "Thumbnail"
+        name: "thumbnail"
+        required: false
+        widget: "image"
+
+      - label: "Categorias"
         name: "categories"
         required: false
         widget: "list"
@@ -35,35 +61,6 @@ collections:
         required: false
         widget: "list"
 
-      - label: "Keywords"
-        name: "keywords"
-        required: false
-        widget: "list"
-
-      - label: "Auto Thumbnail Image"
-        name: "autoThumbnailImage"
-        required: false
-        widget: "boolean"
-        default: false
-
-      - label: "Thumbnail Image Position"
-        name: "thumbnailImagePosition"
-        required: false
-        widget: "select"
-        default: "top"
-        options: ["left", "top", "right"]
-        
-      - label: "Thumbnail Image"
-        name: "thumbnailImage"
-        required: false
-        widget: "image"
-
-      - label: "Cover Image"
-        name: "coverImage"
-        required: false
-        widget: "image"
-        default: "/img/cover.jpg"
-        
       - label: "Body"
         name: "body"
         widget: "markdown"
