@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>intermediário on inteligência das coisas</title>
-    <link>https://inteligenciadascoisas.netlify.app/tags/intermedi%C3%A1rio/</link>
+    <link>https://sad-knuth-e7a56d.netlify.app/tags/intermedi%C3%A1rio/</link>
     <description>Recent content in intermediário on inteligência das coisas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://inteligenciadascoisas.netlify.app/tags/intermedi%C3%A1rio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sad-knuth-e7a56d.netlify.app/tags/intermedi%C3%A1rio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>O Arduino Uno tem 2 microcontroladores!</title>
-      <link>https://inteligenciadascoisas.netlify.app/post/arduino-post-2-hoodloader/</link>
+      <link>https://sad-knuth-e7a56d.netlify.app/post/arduino-post-2-hoodloader/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://inteligenciadascoisas.netlify.app/post/arduino-post-2-hoodloader/</guid>
+      <guid>https://sad-knuth-e7a56d.netlify.app/post/arduino-post-2-hoodloader/</guid>
       <description>Introdução O Arduino é uma plataforma de eletrônica de baixo custo, open source, baseada em hardware e software fáceis de usar.
 As placas do Arduino são capazes de ler entradas - luz em um sensor, um dedo em um botão, uma mensagem no Twitter - e transformá-las em uma saída - ativando um motor, ligando um LED, publicando algo online.
 Por padrão, a programação é feita utilizando uma linguagem baseada em C/C++, sem a necessidade de equipamentos extras além de um cabo USB.</description>
