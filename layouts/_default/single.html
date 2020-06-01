@@ -101,18 +101,6 @@
                     </ul>
                 </section>
                 {{ end }}
-                {{ with .Params.authors }}
-                    {{ range $ind,$val := . }}
-                        {{$author := $val | urlize }}
-                        {{- with $.Site.GetPage "taxonomyTerm" "authors" $author}}
-                        <p>Name = {{ .Params.name }} </p>
-                        <p>Bio = {{ .Params.bio }}</p>
-                        <p>Photo = {{.Params.photo}}</p>
-                        <p>Here is the content from this author's _index.md file:</p>
-                        {{.Content}}
-                        {{ end -}}
-                    {{ end }}
-                {{ end }}
             </div>
         </div>
     </div>
