@@ -2,7 +2,6 @@ baseURL = "https://inteligenciadascoisas.com/"
 title = "inteligência das coisas"
 theme =  "hugo-theme-cleanwhite"
 languageCode = "pt-br"
-publishDir = "localpreview"
 preserveTaxonomyNames = true
 disqusShortname = "inteligenciadascoisas"
 enableEmoji = true
