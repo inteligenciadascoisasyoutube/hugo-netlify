@@ -5,8 +5,8 @@ subtitle:       "O que é, e pra que serve o input pull-up?"
 description:    "Artigo explicando porque se deve utilizar um resistor ao ligar um botão ao Arduino (input pull-up)."
 date:           2020-05-17
 author:         "Alexandre Alvaro"
-image:          "/img/arduino-post-001/arduino-post-1-pullup.jpg"
-thumbnail:      "/img/arduino-post-001/thumb.jpg"
+image:          "/img/upload/alexandre-20200407-capa.jpg"
+thumbnail:      "/img/upload/alexandre-20200407-thumb.jpg"
 categories:     [ Arduino ]
 tags:
                 - arduino
@@ -46,7 +46,7 @@ Clique sobre o botão para fechar o circuito e ver como ele se comporta:
 # Arduino
 Quando montamos um circuito com Arduino, o botão se mostra um componente muito útil, pois através dele podemos acionar as entradas digitais e fazer com que ao receber esta informação um comando de programação possa ser executado.  
 O acionamento da porta digital de um Arduino Uno, por exemplo, é ligada ou desligada conforme recebe ZERO Volts ou 5 Volts, alterando seu nível lógico.  
-![](/img/arduino-post-001/logic-level.gif)  
+![](/img/upload/alexandre-20200407-logic-level.gif)  
 * Botão pressionado, 5V na entrada digital: nível lógico Alto
 * Botão solto, 0V (teórico) na entrada digital: nível lógico Baixo
 
@@ -55,7 +55,7 @@ O acionamento da porta digital de um Arduino Uno, por exemplo, é ligada ou desl
 # Estado flutuante
 Até então expliquei como a coisa funciona na teoria, mas na verdade, quando o botão está solto o circuito fica aberto e eu não estou enviando realmente ZERO Volts, mas sim um valor flutuante.  
 Isso porque o fio solto conetado a porta digital se comporta como uma antena e capta as interferências, enviando estes valores flutuantes para o Arduino.  
-![](/img/arduino-post-001/antena.gif)  
+![](/img/upload/alexandre-20200407-antena.gif)  
 Tanto o próprio campo eletromagnético dos outros fios e componentes no circuito, quanto eletricidade estática e outros fatores podem ser captados por esse fio que se tornou uma antena indesejada.
 
 No circuito abaixo segure o Botão para enviar 5 Volts pressionado por alguns instantes.. Observe que o Voltímetro não vai mostrar ZERO Volts com o Botão solto:
@@ -108,7 +108,7 @@ Para habilitar basta inicializar o pino de entrada conforme a seguir:
 pinMode(8, INPUT_PULLUP);
 ```
  E fazer a ligação do botão entre o pino de entrada digital e o GND:  
-![](/img/arduino-post-001/input-pull-up.gif)  
+![](/img/upload/alexandre-20200407-input-pull-up.gif)  
 
 
 **Agora você realmente sabe como e porquê utilizamos o resistor de pull-up para entradas digitais no Arduino.**
