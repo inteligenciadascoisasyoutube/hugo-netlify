@@ -39,7 +39,7 @@ collections:
       - label: "Autor"
         name: "author"
         required: true
-        widget: "list"
+        widget: "string"
 
       - label: "Capa"
         name: "image"
