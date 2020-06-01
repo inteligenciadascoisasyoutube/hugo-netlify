@@ -6,6 +6,7 @@ preserveTaxonomyNames = true
 disqusShortname = "inteligenciadascoisas"
 enableEmoji = true
 googleAnalytics = "UA-165857578-1"
+publishDir = "localpreview"
 
 [outputs]
     home = ["HTML"]
