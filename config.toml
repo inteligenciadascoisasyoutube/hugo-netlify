@@ -17,7 +17,7 @@ googleAnalytics = "UA-165857578-1"
     keyword = "blog, iot, internet das coisas, desenvolvimento, frontend, algoritmos, eletrônica, embarcados, protótipos, visão computacional, automação, design, motion graphics"
     slogan = "blog de tecnologia aplicada"
 
-    logo_svg = "/img/logo-idc.svg"
+    logo_svg = "/img/logo-idc-2.svg"
 
     image_404 = "/img/404-bg.jpg"
     title_404 = "Página não encontrada :("
