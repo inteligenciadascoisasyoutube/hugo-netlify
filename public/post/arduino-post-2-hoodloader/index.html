@@ -14,12 +14,12 @@
 As placas do Arduino são capazes de ler entradas - luz em um sensor, um dedo em um botão, uma mensagem no Twitter - e transformá-las em uma saída - ativando um motor, ligando um LED, publicando algo online.
 Por padrão, a programação é feita utilizando uma linguagem baseada em C/C&#43;&#43;, sem a necessidade de equipamentos extras além de um cabo USB." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://sad-knuth-e7a56d.netlify.app/post/arduino-post-2-hoodloader/" /><meta property="article:published_time" content="2020-04-07T00:00:00+00:00" />
+<meta property="og:url" content="https://inteligenciadascoisas.netlify.app/post/arduino-post-2-hoodloader/" /><meta property="article:published_time" content="2020-04-07T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-04-07T00:00:00+00:00" />
 
     
-    <meta property="og:image" content="https://sad-knuth-e7a56d.netlify.app/img/arduino-post-002/thumb.jpg">
-    <meta property="twitter:image" content="https://sad-knuth-e7a56d.netlify.app/img/arduino-post-002/thumb.jpg" />
+    <meta property="og:image" content="https://inteligenciadascoisas.netlify.app//img/arduino-post-002/thumb.jpg">
+    <meta property="twitter:image" content="https://inteligenciadascoisas.netlify.app//img/arduino-post-002/thumb.jpg" />
     
 
     
@@ -315,7 +315,7 @@ Mas eles também têm um outro microcontrolador, o 16u2, que geralmente ignoramo
 Bom… na verdade se olharmos para o Arduino Pro Micro e o Leonardo por exemplo, notamos que eles usam o 32u4, que é um microcontrolador similar ao 16u2 que vem com o Uno/ Mega, sendo que este último tem menos memória, pinos, e outros recursos, porém é um microcontrolador totalmente funcional e também podemos usá-lo!<br>
 O que quero dizer é que é possível ter 2 microcontroladores trabalhando ao mesmo tempo e de forma independente na mesma placa. É como se tivéssemos uma versão mais simples do Arduino Leonardo/ Micro embutido no Arduino Uno/ Mega!!!<br>
 Pra ter acesso a esse microcontrolador (16u2) pela IDE do Arduino vamos precisar alterar o Bootloader padrão (que é o DFU no Uno/Mega e CDC no Leonardo/Micro) por um Bootloader CDC + Fast USB-Serial tudo junto, o <a href="https://github.com/NicoHood/HoodLoader2">Hoodloader2</a>.<br>
-<img src="img/arduino-post-002/1.jpg" alt=""></p>
+<img src="/img/arduino-post-002/1.jpg" alt=""></p>
 <blockquote>
 <p>*Só verifique, pois, alguns Arduinos usam o CH340G, que é apenas conversor serial para ser mais barato.<br>
 Aí não funciona 🙁</p>
@@ -333,7 +333,7 @@ Aí não funciona 🙁</p>
 
 
     <div style="width:210px">
-       <a href="https://drive.google.com/file/d/1-7QA6vro2y2pgKnfFBE6pauRNGdwlwL6/view?usp=sharing"><img src="img/arduino-post-002/2.png" style="cursor: pointer;" /></a>
+       <a href="https://drive.google.com/file/d/1-7QA6vro2y2pgKnfFBE6pauRNGdwlwL6/view?usp=sharing"><img src="/img/arduino-post-002/2.png" style="cursor: pointer;" /></a>
     </div>
 
 <ol start="3">
@@ -344,7 +344,7 @@ Aí não funciona 🙁</p>
 <p>Se necessário mude a configuração HEXFILE para a sua placa.</p>
 </li>
 </ol>
-<p><img src="img/arduino-post-002/3.png" alt=""></p>
+<p><img src="/img/arduino-post-002/3.png" alt=""></p>
 <ol start="5">
 <li>
 <p>Conecte o cabo USB, selecione a sua placa normalmente (como faz para descarregar qualquer sketch) e carregue o sketch para a placa.</p>
@@ -359,7 +359,7 @@ Aí não funciona 🙁</p>
 <p>Conecte os cabos e componentes no Arduino conforme imagem:</p>
 </li>
 </ol>
-<p><img src="img/arduino-post-002/4.jpg" alt=""></p>
+<p><img src="/img/arduino-post-002/4.jpg" alt=""></p>
 <blockquote>
 <p>*É a mesma configuração para o Mega2560</p>
 </blockquote>
@@ -383,7 +383,7 @@ PIN 10   - 16u2 RESET
 <p>Desconecte o capacitor e fiações e pode começar a utilizar os 2 microcontroladores!</p>
 <h1 id="utilizando-os-2-microcontroladores">Utilizando os 2 microcontroladores</h1>
 <h2 id="sobre-o-hardware-como-fica-a-pinagem">Sobre o Hardware.. Como fica a pinagem?</h2>
-<p><img src="img/arduino-post-002/5.jpg" alt=""></p>
+<p><img src="/img/arduino-post-002/5.jpg" alt=""></p>
 <p>No 16u2 Nós passamos a ter acesso a 7 pinos (fundo cor creme na imagem acima):</p>
 <p>D1 – PB1 PCINT1 SCLK
 D2 – PB2 PCINT2 MOSI
@@ -394,21 +394,21 @@ D6 – PB6 PCINT6
 ~D7 – PB7 PCINT7 TIMER1C PWM
 …</p>
 <p>Dica: Para facilitar o uso, gosto de soldar conectores nos pinos PB4, PB5, PB6 e PB7:</p>
-<p><img src="img/arduino-post-002/6.jpg" alt=""></p>
+<p><img src="/img/arduino-post-002/6.jpg" alt=""></p>
 <p>Configurando a IDE do Arduino
 A instalação de novos drivers não é necessária para Windows10/ MacOS/ Linux. Mas se estiver usando Windows 7/ 8 siga as <a href="https://github.com/NicoHood/HoodLoader2/wiki/Software-Installation#1-cdc-driver-installation-windows-78-only">etapas de instalação dos drivers CDC</a>.</p>
 <ol>
 <li>Abra as preferências da IDE e adicione o endereço a seguir no campo “URLs Adicionais para Gerenciadores de Placas”</li>
 </ol>
 <pre><code>https://raw.githubusercontent.com/NicoHood/HoodLoader2/master/package_NicoHood_HoodLoader2_index.json
-</code></pre><p><img src="img/arduino-post-002/7.png" alt=""></p>
+</code></pre><p><img src="/img/arduino-post-002/7.png" alt=""></p>
 <ol start="2">
 <li>Instale o Hoodloader2 pelo Gerenciador de Placas (Ferramentas &gt; Placa &gt; Gerenciador de Placas)</li>
 </ol>
-<p><img src="img/arduino-post-002/8.png" alt=""></p>
+<p><img src="/img/arduino-post-002/8.png" alt=""></p>
 <h1 id="certo-e-como-descarrego-meus-sketches">Certo! E como descarrego meus Sketches?</h1>
 <p>Depois de configurado na IDE do Arduino e alterado o Bootloader do 16u2, basta selecionar se quer descarregar o Sketch para o 16u2 ou para o ATmega328p (ou Mega2560).</p>
-<p><img src="img/arduino-post-002/9.jpg" alt=""></p>
+<p><img src="/img/arduino-post-002/9.jpg" alt=""></p>
 <p>Para ter os 2 sketches rodando descarregue primeiro do ATmega328p/ Mega2560 e somente depois o do 16u2. Se descarregar ao contrário ele vai considerar apenas o que foi pro ATmega328p/ Mega2560.</p>
 <p>Ah!… e uma coisa bacana do 16u2 é que, assim como os Arduinos Leonardo e Pro Micro, ele pode funcionar como uma conexão plug n’ play com o USB do PC, da TV, do Android, do videogame (Conhecido como HID – Human interface Device), … Ou seja, sem precisar de driver de instalação, assim como os teclados, mouses e joysticks fazem.</p>
 <p>Pronto! Agora utilize sua criatividade para tirar vantagem do uso dos 2 microcontroladores simultaneamente!</p>
@@ -454,7 +454,7 @@ A instalação de novos drivers não é necessária para Windows10/ MacOS/ Linux
     <li><b>Compartilhar publicação: </b></li>
     <li>
         <a href="javascript:;"
-            onclick="window.open('http://www.facebook.com/share.php?href=https:\/\/sad-knuth-e7a56d.netlify.app\/post\/arduino-post-2-hoodloader\/', 'sharer', 'width=626,height=436');">
+            onclick="window.open('http://www.facebook.com/share.php?href=https:\/\/inteligenciadascoisas.netlify.app\/post\/arduino-post-2-hoodloader\/', 'sharer', 'width=626,height=436');">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -463,7 +463,7 @@ A instalação de novos drivers não é necessária para Windows10/ MacOS/ Linux
     </li>
     <li>
         <a href="javascript:;"
-            onclick="window.open('http://twitter.com/share?text=O Arduino Uno tem 2 microcontroladores!&url=https:\/\/sad-knuth-e7a56d.netlify.app\/post\/arduino-post-2-hoodloader\/&hashtags=arduino,tutorial,intermediário,prototipação,eletrônica,iot');">
+            onclick="window.open('http://twitter.com/share?text=O Arduino Uno tem 2 microcontroladores!&url=https:\/\/inteligenciadascoisas.netlify.app\/post\/arduino-post-2-hoodloader\/&hashtags=arduino,tutorial,intermediário,prototipação,eletrônica,iot');">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -472,7 +472,7 @@ A instalação de novos drivers não é necessária para Windows10/ MacOS/ Linux
     </li>
     <li>
         <a href="javascript:;"
-            onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/sad-knuth-e7a56d.netlify.app\/post\/arduino-post-2-hoodloader\/ &title=O Arduino Uno tem 2 microcontroladores! &summary=E vou te mostrar como usá-los :)&source=inteligencia-das-coisas');">
+            onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/inteligenciadascoisas.netlify.app\/post\/arduino-post-2-hoodloader\/ &title=O Arduino Uno tem 2 microcontroladores! &summary=E vou te mostrar como usá-los :)&source=inteligencia-das-coisas');">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -481,7 +481,7 @@ A instalação de novos drivers não é necessária para Windows10/ MacOS/ Linux
     </li>
     <li>
         <a href="javascript:;"
-            onclick="window.open('mailto:?&body=Olha que interessante este artigo: https:\/\/sad-knuth-e7a56d.netlify.app\/post\/arduino-post-2-hoodloader\/&subject=Artigo: O Arduino Uno tem 2 microcontroladores! - E vou te mostrar como usá-los :)');">
+            onclick="window.open('mailto:?&body=Olha que interessante este artigo: https:\/\/inteligenciadascoisas.netlify.app\/post\/arduino-post-2-hoodloader\/&subject=Artigo: O Arduino Uno tem 2 microcontroladores! - E vou te mostrar como usá-los :)');">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>

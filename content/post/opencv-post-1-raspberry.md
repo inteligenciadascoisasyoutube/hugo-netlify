@@ -6,8 +6,8 @@ description:    "Assim como muita gente, tive problemas para instalar o OpenCV e
 Exatamente por isso decidir ajudar, dei uma bela lida nos tutoriais disponíveis e documentação oficial e resolvi compartilhar este processo com alguns scripts pra facilitar e a automatizar bastante esta instalação, deixando bem fácil."
 date:           2020-05-28
 author:         "Alexandre Alvaro"
-image:          "img/opencv-post-001/capa.jpg"
-thumbnail:      "img/opencv-post-001/thumb.jpg"
+image:          "/img/opencv-post-001/capa.jpg"
+thumbnail:      "/img/opencv-post-001/thumb.jpg"
 categories:     [ Visão Computacional ]
 tags:
                 - raspberrypi
@@ -71,7 +71,7 @@ Não passe trabalho desnecessariamente, utilize a ferramenta oficial pra gravar 
 
 *Faça exercícios, tome um banho, tire uma soneca… Pois vai demorar algumas horas..
 
-![](img/opencv-post-001/homer.gif)
+![](/img/opencv-post-001/homer.gif)
 
 ## Testando
 
@@ -119,16 +119,16 @@ sudo raspi-config
 
 e então selecione Advanced Options => Expand filesystem:
 
-![](img/opencv-post-001/01.jpg)
+![](/img/opencv-post-001/01.jpg)
 
 Na tela inicial do raspi-config vá em Boot Options => Desktop / CLI => Console Autologin:
 
-![](img/opencv-post-001/02.jpg)
+![](/img/opencv-post-001/02.jpg)
 
 
 Novamente na tela inicial do raspi-config vá em Advanced Options => Memory Split, onde você vê 64MB (ou outro valor):
 
-![](img/opencv-post-001/03.jpg)
+![](/img/opencv-post-001/03.jpg)
 
 Atualize este valor para 16MB e finalize o raspi-config.
 
@@ -148,7 +148,7 @@ volte ao terminal do Raspbian:
 
 *Faça exercícios, tome um banho, tire uma soneca… Pois vai demorar algumas horas..
 
-![](img/opencv-post-001/homer.gif)
+![](/img/opencv-post-001/homer.gif)
 
 # Instalando a Dlib no Raspbian
 IMPORTANTE: Navegue até a pasta do seu projeto pelo terminal (se precisar crie uma) e rode estes comandos:
@@ -164,7 +164,7 @@ pipenv install 'numpy==1.18.4' 'dlib==19.19.0'
 pipenv install numpy dlib
 
 *Pegue um café, vai demorar bem menos que o outro, mas vai demorar.
-![](img/opencv-post-001/coffee.gif)
+![](/img/opencv-post-001/coffee.gif)
 
 Para linkar a instalação do OpenCV com o python no seu projeto, rode este comando:
 

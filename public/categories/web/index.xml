@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on inteligência das coisas</title>
-    <link>https://sad-knuth-e7a56d.netlify.app/categories/web/</link>
+    <link>https://inteligenciadascoisas.netlify.app/categories/web/</link>
     <description>Recent content in Web on inteligência das coisas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sad-knuth-e7a56d.netlify.app/categories/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://inteligenciadascoisas.netlify.app/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Animações leves e fáceis para Web</title>
-      <link>https://sad-knuth-e7a56d.netlify.app/post/web-post-1-greensock/</link>
+      <link>https://inteligenciadascoisas.netlify.app/post/web-post-1-greensock/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sad-knuth-e7a56d.netlify.app/post/web-post-1-greensock/</guid>
+      <guid>https://inteligenciadascoisas.netlify.app/post/web-post-1-greensock/</guid>
       <description>Para fazer um aproveitamento total dos recursos interativos, acesse pelo computador 😄
 Introdução Opa! Tudo belezinha?
 Este é um artigo bem interativo. Fique de olho em cada detalhe para aprender fazendo seus próprios testes! 😄

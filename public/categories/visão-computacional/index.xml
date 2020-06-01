@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visão Computacional on inteligência das coisas</title>
-    <link>https://sad-knuth-e7a56d.netlify.app/categories/vis%C3%A3o-computacional/</link>
+    <link>https://inteligenciadascoisas.netlify.app/categories/vis%C3%A3o-computacional/</link>
     <description>Recent content in Visão Computacional on inteligência das coisas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 28 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sad-knuth-e7a56d.netlify.app/categories/vis%C3%A3o-computacional/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://inteligenciadascoisas.netlify.app/categories/vis%C3%A3o-computacional/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OpenCV e Dlib no Raspberry Pi</title>
-      <link>https://sad-knuth-e7a56d.netlify.app/post/opencv-post-1-raspberry/</link>
+      <link>https://inteligenciadascoisas.netlify.app/post/opencv-post-1-raspberry/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sad-knuth-e7a56d.netlify.app/post/opencv-post-1-raspberry/</guid>
+      <guid>https://inteligenciadascoisas.netlify.app/post/opencv-post-1-raspberry/</guid>
       <description>UPDATE: Adicionei o processo fácil de instalação. Veja abaixo em INSTALAÇÃO SIMPLES.
 Introdução Assim como muita gente, tive problemas para instalar o OpenCV e a bilioteca Dlib pra trabalhar com visão computacional no Raspberry Pi.
 Exatamente por isso decidir ajudar, dei uma bela lida nos tutoriais disponíveis e documentação oficial e resolvi compartilhar este processo com alguns scripts pra facilitar e a automatizar bastante esta instalação, deixando quase fácil.

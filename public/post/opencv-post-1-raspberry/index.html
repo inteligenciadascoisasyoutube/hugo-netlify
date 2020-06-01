@@ -15,12 +15,12 @@ Introdução Assim como muita gente, tive problemas para instalar o OpenCV e a b
 Exatamente por isso decidir ajudar, dei uma bela lida nos tutoriais disponíveis e documentação oficial e resolvi compartilhar este processo com alguns scripts pra facilitar e a automatizar bastante esta instalação, deixando quase fácil.
 Testei com algumas versões diferentes (de hardware e software) com sucesso." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://sad-knuth-e7a56d.netlify.app/post/opencv-post-1-raspberry/" /><meta property="article:published_time" content="2020-05-28T00:00:00+00:00" />
+<meta property="og:url" content="https://inteligenciadascoisas.netlify.app/post/opencv-post-1-raspberry/" /><meta property="article:published_time" content="2020-05-28T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-05-28T00:00:00+00:00" />
 
     
-    <meta property="og:image" content="https://sad-knuth-e7a56d.netlify.app/img/opencv-post-001/thumb.jpg">
-    <meta property="twitter:image" content="https://sad-knuth-e7a56d.netlify.app/img/opencv-post-001/thumb.jpg" />
+    <meta property="og:image" content="https://inteligenciadascoisas.netlify.app//img/opencv-post-001/thumb.jpg">
+    <meta property="twitter:image" content="https://inteligenciadascoisas.netlify.app//img/opencv-post-001/thumb.jpg" />
     
 
     
@@ -357,7 +357,7 @@ Não pule nenhuma etapa deste tutorial!</p>
 <p>Ao final irá reiniciar para interface desktop</p>
 </blockquote>
 <p>*Faça exercícios, tome um banho, tire uma soneca… Pois vai demorar algumas horas..</p>
-<p><img src="img/opencv-post-001/homer.gif" alt=""></p>
+<p><img src="/img/opencv-post-001/homer.gif" alt=""></p>
 <h2 id="testando">Testando</h2>
 <p>Para o OpenCV rode no terminal:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~/install-opencv-dlib-raspbian/test-opencv.sh
@@ -375,11 +375,11 @@ Não pule nenhuma etapa deste tutorial!</p>
 </code></pre></div><h1 id="preparando-o-sistema-pra-dar-conta-da-instalação">Preparando o sistema pra dar conta da instalação</h1>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo raspi-config
 </code></pre></div><p>e então selecione Advanced Options =&gt; Expand filesystem:</p>
-<p><img src="img/opencv-post-001/01.jpg" alt=""></p>
+<p><img src="/img/opencv-post-001/01.jpg" alt=""></p>
 <p>Na tela inicial do raspi-config vá em Boot Options =&gt; Desktop / CLI =&gt; Console Autologin:</p>
-<p><img src="img/opencv-post-001/02.jpg" alt=""></p>
+<p><img src="/img/opencv-post-001/02.jpg" alt=""></p>
 <p>Novamente na tela inicial do raspi-config vá em Advanced Options =&gt; Memory Split, onde você vê 64MB (ou outro valor):</p>
-<p><img src="img/opencv-post-001/03.jpg" alt=""></p>
+<p><img src="/img/opencv-post-001/03.jpg" alt=""></p>
 <p>Atualize este valor para 16MB e finalize o raspi-config.</p>
 <p>Ao sair será solicitado para reiniciar.</p>
 <p>Vá em frente, Reinicie!</p>
@@ -391,7 +391,7 @@ Não pule nenhuma etapa deste tutorial!</p>
 ~/install-opencv-dlib-raspbian/install.sh 4.1.1</p>
 </blockquote>
 <p>*Faça exercícios, tome um banho, tire uma soneca… Pois vai demorar algumas horas..</p>
-<p><img src="img/opencv-post-001/homer.gif" alt=""></p>
+<p><img src="/img/opencv-post-001/homer.gif" alt=""></p>
 <h1 id="instalando-a-dlib-no-raspbian">Instalando a Dlib no Raspbian</h1>
 <p>IMPORTANTE: Navegue até a pasta do seu projeto pelo terminal (se precisar crie uma) e rode estes comandos:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pipenv install <span style="color:#ff79c6">&amp;&amp;</span> pipenv shell
@@ -401,7 +401,7 @@ Não pule nenhuma etapa deste tutorial!</p>
 pipenv install numpy dlib</p>
 </blockquote>
 <p>*Pegue um café, vai demorar bem menos que o outro, mas vai demorar.
-<img src="img/opencv-post-001/coffee.gif" alt=""></p>
+<img src="/img/opencv-post-001/coffee.gif" alt=""></p>
 <p>Para linkar a instalação do OpenCV com o python no seu projeto, rode este comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~/install-opencv-dlib-raspbian/link-virtualenv.sh
 </code></pre></div><h1 id="finalizando">Finalizando</h1>
@@ -461,7 +461,7 @@ pipenv install numpy dlib</p>
     <li><b>Compartilhar publicação: </b></li>
     <li>
         <a href="javascript:;"
-            onclick="window.open('http://www.facebook.com/share.php?href=https:\/\/sad-knuth-e7a56d.netlify.app\/post\/opencv-post-1-raspberry\/', 'sharer', 'width=626,height=436');">
+            onclick="window.open('http://www.facebook.com/share.php?href=https:\/\/inteligenciadascoisas.netlify.app\/post\/opencv-post-1-raspberry\/', 'sharer', 'width=626,height=436');">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -470,7 +470,7 @@ pipenv install numpy dlib</p>
     </li>
     <li>
         <a href="javascript:;"
-            onclick="window.open('http://twitter.com/share?text=OpenCV e Dlib no Raspberry Pi&url=https:\/\/sad-knuth-e7a56d.netlify.app\/post\/opencv-post-1-raspberry\/&hashtags=raspberrypi,tutorial,intermediario,prototipação,visaocomputacional,iot,opencv,dlib');">
+            onclick="window.open('http://twitter.com/share?text=OpenCV e Dlib no Raspberry Pi&url=https:\/\/inteligenciadascoisas.netlify.app\/post\/opencv-post-1-raspberry\/&hashtags=raspberrypi,tutorial,intermediario,prototipação,visaocomputacional,iot,opencv,dlib');">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -479,7 +479,7 @@ pipenv install numpy dlib</p>
     </li>
     <li>
         <a href="javascript:;"
-            onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/sad-knuth-e7a56d.netlify.app\/post\/opencv-post-1-raspberry\/ &title=OpenCV e Dlib no Raspberry Pi &summary=Instalação AGORA fácil&source=inteligencia-das-coisas');">
+            onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/inteligenciadascoisas.netlify.app\/post\/opencv-post-1-raspberry\/ &title=OpenCV e Dlib no Raspberry Pi &summary=Instalação AGORA fácil&source=inteligencia-das-coisas');">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -488,7 +488,7 @@ pipenv install numpy dlib</p>
     </li>
     <li>
         <a href="javascript:;"
-            onclick="window.open('mailto:?&body=Olha que interessante este artigo: https:\/\/sad-knuth-e7a56d.netlify.app\/post\/opencv-post-1-raspberry\/&subject=Artigo: OpenCV e Dlib no Raspberry Pi - Instalação AGORA fácil');">
+            onclick="window.open('mailto:?&body=Olha que interessante este artigo: https:\/\/inteligenciadascoisas.netlify.app\/post\/opencv-post-1-raspberry\/&subject=Artigo: OpenCV e Dlib no Raspberry Pi - Instalação AGORA fácil');">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
