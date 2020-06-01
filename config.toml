@@ -4,6 +4,7 @@ theme =  "hugo-theme-cleanwhite"
 languageCode = "pt-br"
 preserveTaxonomyNames = true
 disqusShortname = "inteligenciadascoisas"
+publishDir = "docs"
 enableEmoji = true
 googleAnalytics = "UA-165857578-1"
 
