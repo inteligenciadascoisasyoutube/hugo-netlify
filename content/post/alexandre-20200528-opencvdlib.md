@@ -5,8 +5,8 @@ subtitle:       "Instalação AGORA fácil"
 description:    "Intalação super fácil do OpenCV e Dlib no Raspberry Pi"
 date:           2020-05-28
 author:         "Alexandre Alvaro"
-image:          "/img/opencv-post-001/capa.jpg"
-thumbnail:      "/img/opencv-post-001/thumb.jpg"
+image:          "/img/alexandre-20200528-capa.jpg"
+thumbnail:      "/img/alexandre-20200528-thumb.jpg"
 categories:     [ VisãoComputacional ]
 tags:
                 - raspberrypi
@@ -69,7 +69,7 @@ Não passe trabalho desnecessariamente, utilize a ferramenta oficial pra gravar 
 
 *Faça exercícios, tome um banho, tire uma soneca… Pois vai demorar algumas horas..
 
-![](/img/opencv-post-001/homer.gif)
+![](/img/alexandre-20200528-homer.gif)
 
 ## Testando
 
@@ -117,16 +117,16 @@ sudo raspi-config
 
 e então selecione Advanced Options => Expand filesystem:
 
-![](/img/opencv-post-001/01.jpg)
+![](/img/alexandre-20200528-01.jpg)
 
 Na tela inicial do raspi-config vá em Boot Options => Desktop / CLI => Console Autologin:
 
-![](/img/opencv-post-001/02.jpg)
+![](/img/alexandre-20200528-02.jpg)
 
 
 Novamente na tela inicial do raspi-config vá em Advanced Options => Memory Split, onde você vê 64MB (ou outro valor):
 
-![](/img/opencv-post-001/03.jpg)
+![](/img/alexandre-20200528-03.jpg)
 
 Atualize este valor para 16MB e finalize o raspi-config.
 
@@ -146,7 +146,7 @@ volte ao terminal do Raspbian:
 
 *Faça exercícios, tome um banho, tire uma soneca… Pois vai demorar algumas horas..
 
-![](/img/opencv-post-001/homer.gif)
+![](/img/alexandre-20200528-homer.gif)
 
 # Instalando a Dlib no Raspbian
 IMPORTANTE: Navegue até a pasta do seu projeto pelo terminal (se precisar crie uma) e rode estes comandos:
@@ -162,7 +162,7 @@ pipenv install 'numpy==1.18.4' 'dlib==19.19.0'
 pipenv install numpy dlib
 
 *Pegue um café, vai demorar bem menos que o outro, mas vai demorar.
-![](/img/opencv-post-001/coffee.gif)
+![](/img/alexandre-20200528-coffee.gif)
 
 Para linkar a instalação do OpenCV com o python no seu projeto, rode este comando:
 
