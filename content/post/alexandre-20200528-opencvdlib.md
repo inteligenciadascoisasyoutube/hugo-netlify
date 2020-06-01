@@ -2,13 +2,12 @@
 layout:         post 
 title:          "OpenCV e Dlib no Raspberry Pi"
 subtitle:       "Instalação AGORA fácil"
-description:    "Assim como muita gente, tive problemas para instalar o OpenCV e a bilioteca Dlib pra trabalhar com visão computacional no Raspberry Pi.
-Exatamente por isso decidir ajudar, dei uma bela lida nos tutoriais disponíveis e documentação oficial e resolvi compartilhar este processo com alguns scripts pra facilitar e a automatizar bastante esta instalação, deixando bem fácil."
+description:    "Intalação super fácil do OpenCV e Dlib no Raspberry Pi"
 date:           2020-05-28
 author:         "Alexandre Alvaro"
 image:          "/img/opencv-post-001/capa.jpg"
 thumbnail:      "/img/opencv-post-001/thumb.jpg"
-categories:     [ Visão Computacional ]
+categories:     [ VisãoComputacional ]
 tags:
                 - raspberrypi
                 - tutorial
@@ -21,7 +20,6 @@ tags:
 ---
 
 **UPDATE: Adicionei o processo fácil de instalação. Veja abaixo em [INSTALAÇÃO SIMPLES](#instalação-simples).**
-
 
 # Introdução
 
