@@ -38,7 +38,5 @@ Com base em alguns scripts que venho usando nos últimos anos bolei um jeito ext
 * Raspberry Pi com Raspbian
 * Push-button (com ou sem LED)
 
->Se ainda não tiver o Raspbian, não passe trabalho desnecessariamente. Utilize a ferramenta oficial pra gravar o Raspbian no cartão SD. 😊
-
-
+>Se ainda não tiver o Raspbian instalado, não passe trabalho desnecessariamente. Utilize a ferramenta oficial pra gravar o Raspbian no cartão SD. E depois ligue o Raspberry Pi em um monitor com teclado e mouse pra configurar a instalação. 😊
 
