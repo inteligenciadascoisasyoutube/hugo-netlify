@@ -23,12 +23,11 @@ tags:
   - soft power button
   - energia
 ---
-
-
 # Introdução
 
-Uma chave que simplesmente corta a energia abruptamente pode trazer sérios problemas para equipamentos com sistema operacional. Nos PCs com Windows nos anos 90 além de dar o comando de desligamento, precisávamos pressionar o botão de desligamento ao ver esta tela:  
-![](/img/upload/20200602-pc-tela-desligar.jpg)  
+Uma chave que simplesmente corta a energia abruptamente pode trazer sérios problemas para equipamentos com sistema operacional. Nos PCs com Windows nos anos 90 além de dar o comando de desligamento, precisávamos pressionar o botão de desligamento ao ver esta tela:
+
+![](/img/upload/20200602-pc-tela-desligar.jpg)
 
 Assim como o propósito das fontes ATX nos PCs, nós precisamos de algo para evitar corromper ou perder dados ao desligar dispositivos com sistema operacional embarcado, como o Raspberry Pi e similares. Da mesma forma em dispositivos microcontroladores utilizados em soluções IoT como os arduinos, nodeMCU (ESP8266, ESP32) muitas vezes precisam de um controle de energia mais otimizado para uso com baterias.
 
