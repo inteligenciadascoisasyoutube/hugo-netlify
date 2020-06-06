@@ -1,6 +1,6 @@
 ---
 name: Marcelo Wippel
-photo: /img/wippel-profile.jpg
+image: /img/wippel-profile.jpg
 email: mailto:mawippel2@hotmail.com
 facebook: https://www.facebook.com/marcelo.wippel.9
 linkedin: https://www.linkedin.com/in/marcelo-wippel-359505160/

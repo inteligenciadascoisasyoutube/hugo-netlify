@@ -44,7 +44,7 @@
                 {{ range ($.Site.GetPage "taxonomyTerm" "authors").Pages }}
                 <li>
                     <a href="{{ .Permalink }}">
-                        <img width="100px" src="{{ .Params.photo }}" alt="avatar"
+                        <img width="100px" src="{{ .Params.image }}" alt="avatar"
                             style="cursor: pointer; border-radius: 10px;" />
                         <b>{{ .Params.name }}</b>
                     </a>

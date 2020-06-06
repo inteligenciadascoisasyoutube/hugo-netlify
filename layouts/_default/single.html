@@ -58,7 +58,7 @@
                     {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
                         <b>Escrito por:</b>
                         <figure>
-                            <img width="150px" src="{{ .Params.photo }}" alt=""/>
+                            <img width="150px" src="{{ .Params.image }}" alt=""/>
                             <figcaption>
                                 <a href="{{ .Permalink }}">{{ .Params.name }}</a>
                             </figcaption>

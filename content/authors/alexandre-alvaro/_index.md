@@ -1,6 +1,6 @@
 ---
 name:           Alexandre Alvaro
-photo:          '/img/alexandrealvaro.png'
+image:          '/img/alexandrealvaro.png'
 resume:         "https://alexandremendoncaalvaro.github.io"
 email:          "alexandre.alvaro@hotmail.com"
 facebook:       "https://www.facebook.com/peritto"
