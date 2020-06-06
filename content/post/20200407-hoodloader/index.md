@@ -5,8 +5,8 @@ subtitle:       "E vou te mostrar como usá-los :)"
 description:    "Artigo explicando como utilizar independentemente os dois microcontroladores que os Arduinos Uno e Mega possuem."
 date:           2020-04-07
 author:         "Alexandre Alvaro"
-image:          "/img/arduino-post-002/arduino-post-2-hoodloader.jpg"
-thumbnail:      "/img/arduino-post-002/thumb.jpg"
+image:          "/post/20200407-hoodloader/capa.jpg"
+thumbnail:      "/post/20200407-hoodloader/thumb.jpg"
 categories:     [ Arduino ]
 tags:
                 - arduino
@@ -36,7 +36,7 @@ Mas eles também têm um outro microcontrolador, o 16u2, que geralmente ignoramo
 Bom… na verdade se olharmos para o Arduino Pro Micro e o Leonardo por exemplo, notamos que eles usam o 32u4, que é um microcontrolador similar ao 16u2 que vem com o Uno/ Mega, sendo que este último tem menos memória, pinos, e outros recursos, porém é um microcontrolador totalmente funcional e também podemos usá-lo!  
 O que quero dizer é que é possível ter 2 microcontroladores trabalhando ao mesmo tempo e de forma independente na mesma placa. É como se tivéssemos uma versão mais simples do Arduino Leonardo/ Micro embutido no Arduino Uno/ Mega!!!  
 Pra ter acesso a esse microcontrolador (16u2) pela IDE do Arduino vamos precisar alterar o Bootloader padrão (que é o DFU no Uno/Mega e CDC no Leonardo/Micro) por um Bootloader CDC + Fast USB-Serial tudo junto, o [Hoodloader2](https://github.com/NicoHood/HoodLoader2).  
-![](/img/arduino-post-002/1.jpg)
+![](1.jpg)
 
 >*Só verifique, pois, alguns Arduinos usam o CH340G, que é apenas conversor serial para ser mais barato.  
 Aí não funciona 🙁
@@ -51,7 +51,7 @@ Para fazer uso do 16u2 usamos o próprio ATmega328p para configurá-lo. Mudando 
 
 {{< rawhtml >}}
     <div style="width:210px">
-       <a href="https://drive.google.com/file/d/1-7QA6vro2y2pgKnfFBE6pauRNGdwlwL6/view?usp=sharing"><img src="/img/arduino-post-002/2.png" style="cursor: pointer;" /></a>
+       <a href="https://drive.google.com/file/d/1-7QA6vro2y2pgKnfFBE6pauRNGdwlwL6/view?usp=sharing"><img src="2.png" style="cursor: pointer;" /></a>
     </div>
 {{< /rawhtml >}}
 
@@ -59,7 +59,7 @@ Para fazer uso do 16u2 usamos o próprio ATmega328p para configurá-lo. Mudando 
 
 4) Se necessário mude a configuração HEXFILE para a sua placa.
 
-![](/img/arduino-post-002/3.png)
+![](3.png)
 
 5) Conecte o cabo USB, selecione a sua placa normalmente (como faz para descarregar qualquer sketch) e carregue o sketch para a placa.
 
@@ -69,7 +69,7 @@ Para fazer uso do 16u2 usamos o próprio ATmega328p para configurá-lo. Mudando 
 
 8) Conecte os cabos e componentes no Arduino conforme imagem:
 
-![](/img/arduino-post-002/4.jpg)
+![](4.jpg)
 
 >*É a mesma configuração para o Mega2560
 
@@ -103,7 +103,7 @@ Desconecte o capacitor e fiações e pode começar a utilizar os 2 microcontrola
 
 ## Sobre o Hardware.. Como fica a pinagem?
 
-![](/img/arduino-post-002/5.jpg)
+![](5.jpg)
 
 No 16u2 Nós passamos a ter acesso a 7 pinos (fundo cor creme na imagem acima):
 
@@ -118,7 +118,7 @@ D6 – PB6 PCINT6
 
 Dica: Para facilitar o uso, gosto de soldar conectores nos pinos PB4, PB5, PB6 e PB7:
 
-![](/img/arduino-post-002/6.jpg)
+![](6.jpg)
 
 
 Configurando a IDE do Arduino
@@ -130,17 +130,17 @@ A instalação de novos drivers não é necessária para Windows10/ MacOS/ Linux
 https://raw.githubusercontent.com/NicoHood/HoodLoader2/master/package_NicoHood_HoodLoader2_index.json
 ```
 
-![](/img/arduino-post-002/7.png)
+![](7.png)
 
 2) Instale o Hoodloader2 pelo Gerenciador de Placas (Ferramentas > Placa > Gerenciador de Placas)
 
-![](/img/arduino-post-002/8.png)
+![](8.png)
 
 # Certo! E como descarrego meus Sketches?
 
 Depois de configurado na IDE do Arduino e alterado o Bootloader do 16u2, basta selecionar se quer descarregar o Sketch para o 16u2 ou para o ATmega328p (ou Mega2560).
 
-![](/img/arduino-post-002/9.jpg)
+![](9.jpg)
 
 Para ter os 2 sketches rodando descarregue primeiro do ATmega328p/ Mega2560 e somente depois o do 16u2. Se descarregar ao contrário ele vai considerar apenas o que foi pro ATmega328p/ Mega2560.
 

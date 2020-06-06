@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on inteligência das coisas</title>
-    <link>https://inteligenciadascoisas.netlify.app/categories/</link>
+    <link>https://inteligenciadascoisas.com/categories/</link>
     <description>Recent content in Categories on inteligência das coisas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 28 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://inteligenciadascoisas.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://inteligenciadascoisas.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Visão Computacional</title>
-      <link>https://inteligenciadascoisas.netlify.app/categories/vis%C3%A3o-computacional/</link>
+      <title>VisãoComputacional</title>
+      <link>https://inteligenciadascoisas.com/categories/vis%C3%A3ocomputacional/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://inteligenciadascoisas.netlify.app/categories/vis%C3%A3o-computacional/</guid>
+      <guid>https://inteligenciadascoisas.com/categories/vis%C3%A3ocomputacional/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Arduino</title>
-      <link>https://inteligenciadascoisas.netlify.app/categories/arduino/</link>
+      <link>https://inteligenciadascoisas.com/categories/arduino/</link>
       <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://inteligenciadascoisas.netlify.app/categories/arduino/</guid>
+      <guid>https://inteligenciadascoisas.com/categories/arduino/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web</title>
-      <link>https://inteligenciadascoisas.netlify.app/categories/web/</link>
+      <link>https://inteligenciadascoisas.com/categories/web/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://inteligenciadascoisas.netlify.app/categories/web/</guid>
+      <guid>https://inteligenciadascoisas.com/categories/web/</guid>
       <description></description>
     </item>
     

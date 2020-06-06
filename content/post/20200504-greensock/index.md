@@ -5,8 +5,8 @@ subtitle:       "Utilizando javascript puro, imagens SVG e a biblioteca GreenSoc
 description:    "Artigo e tutorial interativo sobre animações leves e fáceis para Web utilizando javascript puro, imagens SVG e a biblioteca GreenSock."
 date:           2020-05-04
 author:         "Alexandre Alvaro"
-image:          "/img/web-post-001/web-post-1-greensock.jpg"
-thumbnail:      "/img/web-post-001/thumb.jpg"
+image:          "/post/20200504-greensock/capa.jpg"
+thumbnail:      "/post/20200504-greensock/thumb.jpg"
 categories:     [ Web ]
 tags:
                 - web
@@ -30,7 +30,7 @@ As animações na internet se popularizaram bastante desde o surgimento dos GIFs
 O GIF é um formato de arquivo que funciona de maneira similar a um vídeo, com uma sequencia de quadros que trocam muito rapidamente gerando a ilusão de movimento.  
 Cada quadro é uma imagem Bitmap (formada por pixels) e tem um máximo de 256 cores, o que deixa o arquivo leve, porém bastante limitado.  
 Passe o cursor horizontalmente sobre o gif abaixo para controlar a passagem dos quadros:  
-{{< gif-player "/img/web-post-001/001.gif">}}
+{{< gif-player "001.gif">}}
 
 ## Vetores
 O uso de formas vetoriais permitiu gerar imagens escaláveis, ou seja, diferentemente dos pixels, os vetores não perdem qualidade quando redimensionados.  
