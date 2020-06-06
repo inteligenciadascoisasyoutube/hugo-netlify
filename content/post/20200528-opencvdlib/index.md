@@ -8,7 +8,8 @@ author: Alexandre Alvaro
 image: /post/20200528-opencvdlib/capa.jpg
 thumbnail: /post/20200528-opencvdlib/thumb.jpg
 categories:
-  - VisãoComputacional
+  - Visão Computacional
+  - Raspberry
 tags:
   - raspberrypi
   - tutorial
