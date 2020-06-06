@@ -1,22 +1,23 @@
 ---
-layout:         post 
-title:          "OpenCV e Dlib no Raspberry Pi"
-subtitle:       "Instalação AGORA fácil"
-description:    "Intalação super fácil do OpenCV e Dlib no Raspberry Pi"
-date:           2020-05-28
-author:         "Alexandre Alvaro"
-image:          "/post/20200528-opencvdlib/capa.jpg"
-thumbnail:      "/post/20200528-opencvdlib/thumb.jpg"
-categories:     [ VisãoComputacional ]
+layout: post
+title: OpenCV e Dlib no Raspberry Pi
+subtitle: Instalação AGORA fácil
+description: Intalação super fácil do OpenCV e Dlib no Raspberry Pi
+date: 2020-05-28T00:00:00.000Z
+author: Alexandre Alvaro
+image: /post/20200528-opencvdlib/capa.jpg
+thumbnail: /post/20200528-opencvdlib/thumb.jpg
+categories:
+  - VisãoComputacional
 tags:
-                - raspberrypi
-                - tutorial
-                - intermediario
-                - prototipação
-                - visaocomputacional
-                - iot
-                - opencv
-                - dlib
+  - raspberrypi
+  - tutorial
+  - intermediario
+  - prototipação
+  - visaocomputacional
+  - iot
+  - opencv
+  - dlib
 ---
 
 **UPDATE: Adicionei o processo fácil de instalação. Veja abaixo em [INSTALAÇÃO SIMPLES](#instalação-simples).**
@@ -44,9 +45,9 @@ Não pule nenhuma etapa deste tutorial!
 # Instalação do Raspbian
 Não passe trabalho desnecessariamente, utilize a ferramenta oficial pra gravar o Raspbian no cartão SD. 😊
 
-[Raspberry Pi Imager for Windows](https://downloads.raspberrypi.org/imager/imager.exe)
-[Raspberry Pi Imager for macOS](https://downloads.raspberrypi.org/imager/imager.dmg)
-[Raspberry Pi Imager for Ubuntu](https://downloads.raspberrypi.org/imager/imager_amd64.deb)
+[Raspberry Pi Imager for Windows](https://downloads.raspberrypi.org/imager/imager.exe)  
+[Raspberry Pi Imager for macOS](https://downloads.raspberrypi.org/imager/imager.dmg)  
+[Raspberry Pi Imager for Ubuntu](https://downloads.raspberrypi.org/imager/imager_amd64.deb)  
 
 
 # INSTALAÇÃO SIMPLES
