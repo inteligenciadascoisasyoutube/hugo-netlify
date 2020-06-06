@@ -89,6 +89,11 @@ collections:
         required: true
         widget: "image"
 
+      - label: "Foto path"
+        name: "photo"
+        required: false
+        widget: "string"
+
       - label: "Site Pessoal"
         name: "resume"
         required: false
