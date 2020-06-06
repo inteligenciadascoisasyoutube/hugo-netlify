@@ -84,7 +84,7 @@ collections:
         required: true
         widget: "string"
 
-      - label: "Foto Perfil"
+      - label: "URL Foto Perfil (/img/nome.jpg)"
         name: "image"
         required: true
         widget: "string"

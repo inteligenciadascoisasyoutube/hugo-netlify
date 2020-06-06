@@ -1,7 +1,7 @@
 ---
 name: Pedro Emmel
 image: /img/pepe-profile.jpg
-email: mailto:pedro.emmel@hotmail.com
+email: pedro.emmel@hotmail.com
 facebook: https://www.facebook.com/pedro.kolbemmel
 linkedin: https://www.linkedin.com/in/pedro-kolb-emmel-42496794/
 github: https://github.com/pedroemmel
