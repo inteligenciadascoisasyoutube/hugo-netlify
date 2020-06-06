@@ -13,8 +13,6 @@ collections:
     label: "Autores" # Used in the UI
     folder: "content/authors" # The path to the folder where the documents are stored
     path: '{{slug}}/_index'
-    media_folder: "static/img"
-    public_folder: "/img"
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -24,10 +22,10 @@ collections:
         required: true
         widget: "string"
 
-      - label: "Foto"
+      - label: "Foto path"
         name: "photo"
         required: true
-        widget: "image"
+        widget: "string"
 
       - label: "Site Pessoal"
         name: "resume"
