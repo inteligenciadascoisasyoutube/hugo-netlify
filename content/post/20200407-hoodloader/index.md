@@ -4,7 +4,8 @@ title:          "O Arduino Uno tem 2 microcontroladores!"
 subtitle:       "E vou te mostrar como usá-los :)"
 description:    "Artigo explicando como utilizar independentemente os dois microcontroladores que os Arduinos Uno e Mega possuem."
 date:           2020-04-07
-author:         "Alexandre Alvaro"
+authors:
+                - Alexandre Alvaro
 image:          "/post/20200407-hoodloader/capa.jpg"
 thumbnail:      "/post/20200407-hoodloader/thumb.jpg"
 categories:     [ Arduino ]

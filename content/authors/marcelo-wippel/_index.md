@@ -1,0 +1,9 @@
+---
+name:           Marcelo Wippel
+photo:          '/img/wippel-profile.jpg'
+linkedin:       "https://www.linkedin.com/in/marcelo-wippel-359505160/"
+email:          "mailto:mawippel2@hotmail.com"
+facebook:       "https://www.facebook.com/marcelo.wippel.9"
+---
+
+Desenvolvedor FullStack na HBSIS Ambev, com foco em Backend/Mobile. Apaixonado por Arquitetura de Software e Desenvolvimento de projetos Open Source.

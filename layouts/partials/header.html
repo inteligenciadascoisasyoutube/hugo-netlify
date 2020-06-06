@@ -1,0 +1,17 @@
+<div id="particles-js"></div>
+<header class="intro-header"
+    style="background: rgb(2,23,34); background: linear-gradient(90deg, rgba(2,23,34,1) 0%, rgba(14,61,87,1) 30%, rgba(14,61,87,1) 70%, rgba(3,34,51,1) 100%);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading" style="padding: 50px;">
+                    <div class="row">
+                        {{ with .Site.Params.logo_svg }}
+                            <img src="{{ . | relURL }}" alt="" style="width: 60%;">
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

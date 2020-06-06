@@ -9,12 +9,13 @@
 <h2 class="subheading">{{ .Params.subtitle }}</h2>
 {{ if ne .Params.showpagemeta false }}
 <div class="post__meta tags">
-  {{ if .Params.author }}
-  {{ .Params.author }}
-  {{ else }}
-  {{ .Site.Title }}
+  Escrito por 
+  {{- range .Params.authors }}
+    {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+      <a href="{{ .Permalink }}">{{ .Params.name }}</a>
+    {{ end }}
   {{ end }}
-  |
+  em
   <!-- published date -->
   {{ if not .Date.IsZero }}
   {{ partial "date-pt" .Date }}
@@ -23,7 +24,7 @@
   {{ with .Params.categories }}
   {{ $total := len . }}
   {{ if gt $total 0 }}
-  em
+  | Categorias: 
   {{ $total := sub $total 1 }}
   {{ range $i, $cat := sort . }}
   <a class="tag" href="{{ "/categories/" | relURL }}{{ $cat | urlize }}">{{ $cat | upper }}</a>

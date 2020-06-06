@@ -5,30 +5,34 @@
         <h2 class="post-title">
             {{ .Title }}
         </h2>
-	{{with .Params.subtitle }}
+        {{with .Params.subtitle }}
         <h3 class="post-subtitle">
             {{ . }}
         </h3>
-	{{ end }}
+        {{ end }}
         <div class="post-content-preview">
-	{{ with .Description }}
+            {{ with .Description }}
             {{ . }}
-        {{ else }}
+            {{ else }}
             {{ .Summary}}
-       {{ end }}
+            {{ end }}
         </div>
     </a>
     <p class="post-meta">
-
-    {{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}
-      <!-- published date -->
-    {{ if not .Date.IsZero }}
-    {{ partial "date-pt" .Date }}
-    {{ end }}
-    <!-- Don't show "Last Modified on" if update happened on the same day. -->
-    {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
-    <br>Last Modified on {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }}
-    {{ end }}
+        {{- range .Params.authors }}
+        {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+        <a href="{{ .Permalink }}">{{ .Params.name }}</a>
+        {{ end }}
+        {{ end }}
+        em
+        <!-- published date -->
+        {{ if not .Date.IsZero }}
+        {{ partial "date-pt" .Date }}
+        {{ end }}
+        <!-- Don't show "Last Modified on" if update happened on the same day. -->
+        {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
+        <br>Last Modified on {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }}
+        {{ end }}
     </p>
 
 </div>

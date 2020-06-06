@@ -54,3 +54,8 @@ googleAnalytics = "UA-165857578-1"
         startLevel = 1
     [markup.highlight]
         style = "dracula"
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+  category = "categories"

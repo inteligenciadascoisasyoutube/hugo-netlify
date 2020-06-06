@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
 
 publish_mode: editorial_workflow
 
@@ -39,10 +39,10 @@ collections:
         required: true
         widget: "datetime"
 
-      - label: "Autor"
-        name: "author"
+      - label: "Autores"
+        name: "authors"
         required: true
-        widget: "string"
+        widget: "list"
 
       - label: "Capa"
         name: "image"
@@ -63,6 +63,74 @@ collections:
         name: "tags"
         required: true
         widget: "list"
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+
+  - name: "authors" # Used in routes, e.g., /admin/collections/blog
+    label: "Autores" # Used in the UI
+    folder: "content/authors" # The path to the folder where the documents are stored
+    path: '{{slug}}/_index'
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+
+      - label: "Nome"
+        name: "name"
+        required: true
+        widget: "string"
+
+      - label: "Foto"
+        name: "photo"
+        required: true
+        widget: "image"
+
+      - label: "Site Pessoal"
+        name: "resume"
+        required: false
+        widget: "string"
+
+      - label: "e-mail"
+        name: "email"
+        required: false
+        widget: "string"
+
+      - label: "Facebook"
+        name: "facebook"
+        required: false
+        widget: "string"
+
+      - label: "Linkedin"
+        name: "linkedin"
+        required: false
+        widget: "string"
+
+      - label: "Github"
+        name: "github"
+        required: false
+        widget: "string"
+
+      - label: "Instagram"
+        name: "instagram"
+        required: false
+        widget: "string"
+
+      - label: "Deviantart"
+        name: "deviantart"
+        required: false
+        widget: "string"
+
+      - label: "Soundcloud"
+        name: "soundcloud"
+        required: false
+        widget: "string"
+
+      - label: "Whatsapp"
+        name: "whatsapp"
+        required: false
+        widget: "string"
 
       - label: "Body"
         name: "body"

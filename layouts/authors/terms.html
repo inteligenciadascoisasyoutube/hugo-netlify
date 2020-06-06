@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+<!-- Page Header -->
+{{ partial "header.html" .}}
+
+<body>
+    <article>
+        <div class="container">
+            <div class="row">
+                <!-- Post Container -->
+                <div class="
+                    col-lg-8 col-lg-offset-2
+                    col-md-10 col-md-offset-1
+                    post-container">
+                    <h1>Autores</h1>
+                    <div class="short-about" style="text-align: center;">
+                        <ul class="list-inline">
+                            {{ range .Data.Pages }}
+                            <li>
+                                <a href="{{ .Permalink }}">
+                                    <figure>
+                                        <img src="{{ .Params.photo }}" alt="avatar"
+                                            style="cursor: pointer; border-radius: 10px; width: 150px; height: 150px; object-fit: cover;" />
+                                        <figcaption>
+                                            {{ .Params.name }}
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    {{ partial "footer.html" . }}
+    {{ partial "header_effect.html" . }}
+    <!-- Custom JS -->
+    {{ range .Site.Params.custom_js }}
+    <script src="{{ . | absURL }}"></script>
+    {{ end }}
+</body>
+
+</html>

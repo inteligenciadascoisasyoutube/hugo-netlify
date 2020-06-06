@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+<!-- Page Header -->
+{{ partial "header.html" .}}
+
+<body>
+    <article>
+        <div class="container">
+            <div class="row">
+                <!-- Post Container -->
+                <div class="
+                    col-lg-8 col-lg-offset-2
+                    col-md-10 col-md-offset-1
+                    post-container">
+                    <div class="short-about" style="text-align: center;">
+                        <a href="{{ if .Params.resume }}{{ .Params.resume }}{{ else }}{{ .Params.linkedin }}{{ end }}">
+                            <figure>
+                                <img width="300px" src="{{ .Params.photo }}" alt="avatar" style="cursor: pointer; border-radius: 10px;" />
+                                <figcaption>
+                                    {{ .Params.name }}
+                                </figcaption>
+                            </figure>
+                        </a>
+                        
+                        {{ .Content }}
+
+                        <ul class="list-inline">
+                            {{ with .Params.resume }}
+                            <li>
+                                <a href='{{ . }}' title="Resume/ Portifolio" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.email }}
+                            <li>
+                                <a href="mailto:{{ . }}" title="e-mail">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+
+                            {{ with .Params.twitter }}
+                            <li>
+                                <a href="{{ . }}" title="Twitter">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.facebook }}
+                            <li>
+                                <a target="_blank" href="{{ . }}" title="Facebook">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.github }}
+                            <li>
+                                <a target="_blank" href="{{ . }}" title="Github">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.gitlab }}
+                            <li>
+                                <a target="_blank" href="{{ . }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.git }}
+                            <li>
+                                <a target="_blank" href="{{ . }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-git fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.linkedin }}
+                            <li>
+                                <a target="_blank" href="{{ . }}" title="Linkedin">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.medium }}
+                            <li>
+                                <a target="_blank" href="{{ . }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.stackoverflow }}
+                            <li>
+                                <a target="_blank" href="{{ . }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.reddit }}
+                            <li>
+                                <a target="_blank" href="{{ . }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.mastodon }}
+                            <li>
+                                <a target="_blank" href="{{ . }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.keybase }}
+                            <li>
+                                <a target="_blank" href="{{ . }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-keybase fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.xing }}
+                            <li>
+                                <a target="_blank" href="{{ . }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.instagram }}
+                            <li>
+                                <a target="_blank" href="{{ . }}" title="Instagram">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.flickr }}
+                            <li>
+                                <a target="_blank" href="{{ . }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-flickr fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.deviantart }}
+                            <li>
+                                <a target="_blank" href="{{ . }}" title="DeviantArt">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-deviantart fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.soundcloud }}
+                            <li>
+                                <a target="_blank" href="{{ . }}" title="Soundcloud">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-soundcloud fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                            {{ with .Params.whatsapp }}
+                            <li>
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone={{ . }}&amp;text=Site" title="Whatsapp">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    <h3>Artigos</h3>
+                    <ul>
+                        {{ range .Data.Pages }}
+                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+    {{ partial "footer.html" . }}
+    {{ partial "header_effect.html" . }}
+    <!-- Custom JS -->
+    {{ range .Site.Params.custom_js }}
+    <script src="{{ . | absURL }}"></script>
+    {{ end }}
+</body>
+
+</html>

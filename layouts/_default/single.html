@@ -4,6 +4,13 @@
     header.intro-header {
         background-image: url('{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ .Site.Params.header_image | relURL}}{{ end }}')
     }
+
+    .post-container img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
 </style>
 <header class="intro-header">
     <div class="container">
@@ -42,7 +49,22 @@
                 {{ .Content }}
 
                 <hr>
+
                 {{ partial "share_buttons.html" . }}
+
+                <hr>
+
+                {{- range .Params.authors }}
+                    {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+                        <b>Escrito por:</b>
+                        <figure>
+                            <img width="150px" src="{{ .Params.photo }}" alt=""/>
+                            <figcaption>
+                                <a href="{{ .Permalink }}">{{ .Params.name }}</a>
+                            </figcaption>
+                        </figure>
+                    {{ end }}
+                {{ end }}
 
                 <hr>
                 <ul class="pager">

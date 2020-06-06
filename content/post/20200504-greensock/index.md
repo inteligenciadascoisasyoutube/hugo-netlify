@@ -4,7 +4,8 @@ title:          "Animações leves e fáceis para Web"
 subtitle:       "Utilizando javascript puro, imagens SVG e a biblioteca GreenSock"
 description:    "Artigo e tutorial interativo sobre animações leves e fáceis para Web utilizando javascript puro, imagens SVG e a biblioteca GreenSock."
 date:           2020-05-04
-author:         "Alexandre Alvaro"
+authors:
+                - Alexandre Alvaro
 image:          "/post/20200504-greensock/capa.jpg"
 thumbnail:      "/post/20200504-greensock/thumb.jpg"
 categories:     [ Web ]

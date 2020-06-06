@@ -4,7 +4,8 @@ title: OpenCV e Dlib no Raspberry Pi
 subtitle: Instalação AGORA fácil
 description: Intalação super fácil do OpenCV e Dlib no Raspberry Pi
 date: 2020-05-28T00:00:00.000Z
-author: Alexandre Alvaro
+authors:
+  - Alexandre Alvaro
 image: /post/20200528-opencvdlib/capa.jpg
 thumbnail: /post/20200528-opencvdlib/thumb.jpg
 categories:
