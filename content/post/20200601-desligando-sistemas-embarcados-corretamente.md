@@ -7,8 +7,8 @@ description: Seja para não corromper dados em placas com sistema operacional
   adequadamente.
 date: 2020-06-02T21:00:04.798Z
 author: Alexandre Alvaro
-image: /img/upload/20200602-desligando-sistemas-embarcados-corretamente-capa.jpg
-thumbnail: /img/upload/20200602-desligando-sistemas-embarcados-corretamente-thumb.jpg
+image: capa.jpg
+thumbnail: thumb.jpg
 categories:
   - Arduino
   - Raspberry
