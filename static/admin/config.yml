@@ -9,9 +9,71 @@ public_folder: "/img"
 
 collections:
 
+  - name: "post" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "content/post" # The path to the folder where the documents are stored
+    path: '{{slug}}/index'
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}{{month}}{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: ""
+    public_folder: ""
+    fields: # The fields for each document, usually in front matter
+
+      - label: "Titulo"
+        name: "title"
+        required: true
+        widget: "string"
+
+      - label: "Subtitulo"
+        name: "subtitle"
+        required: true
+        widget: "string"
+
+      - label: "Descrição"
+        name: "description"
+        required: true
+        widget: "string"
+
+      - label: "Data"
+        name: "date"
+        required: true
+        widget: "datetime"
+
+      - label: "Autores"
+        name: "authors"
+        required: true
+        widget: "list"
+
+      - label: "Capa"
+        name: "image"
+        required: true
+        widget: "image"
+
+      - label: "Thumbnail"
+        name: "thumbnail"
+        required: true
+        widget: "image"
+
+      - label: "Categorias"
+        name: "categories"
+        required: true
+        widget: "list"
+
+      - label: "Tags"
+        name: "tags"
+        required: true
+        widget: "list"
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+
   - name: "authors" # Used in routes, e.g., /admin/collections/blog
     label: "Autores" # Used in the UI
     folder: "content/authors" # The path to the folder where the documents are stored
+    media_folder: "static/img"
+    public_folder: "/img"
     path: '{{slug}}/_index'
     create: true # Allow users to create new documents in this collection
     slug: "{{name}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -71,65 +133,6 @@ collections:
         name: "whatsapp"
         required: false
         widget: "string"
-
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
-
-  - name: "post" # Used in routes, e.g., /admin/collections/blog
-    label: "Posts" # Used in the UI
-    folder: "content/post" # The path to the folder where the documents are stored
-    path: '{{slug}}/index'
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}{{month}}{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    media_folder: ""
-    public_folder: ""
-    fields: # The fields for each document, usually in front matter
-
-      - label: "Titulo"
-        name: "title"
-        required: true
-        widget: "string"
-
-      - label: "Subtitulo"
-        name: "subtitle"
-        required: true
-        widget: "string"
-
-      - label: "Descrição"
-        name: "description"
-        required: true
-        widget: "string"
-
-      - label: "Data"
-        name: "date"
-        required: true
-        widget: "datetime"
-
-      - label: "Autores"
-        name: "authors"
-        required: true
-        widget: "list"
-
-      - label: "Capa"
-        name: "image"
-        required: true
-        widget: "image"
-
-      - label: "Thumbnail"
-        name: "thumbnail"
-        required: true
-        widget: "image"
-
-      - label: "Categorias"
-        name: "categories"
-        required: true
-        widget: "list"
-
-      - label: "Tags"
-        name: "tags"
-        required: true
-        widget: "list"
 
       - label: "Body"
         name: "body"
