@@ -10,7 +10,11 @@ thumbnail: capa.png
 categories:
   - modelagem 3D
 tags:
-  - modelagem3D; Fusion360; autodesk;
+  - tutorial
+  - iniciante
+  - modelagem3D
+  - Fusion360
+  - autodesk
 ---
 <!--StartFragment-->
 
