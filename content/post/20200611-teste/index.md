@@ -8,75 +8,53 @@ authors:
 image: capa.jpg
 thumbnail: thumb.jpg
 categories:
-  - modelagem 3D
+  - 3D
+  - equipamento
 tags:
   - tutorial
   - iniciante
-  - modelagem3D
-  - Fusion360
+  - modelagem3d
+  - fusion360
   - autodesk
+  - prototipação
+  - projeto
+  - equipamento
 ---
-<!--StartFragment-->
+# Indrodução
 
 Modelagem 3D é o processo que usa software para criar uma representação matemática de um objeto ou forma tridimensional. O objeto criado é chamado de modelo 3D e tais modelos são usados em vários setores como: Engenharia, medicina, cinema, videogames, arquitetura entre vários outros.
 
-
-
 Nesse artigo vamos utilizar o Fusion 360 da Autodesk, um software moderno e versátil para demonstrar os princípios da modelagem 3D. Mas não se preocupe ele grátis para estudantes e para pessoas que queiram fazer projetos pessoais sem fins lucrativos. Outra grande vantagem do Fusion é ser baseado em nuvem o que permite trabalhar de modo colaborativo.
 
-
-
-**Tipos de modelagem:**
-
-
+# Tipos de modelagem
 
 Existem resumidamente 6 tipos de modelagem são eles
 
-
-
 ***FreeForm:*** Utilizada em designs orgânicos permite a criação de formas sem a necessidade de medidas específicas ou alguma relação direta com o restante do modelo.
-
-
 
 ***Parametric:*** Comumente utilizada para projeto de peças mecânicas essa técnica faz uso de medidas e outras relações (abordaremos futuramente) para construir o modelo desejado.
 
-
-
 ***Sheet metal:*** Tem seu uso restrito a modelagem de peças que serão fabricadas a partir de chapas metálicas ou demais materiais calculando a perda de material em dobras e curvaturas.
-
-
 
 ***Direct:*** Quando importamos um modelo dificilmente temos acesso ao histórico de alterações do mesmo onde normalmente buscaríamos o recuso para alterar. Com o modo direct você consegue fazer alterações mesmo sem esse histórico geométrico o que facilita muito. Mesmo em modelos paramétricos onde você tem referências e o histórico de modificações por vezes alterar pequenos detalhes pelo histórico acaba não sendo muito prático e é aí que o Direct facilita sua vida.
 
-
-
 ***Surface:*** Neste modo podemos criar ou eliminar superfícies, também pode ser muito útil ao criar formas orgânicas.
-
-
 
 ***Mesh:*** O modo Mesh basicamente trabalha a malha, modelos para impressão 3D geralmente são apenas uma malha e podem ser editados através desse modo.
 
-
-
 Não se assuste, tudo leva seu tempo, você não precisa aprender como trabalhar em todos os modos logo de cara para modelar inicialmente.
 
+# Criando o Modelo 3D
 
-
-Vamos abordar o modo paramétrico e tenho certeza que você vai terminar este artigo sabendo criar seu modelo 3D ok Mas Antes disso precisamos saber navegar pelo programa para chegarmos na fase de modelação concorda? Vamos lá então.
-
-
+Vamos abordar o modo paramétrico e tenho certeza que você vai terminar este artigo sabendo criar seu modelo 3D ok? Mas Antes disso precisamos saber navegar pelo programa para chegarmos na fase de modelação concorda? Vamos lá então.
 
 logo no primeiro ícone você tem acesso aos seus aquivos, projetos e modelos.
 
 ![](icone-de-arquivos.png)
 
-
-
 Já o segundo ícone é o menu de arquivos, aqui você pode criar, fazer upload, abrir, salvar, exportar e compartilhar arquivos.
 
 ![](menu-arquivos.png)
-
-
 
 Para criar um modelo 3D precisamos antes fazer um esboço em 2D, o famoso Sketch, ele que vai nos dar as referências.
 
@@ -106,16 +84,4 @@ Repetimos o processo fazendo um novo sketch agora selecionando uma face do nosso
 
 ![](cut.gif)
 
-<!--StartFragment-->
-
-
-
 Pronto! Agora que você desmistificou como a modelagem 3D funciona pode fazer seus próprios modelos, comece com algo simples e vá aprimorando ao longo do caminho.
-
-<!--EndFragment-->
-
-
-
-
-
-<!--EndFragment-->
