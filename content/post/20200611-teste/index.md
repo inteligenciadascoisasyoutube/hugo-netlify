@@ -64,52 +64,54 @@ Vamos abordar o modo paramétrico e tenho certeza que você vai terminar este ar
 
 logo no primeiro ícone você tem acesso aos seus aquivos, projetos e modelos.
 
+![](icone-de-arquivos.png)
+
 
 
 Já o segundo ícone é o menu de arquivos, aqui você pode criar, fazer upload, abrir, salvar, exportar e compartilhar arquivos.
+
+![](menu-arquivos.png)
 
 
 
 Para criar um modelo 3D precisamos antes fazer um esboço em 2D, o famoso Sketch, ele que vai nos dar as referências.
 
-
-
 Clique no ícone Create a Sketch na barra de ferramentas. Agora devemos escolher em que plano (X, Y ou Z) queremos fazer o desenho. Você pode criar um modelo a partir do plano que quiser mas para facilitar nossa visualização escolha o plano Z (a base)
-
-
 
 Pronto! agora temos a visão 2D do plano e podemos fazer nosso esboço.
 
-
-
 Agora selecione o retângulo na barra de ferramentas, vamos clicar na origem dos planos para travar o esboço na mesma e então desloque o cursor e clique novamente.
-
-
 
 Para deixar esse retângulo no tamanho desejado utilizamos a ferramenta Sketch Dimension, com ela vamos clicar em uma das linhas e inserir uma medida (geralmente se trabalha com milímetros mas pode ser ajustado) nesse primeiramente 80mm e na outra linha 50mm. Mas e se eu mudar de ideia e quiser alterar a medida que acabei de adicionar? Sem problemas, clique duas vezes na medida e insira o novo valor.
 
-
-
 Agora temos nosso esboço e podemos finalizar o sketch.
 
-
+![](sketch.gif)
 
 A partir dele vamos fazer uma extrusão (criar material) clicando em extrusão na barra de tarefas da secção SOLID, precisamos então indicar qual sketch queremos usar como referência para essa extrusão e inserir o tamanho da extrusão que queremos realizar.
 
-
-
 Pronto, agora você acabou de fazer sua primeira modelagem 3D!
-
-
 
 Para rotacionar a visualização basta segurar shift + botão de roda do mouse movendo o mesmo.
 
-
+![](extrude.gif)
 
 Assim como a extrusão existem inúmeras ferramentas para modelar como por exemplo a ferramenta de corte o Cut que ao invés de adicionar material corta ou remove o mesmo.
 
-
-
 Repetimos o processo fazendo um novo sketch agora selecionando uma face do nosso sólido, podemos então desenhar apenas como exemplo um círculo, finalizamos o sketch e usando o ícone do Extrude, mudamos no seu menu ou apenas arrastando no sentido que queremos remover material
+
+![](cut.gif)
+
+<!--StartFragment-->
+
+
+
+Pronto! Agora que você desmistificou como a modelagem 3D funciona pode fazer seus próprios modelos, comece com algo simples e vá aprimorando ao longo do caminho.
+
+<!--EndFragment-->
+
+
+
+
 
 <!--EndFragment-->
