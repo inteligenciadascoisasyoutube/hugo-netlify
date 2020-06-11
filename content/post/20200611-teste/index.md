@@ -8,8 +8,8 @@ authors:
 image: capa.png
 thumbnail: capa.png
 categories:
-  - arquivos
+  - modelagem 3D
 tags:
-  - arquivos
+  - modelagem3D; Fusion360; autodesk;
 ---
 teste teste
