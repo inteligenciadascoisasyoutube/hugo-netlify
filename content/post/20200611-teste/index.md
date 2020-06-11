@@ -1,12 +1,12 @@
 ---
-title: Introdução a modelagem 3D
+title: Introdução a modelagem 3D com Fusion 360
 subtitle: Como um objeto 3D é criado?
 description: Primeiros passos na modelagem 3D
 date: 2020-06-11T19:49:04.698Z
 authors:
   - Pedro Emmel
-image: capa.png
-thumbnail: capa.png
+image: capa.jpg
+thumbnail: thumb.jpg
 categories:
   - modelagem 3D
 tags:
