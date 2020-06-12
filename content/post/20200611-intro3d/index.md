@@ -5,8 +5,8 @@ description: Primeiros passos na modelagem 3D para a criação de um equipamento
 date: 2020-06-11T23:47:59.331Z
 authors:
   - Pedro Emmel
-image: capa.jpg
-thumbnail: thumb.jpg
+image: /post/20200611-intro3d/capa.jpg
+thumbnail: /post/20200611-intro3d/thumb.jpg
 categories:
   - 3D
   - equipamento
