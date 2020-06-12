@@ -152,7 +152,7 @@ A seguir vou demonstrar como criar uma animação básica de elementos [DOM](htt
 
 **O vídeo é interativo! Você pode pausar a qualquer momento, mudar o que quiser no código e ver o que acontece.**
 
-{{< scrimba c2KvV4tN >}}
+{{< scrimba cMZ7kzs9 >}}
 
 *[Clique aqui](https://www.youtube.com/watch?v=02rvd_7HcFY) para ver uma excelente explicação sobre CDN com a galera do canal Código Fonte TV.
 
