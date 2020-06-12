@@ -49,11 +49,11 @@ Vamos abordar o modo paramétrico e tenho certeza que você vai terminar este ar
 
 Logo no primeiro ícone você tem acesso aos seus aquivos, projetos e modelos.
 
-![](icone-de-arquivos.png)
+![](icone-de-arquivos.gif)
 
 Já o segundo ícone é o menu de arquivos, aqui você pode criar, fazer upload, abrir, salvar, exportar e compartilhar arquivos.
 
-![](menu-arquivos.png)
+![](menu-arquivos.gif)
 
 Para criar um modelo 3D precisamos antes fazer um esboço em 2D, o famoso Sketch, ele que vai nos dar as referências.
 
