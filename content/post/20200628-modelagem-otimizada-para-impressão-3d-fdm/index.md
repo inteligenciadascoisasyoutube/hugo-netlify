@@ -32,14 +32,12 @@ A impressão FDM (Fused Deposition Modeling) é uma das técnicas impressão mai
 
 ![](c2c56986e5242fca-3d-printing-a-look-at-four-types-of-additive-manufacturing.gif)
 
-# Modelando para fabricação FDM
+# Boas práticas para fabricação FDM
 
-Ao desenhar um objeto em 3d a ser produzido com a FDM precismos observar algumas características para tirar o melhor da tecnologia.
+Como a impressão FDM é feita em camadas e o material depositado através de um bico que geramente tem diâmetro inferior a 1mm a resistência dessa peça pode ser diferente de um local para o outro dependendo da orientação da peça no momento da impressão. Um fator característico dessa tecnologia é que as peças são mais resitentes a tração no sentido XY (horizontal) do que no sentido Z (vertical), isto acontece porque a impressora quando realiza uma camada está na maior parte do tempo extrudando o polímero em fluxo contínuo, o material dessa camada sofre poucas emendas. Quando uma nova camada é depositada ela é extrudada em cima da anterior, porém se trata de uma nova deposição, a junção das camadas se dá exclusivamente pela fusão do material aquecido quando depositado. 
 
-esqueleto: 
+Outra característa decorrente deste método é que quando imprimimos um objeto, digamos um retângulo na horizontal, ele leva mais tempo para ser impresso do que o mesmo quando colocado na horizontal. Isso ocorre pois a cada nova camada a impressora precisa "aguardar" enquanto movimenta seu eixo Z e se prepara para iniciar a nova camada.
 
-não é possível depositar material no ar\
-\
-velocidade em Z inferior a XY 
+O material extrudado precisa de uma base para se depositar, quando 
 
-Resistência inferior em Z
+![](3d-printing-timeline-header.gif)
