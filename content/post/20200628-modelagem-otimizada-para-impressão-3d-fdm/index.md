@@ -32,33 +32,25 @@ A impressão FDM (Fused Deposition Modeling) é uma das técnicas impressão mai
 
 # Boas práticas para fabricação FDM
 
-Como a impressão FDM é feita em camadas e o material depositado através de um bico que geralmente tem diâmetro inferior a 1mm a resistência dessa peça pode ser diferente de um local para o outro dependendo da orientação da peça no momento da impressão. Um fator característico dessa tecnologia é que as peças são mais resistentes a tração no sentido XY (horizontal) do que no sentido Z (vertical), isto acontece porque a impressora quando realiza uma camada está na maior parte do tempo extrudando o polímero em fluxo contínuo, o material dessa camada sofre poucas emendas. Quando uma nova camada é depositada ela é extrudada em cima da anterior, porém se trata de uma nova deposição, a junção das camadas se dá exclusivamente pela fusão do material aquecido quando depositado. 
+Como a impressão FDM é feita em camadas e o material depositado através de um bico que geralmente tem diâmetro inferior a 1mm, a resistência dessa peça pode ser diferente de um local para o outro dependendo da orientação da peça no momento da impressão. Um fator característico dessa tecnologia é que as peças são mais resistentes a tração no sentido XY (horizontal) do que no sentido Z (vertical), isto acontece porque a impressora quando realiza uma camada está na maior parte do tempo extrudando o polímero em fluxo contínuo, o material dessa camada sofre poucas emendas. Quando uma nova camada é depositada ela é extrudada em cima da anterior, porém se trata de uma nova deposição, a junção das camadas se dá exclusivamente pela fusão do material aquecido quando depositado. 
 
-Outra característica decorrente deste método é que quando imprimimos um objeto, digamos um retângulo na horizontal, ele leva mais tempo para ser impresso do que o mesmo quando colocado na horizontal. Isso ocorre pois a cada nova camada a impressora precisa "aguardar" enquanto movimenta seu eixo Z e se prepara para iniciar a nova camada.
+Outra característica decorrente deste método é que quando imprimimos um objeto, digamos um retângulo na vertical, ele leva mais tempo para ser impresso do que o mesmo quando colocado na horizontal. Isso ocorre pois a cada nova camada a impressora precisa "aguardar" enquanto movimenta seu eixo Z e se prepara para iniciar a nova camada.
 
 ![](3d-printing-timeline-header.gif)
-
-
 
 O material extrudado precisa de uma base para se depositar, quando o modelo tem alguma saliência como no exemplo abaixo é necessário o uso de material de suporte que é posteriormente removido. Vale lembrar que os suportes adicionam tempo de fabricação e aumentam o desperdício de matéria prima no processo.
 
 ![](sparkyface5-pinky.gif)
 
-
-
   Se existir algum vão entre dois pontos na impressão ainda é possível utilizar um recurso chamado de Bridging que altera fatores como velocidade, extrusão e temperatura para garantir que o material ligue os pontos de forma uniforme sem a necessidade de suportes. Abaixo também é possível observar que é possível imprimir com certa inclinação, mas existem limites dependendo do material, temperatura, ventilação e velocidade para isso, ultrapassando o limite de inclinação também se faz necessário o uso de suportes.
 
 ![](overhangs_bridges.jpg)
-
-
 
 # Exemplo prático - Dispenser de álcool gel
 
 ![](reservatório-álcool-gel-v3-copia.png)
 
 Para demonstrar a importância dos conceitos acima realizei o projeto de um dispenser de álcool gel automático, no projeto basicamente possui um sensor ultrassônico que aciona um servo motor conectado a uma alavanca de força pressionando o dosador. O intuito do projeto ao fazer um sistema de acionamento basicamente mecânico foi justamente demonstrar a importância de produzir peças robustas utilizando a orientação de impressão ideal para este caso.  
-
-
 
 ![](exploded-view-geral3.gif)
 
@@ -68,8 +60,6 @@ A extrutura de suporte do dispositivo e componentes foi projetada em 3 peças di
 Com esse projeto podemos imprimir as peças separadas cada uma com sua orientação ideal, com isso temos peças mais resistentes com menor tempo de produção, manos matéria prima e com menos desperdício. 
 
 ![](explosão-suportes.gif.gif)
-
-
 
 # Diferença no tempo de impressão
 
@@ -88,8 +78,6 @@ Altura de camada: 0.20mm
 
 .
 
-
-
 ### Simulação 1: Extrutura de suporte modelada em peça única:
 
 Tempo de impressão elevado, grande quantidade de material de suporte e baixa resistência mecânica.
@@ -103,8 +91,6 @@ Matéria prima: 116g
 .
 
 .
-
-
 
 #### Simulação 2: Extrutura de suporte modelada em peças separadas:
 
