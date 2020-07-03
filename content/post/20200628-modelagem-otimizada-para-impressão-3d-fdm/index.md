@@ -50,13 +50,13 @@ O material extrudado precisa de uma base para se depositar, quando o modelo tem 
 
 ![](reservatório-álcool-gel-v3-copia.png)
 
-Para demonstrar a importância dos conceitos acima realizei o projeto de um dispenser de álcool gel automático, no projeto basicamente possui um sensor ultrassônico que aciona um servo motor conectado a uma alavanca de força pressionando o dosador. O intuito do projeto ao fazer um sistema de acionamento basicamente mecânico foi justamente demonstrar a importância de produzir peças robustas utilizando a orientação de impressão ideal para este caso.  
+Para demonstrar a importância dos conceitos acima realizei o projeto de um dispenser de álcool gel automático, no projeto basicamente possui um sensor ultrassônico que conectado a um Arduíno  aciona um servo motor acoplado a uma alavanca de força pressionando o dosador. O intuito do projeto ao fazer um sistema de acionamento basicamente mecânico foi justamente demonstrar a importância de produzir peças robustas utilizando a orientação de impressão ideal para este caso.  
 
 ![](exploded-view-geral3.gif)
 
 ![](mecanismo2.gif)
 
-A extrutura de suporte do dispositivo e componentes foi projetada em 3 peças diferentes conforme imagem abaixo, uma **base** que é acoplada ao bocal do reservatório, uma **placa** que suporta o servo motor bem como a base da alavanca e o **suporte** do sensor ultrassônico. As peças será unidas posteriormente utilizando parafusos.\
+A estrutura de suporte do dispositivo e componentes foi projetada em 3 peças diferentes conforme imagem abaixo, uma **base** que é acoplada ao bocal do reservatório, uma **placa** que suporta o servo motor bem como a base da alavanca e o **suporte** do sensor ultrassônico. As peças será unidas posteriormente utilizando parafusos.\
 Com esse projeto podemos imprimir as peças separadas cada uma com sua orientação ideal, com isso temos peças mais resistentes com menor tempo de produção, manos matéria prima e com menos desperdício. 
 
 ![](explosão-suportes.gif.gif)
@@ -72,13 +72,13 @@ Para esta simulação utilizei o software de fatiamento **Cura** que é free e e
 \
 Velocidade: 60mm/s
 
-Preenchimentol: 15%
+Preenchimento: 15%
 
 Altura de camada: 0.20mm
 
 .
 
-### Simulação 1: Extrutura de suporte modelada em peça única:
+### Simulação 1: Estrutura de suporte modelada em peça única:
 
 Tempo de impressão elevado, grande quantidade de material de suporte e baixa resistência mecânica.
 
@@ -92,12 +92,16 @@ Matéria prima: 116g
 
 .
 
-#### Simulação 2: Extrutura de suporte modelada em peças separadas:
-
-Tempo de impressão reduzido em 59%,  matéria prima reduzida em 75%  utilizando pouco material de suporte e alta resistência mecânica.
+#### Simulação 2: Estrutura de suporte modelada em peças separadas
 
 Tempo de impressão: 3h 9min
 
 Matéria prima: 40g 
 
 ![](slicing3.1.gif)
+
+# Conclusão
+
+Podemos comprovar através das simulações os benefícios da modelagem otimizada, o tempo de impressão na primeira simulação foi muito elevado, necessitou grande quantidade de material de suporte e resultou em uma peça de baixa resistência mecânica. Já na segunda simulação conseguimos reduzir o tempo de impressão em 59%, o gasto de matéria prima em 75% utilizando pouco material de suporte, e com alta resistência mecânica. 
+
+Sempre que modelarmos um objeto devemos pensar em como o fabricaremos, quanto mais técnicas de fabricação conhecermos melhores protótipos e até mesmo produtos finais poderemos fabricar.
