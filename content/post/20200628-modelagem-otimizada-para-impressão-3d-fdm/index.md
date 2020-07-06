@@ -5,8 +5,8 @@ description: Conheça boas práticas para produzir objetos de forma ágil e resi
 date: 2020-06-28T01:22:21.923Z
 authors:
   - Pedro Emmel
-image: 3d-printer-copia.jpg
-thumbnail: thumbnail.gif
+image: capa.jpg
+thumbnail: thumb.jpg
 categories:
   - 3D
   - equipamento
