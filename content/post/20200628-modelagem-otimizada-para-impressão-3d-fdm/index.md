@@ -5,8 +5,8 @@ description: Conheça boas práticas para produzir objetos de forma ágil e resi
 date: 2020-06-28T01:22:21.923Z
 authors:
   - Pedro Emmel
-image: capa.jpg
-thumbnail: thumb.jpg
+image: /post/20200628-modelagem-otimizada-para-impressão-3d-fdm/capa.jpg
+thumbnail: /post/20200628-modelagem-otimizada-para-impressão-3d-fdm/thumb.jpg
 categories:
   - 3D
   - equipamento
