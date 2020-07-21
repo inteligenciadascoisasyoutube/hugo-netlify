@@ -2,18 +2,18 @@
 title: Utilizando um Linter em seus projetos Flutter
 subtitle: Por que você deveria utilizar um Linter nos seus projetos?
 description: Explicação da instalação e utilização de um Linter no Flutter
-date: 2020-06-26T23:47:59.331Z
+date: 2020-07-21T20:00:00.000Z
 authors:
   - Marcelo Wippel
 image: /post/20200627-flutterlint/capa.png
 thumbnail: /post/20200627-flutterlint/thumb.jpg
 categories:
-  - Flutter
-  - Linter
+  - flutter
+  - linter
 tags:
   - tutorial
   - iniciante
-  - Flutter
+  - flutter
 ---
 # Indrodução
 
