@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linter on inteligência das coisas</title>
+    <link>https://inteligenciadascoisas.com/categories/linter/</link>
+    <description>Recent content in Linter on inteligência das coisas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 26 Jun 2020 23:47:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://inteligenciadascoisas.com/categories/linter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Utilizando um Linter em seus projetos Flutter</title>
+      <link>https://inteligenciadascoisas.com/post/20200627-flutterlint/</link>
+      <pubDate>Fri, 26 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/post/20200627-flutterlint/</guid>
+      <description>Indrodução Todo dia escrevemos um monte de linhas de código, que muitas vezes não passam por revisão e entram em ambiente produtivo sem garantia de qualidade. Não necessariamente esse código vai gerar bugs (pode gerar), porém, ele poderia ter sido escrito de uma melhor forma a fim de facilitar a leitura e manutenção por outros programadores. No fim das contas, regras existem para gerar ordem, e se tratando de código, todos gostamos de ler algo bem organizado e padronizado!</description>
+    </item>
+    
+  </channel>
+</rss>

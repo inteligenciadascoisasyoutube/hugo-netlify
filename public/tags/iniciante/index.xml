@@ -6,17 +6,36 @@
     <description>Recent content in iniciante on inteligência das coisas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2020 23:47:59 +0000</lastBuildDate>
     
 	<atom:link href="https://inteligenciadascoisas.com/tags/iniciante/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Utilizando um Linter em seus projetos Flutter</title>
+      <link>https://inteligenciadascoisas.com/post/20200627-flutterlint/</link>
+      <pubDate>Fri, 26 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/post/20200627-flutterlint/</guid>
+      <description>Indrodução Todo dia escrevemos um monte de linhas de código, que muitas vezes não passam por revisão e entram em ambiente produtivo sem garantia de qualidade. Não necessariamente esse código vai gerar bugs (pode gerar), porém, ele poderia ter sido escrito de uma melhor forma a fim de facilitar a leitura e manutenção por outros programadores. No fim das contas, regras existem para gerar ordem, e se tratando de código, todos gostamos de ler algo bem organizado e padronizado!</description>
+    </item>
+    
+    <item>
+      <title>Introdução rápida a modelagem 3D com Fusion 360</title>
+      <link>https://inteligenciadascoisas.com/post/20200611-intro3d/</link>
+      <pubDate>Thu, 11 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/post/20200611-intro3d/</guid>
+      <description>Indrodução Modelagem 3D é o processo que usa software para criar uma representação matemática de um objeto ou forma tridimensional. O objeto criado é chamado de modelo 3D e tais modelos são utilizados em vários setores como: Engenharia, medicina, cinema, videogames, arquitetura entre vários outros.
+Nesse artigo vamos utilizar o Fusion 360 da Autodesk, um software moderno e versátil para demonstrar os princípios da modelagem 3D. Não se preocupe, ele grátis para estudantes e para pessoas que queiram fazer projetos pessoais sem fins lucrativos.</description>
+    </item>
+    
+    <item>
       <title>Utilizando botão de forma correta com Arduino</title>
-      <link>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200517-pullup/</link>
+      <link>https://inteligenciadascoisas.com/post/20200517-pullup/</link>
       <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200517-pullup/</guid>
+      <guid>https://inteligenciadascoisas.com/post/20200517-pullup/</guid>
       <description>Para fazer um aproveitamento total dos recursos interativos, acesse pelo computador 😄
 Introdução Este artigo parte do princípio que você já começou a fazer alguns experimentos com Arduino.
 Se você não conhece nada sobre Arduino, dá uma olhada neste material sensacional sobre o assunto no Manual do Mundo.
@@ -26,10 +45,10 @@ Se você não conhece nada sobre Arduino, dá uma olhada neste material sensacio
     
     <item>
       <title>Animações leves e fáceis para Web</title>
-      <link>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200504-greensock/</link>
+      <link>https://inteligenciadascoisas.com/post/20200504-greensock/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200504-greensock/</guid>
+      <guid>https://inteligenciadascoisas.com/post/20200504-greensock/</guid>
       <description>Para fazer um aproveitamento total dos recursos interativos, acesse pelo computador 😄
 Introdução Opa! Tudo belezinha?
 Este é um artigo bem interativo. Fique de olho em cada detalhe para aprender fazendo seus próprios testes! 😄

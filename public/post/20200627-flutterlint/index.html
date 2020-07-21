@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="inteligência das coisas">
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="Utilizando um Linter em seus projetos Flutter" />
+<meta property="og:description" content="Indrodução Todo dia escrevemos um monte de linhas de código, que muitas vezes não passam por revisão e entram em ambiente produtivo sem garantia de qualidade. Não necessariamente esse código vai gerar bugs (pode gerar), porém, ele poderia ter sido escrito de uma melhor forma a fim de facilitar a leitura e manutenção por outros programadores. No fim das contas, regras existem para gerar ordem, e se tratando de código, todos gostamos de ler algo bem organizado e padronizado!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://inteligenciadascoisas.com/post/20200627-flutterlint/" /><meta property="article:published_time" content="2020-06-26T23:47:59+00:00" />
+<meta property="article:modified_time" content="2020-06-26T23:47:59+00:00" />
+
+    
+    <meta property="og:image" content="https://inteligenciadascoisas.com//post/20200627-flutterlint/thumb.jpg">
+    <meta property="twitter:image" content="https://inteligenciadascoisas.com//post/20200627-flutterlint/thumb.jpg" />
+    
+
+    
+    <meta name="title" content="Utilizando um Linter em seus projetos Flutter" />
+    <meta property="og:title" content="Utilizando um Linter em seus projetos Flutter" />
+    <meta property="twitter:title" content="Utilizando um Linter em seus projetos Flutter" />
+    
+
+    
+    <meta name="description" content="Explicação da instalação e utilização de um Linter no Flutter">
+    <meta property="og:description" content="Explicação da instalação e utilização de um Linter no Flutter" />
+    <meta property="twitter:description" content="Explicação da instalação e utilização de um Linter no Flutter" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword" content="blog, iot, internet das coisas, desenvolvimento, frontend, algoritmos, eletrônica, embarcados, protótipos, visão computacional, automação, design, motion graphics">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Utilizando um Linter em seus projetos Flutter</title>
+
+    <link rel="canonical" href="/post/20200627-flutterlint/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css" />
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+
+    
+    <link rel="stylesheet" href="/css/web-post-001.css">
+
+    <link rel="stylesheet" href="/css/my.css">
+
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+</head>
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+            </button>
+
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/" style="color: white;">Início</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/3d" style="color: white;">3d</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/arduino" style="color: white;">arduino</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/equipamento" style="color: white;">equipamento</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/flutter" style="color: white;">flutter</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linter" style="color: white;">linter</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/modelagem" style="color: white;">modelagem</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/raspberry" style="color: white;">raspberry</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/vis%C3%A3o-computacional" style="color: white;">visão-computacional</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/web" style="color: white;">web</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/post/20200627-flutterlint/capa.png')
+    }
+
+    .post-container img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+  
+  <a class="tag" href="/tags/tutorial" title="tutorial">
+    tutorial
+  </a>
+  
+  <a class="tag" href="/tags/iniciante" title="iniciante">
+    iniciante
+  </a>
+  
+  <a class="tag" href="/tags/flutter" title="Flutter">
+    Flutter
+  </a>
+  
+</div>
+<h1>Utilizando um Linter em seus projetos Flutter</h1>
+<h2 class="subheading">Por que você deveria utilizar um Linter nos seus projetos?</h2>
+
+<div class="post__meta tags">
+  Escrito por
+      <a href="https://inteligenciadascoisas.com/authors/marcelo-wippel/">Marcelo Wippel</a>
+    
+  
+  em
+  
+  
+  26
+
+ de 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    Junho, 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+2020
+  
+  
+  
+  
+  
+  | Categorias: 
+  
+  
+  <a class="tag" href="/categories/flutter">FLUTTER</a>
+  •
+  
+  <a class="tag" href="/categories/linter">LINTER</a>
+  
+  
+  
+  
+
+  <br />
+  <i class="fa fa-clock-o"></i> 3 min de leitura
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h4>Tópicos neste artigo</h4>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#indrodução">Indrodução</a></li>
+    <li><a href="#o-que-é-linting">O que é &ldquo;Linting&rdquo;?</a></li>
+    <li><a href="#alguns-exemplos">Alguns exemplos</a></li>
+    <li><a href="#configurando-o-linter-no-seu-projeto">Configurando o Linter no seu projeto</a></li>
+    <li><a href="#como-customizar-as-regras-utilizadas-pelo-linter">Como customizar as regras utilizadas pelo Linter?</a></li>
+    <li><a href="#extra-dica-caso-você-esteja-usando-mobx">(Extra) Dica caso você esteja usando MobX</a></li>
+  </ul>
+</nav>
+                
+
+                <hr>
+
+                <h1 id="indrodução">Indrodução</h1>
+<p>Todo dia escrevemos um monte de linhas de código, que muitas vezes não passam por revisão e entram em ambiente produtivo sem garantia de qualidade. Não necessariamente esse código vai gerar bugs (pode gerar), porém, ele poderia ter sido escrito de uma melhor forma a fim de facilitar a leitura e manutenção por outros programadores. No fim das contas, regras existem para gerar ordem, e se tratando de código, todos gostamos de ler algo bem organizado e padronizado!</p>
+<h1 id="o-que-é-linting">O que é &ldquo;Linting&rdquo;?</h1>
+<p>De acordo com a resposta de Oded Coster no <a href="https://stackoverflow.com/a/8503586">Stack Overflow</a>, &ldquo;<strong>Linting</strong> é o processo de execução de um programa que analisará o código buscando por possíveis erros&rdquo;.</p>
+<p>O <strong>Linter</strong> é a ferramenta que analisa o código buscando por esses possíveis erros de programação, bugs e códigos de origem duvidosa 😜</p>
+<h1 id="alguns-exemplos">Alguns exemplos</h1>
+<p>Abaixo podemos ver alguns exemplos do que fazer (e não fazer) no nosso código.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="warning1.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em><code>import</code> desnecessário</em></td>
+</tr>
+</tbody>
+</table>
+<p>Na imagem acima, o aviso no <code>import</code> mostra que o arquivo <code>url_launcher.dart</code> foi importado, porém nunca é usado. A solução para este caso é remover o <code>import</code> desnecessário, dessa forma o warning sumirá.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="warning2.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>prefira usar <code>ìf-null operators</code></em></td>
+</tr>
+</tbody>
+</table>
+<p>Na imagem acima o aviso é um pouco diferente, pois a condição ternária apresentada não está errada, só existe uma forma mais elegante de se escrever esse código, conforme a regra define. Você pode ler sobre essa regra especificamente neste <a href="https://dart-lang.github.io/linter/lints/prefer_if_null_operators.html">link</a>.</p>
+<p>Agora vamos para parte interessante, onde configuraremos o Linter no seu projeto, pro seu colega de trabalho não abrir seu código e ter a seguinte reação:</p>
+<p><img src="john-travolta-code.gif" alt=""></p>
+<h1 id="configurando-o-linter-no-seu-projeto">Configurando o Linter no seu projeto</h1>
+<p>Para projetos Flutter, o guia de regras utilizadas é o definido pela Google, através do <a href="https://dart.dev/guides/language/effective-dart/style">Effective Dart: Style</a>.
+Eu particularmente gosto muito de utilizar o pacote <a href="https://pub.dev/packages/lint">lint</a>, que já vem com uma pré configuração de regras mais rigorosas.</p>
+<p>O primeiro passo para a configuração é adicionar a dependencia <code>lint</code> no seu <code>pubspec.yml</code></p>
+<pre><code>dev_dependencies:
+  lint: ^1.2.0
+</code></pre><p>Crie um arquivo <code>analysis_options.yaml</code> na raíz do seu projeto e importe as regras do pacote <code>lint</code></p>
+<pre><code>include: package:lint/analysis_options.yaml
+</code></pre><p>Pronto! Simples, né?<br>
+Com esses passos feitos, você terá seu linter configurado, e caso esteja utilizando o VSCode, os avisos já aparecerão na aba de <code>problems</code> do VSCode.</p>
+<h1 id="como-customizar-as-regras-utilizadas-pelo-linter">Como customizar as regras utilizadas pelo Linter?</h1>
+<p>Caso você esteja insatisfeito com alguma regra definida, ou queira adicionar alguma validação, é so alterar a estrutura do arquivo <code>analysis_options.yml</code> com as regras de sua preferência. Vale a pena checar a <a href="https://dart-lang.github.io/linter/lints/">lista de regras suportadas</a>.</p>
+<p>Vou deixar abaixo uma configuração que normalmente uso em meus projetos, mas lembrando, não necessariamente você precise de todas, use somente as que realmente vão agregar em algo no seu projeto.</p>
+
+
+    <script src="https://gist.github.com/mawippel/d12654679b8514b5fbf7ef2d81285341.js"></script>
+
+<h1 id="extra-dica-caso-você-esteja-usando-mobx">(Extra) Dica caso você esteja usando MobX</h1>
+<p>Se você utiliza/já utilizou MobX em seus projetos, provavelmente já sofreu com a ação do linter nos arquivos gerados pelo próprio MobX, como na imagem abaixo:</p>
+<p><img src="mobxwarning.png" alt=""></p>
+<p>As sugestões feitas pelo linter fazem todo o sentido, e realmente deveriam ser aplicadas, porém, o próprio MobX nos avisa para que não altere nenhum arquivo gerado na mão.<br>
+Dessa forma, o melhor a se fazer é desabilitar o linting para esses arquivos gerados, e isso pode ser feito da seguinte forma:</p>
+<p>No arquivo <code>analysis_options.yml</code> você deverá adicionar o seguinte trecho:</p>
+<pre><code>analyzer:
+  exclude:
+    - lib/generated/**
+</code></pre><p>Um exemplo completo pode ser visto nesse <a href="https://gist.github.com/mawippel/d12654679b8514b5fbf7ef2d81285341">link</a>.</p>
+<p>Além disso, para que o VSCode realmente ignore esses arquivos, é necessário adicionar a seguinte informação nas configurações do VSCode (<code>settings.json</code>):</p>
+<pre><code>&quot;dart.analysisExcludedFolders&quot;: [
+    &quot;lib/**.g.dart&quot;
+],
+</code></pre><p>Com essas alterações feitas, os arquivos gerados pelo MobX não serão considerados pelo Linter 😃</p>
+
+
+                <hr>
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="list-inline ">
+    <li><b>Compartilhar publicação: </b></li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('http://www.facebook.com/share.php?href=https:\/\/inteligenciadascoisas.com\/post\/20200627-flutterlint\/', 'sharer', 'width=626,height=436');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('http://twitter.com/share?text=Utilizando um Linter em seus projetos Flutter&url=https:\/\/inteligenciadascoisas.com\/post\/20200627-flutterlint\/&hashtags=tutorial,iniciante,Flutter');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/inteligenciadascoisas.com\/post\/20200627-flutterlint\/ &title=Utilizando um Linter em seus projetos Flutter &summary=Por que você deveria utilizar um Linter nos seus projetos?&source=inteligencia-das-coisas');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('mailto:?&body=Olha que interessante este artigo: https:\/\/inteligenciadascoisas.com\/post\/20200627-flutterlint\/&subject=Artigo: Utilizando um Linter em seus projetos Flutter - Por que você deveria utilizar um Linter nos seus projetos?');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+</ul>
+
+                <hr>
+                        <b>Escrito por:</b>
+                        <figure>
+                            <img width="150px" src="/img/wippel-profile.jpg" alt=""/>
+                            <figcaption>
+                                <a href="https://inteligenciadascoisas.com/authors/marcelo-wippel/">Marcelo Wippel</a>
+                            </figcaption>
+                        </figure>
+                    
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/20200611-intro3d/" data-toggle="tooltip" data-placement="top"
+                            title="Introdução rápida a modelagem 3D com Fusion 360">&larr;
+                            Post Anterior</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm/" data-toggle="tooltip" data-placement="top"
+                            title="Modelagem otimizada para impressão 3D FDM">Próximo
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "inteligenciadascoisas" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">TAGS EM DESTAQUE</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/arduino" title="arduino">
+                            arduino
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/autodesk" title="autodesk">
+                            autodesk
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/eletr%C3%B4nica" title="eletrônica">
+                            eletrônica
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/equipamento" title="equipamento">
+                            equipamento
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/fusion360" title="fusion360">
+                            fusion360
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/iniciante" title="iniciante">
+                            iniciante
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/interativo" title="interativo">
+                            interativo
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/iot" title="iot">
+                            iot
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/modelagem3d" title="modelagem3d">
+                            modelagem3d
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/projeto" title="projeto">
+                            projeto
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/prototipa%C3%A7%C3%A3o" title="prototipação">
+                            prototipação
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tutorial" title="tutorial">
+                            tutorial
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<hr>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div style="text-align: center;">
+                        <img height="200px" src="/img/mascot-2.gif" alt="ia" />
+                    </div>
+                
+                <h3 class="copyright text-muted">Tá empolgado? Não consegue dormir? Aproveita pra dar uma conferida nas minhas redes sociais:</h3>
+                <br>
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a href='https://alexandremendoncaalvaro.github.io' title="Resume/ Portifolio" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:alexandre.alvaro@hotmail.com"  title="e-mail">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/peritto"  title="Facebook">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/alexandremendoncaalvaro"  title="Github">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/alexandre-mendon%C3%A7a-%C3%A1lvaro-273b0050"  title="Linkedin">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/alemendalvaro"  title="Instagram">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.deviantart.com/peritto/gallery" title="DeviantArt">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-deviantart fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://soundcloud.com/peritto-1"  title="Soundcloud">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-soundcloud fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5547991512508&amp;amp;text=Tudo&#43;bom%3F&#43;Encontrei&#43;seu&#43;contato&#43;atrav%C3%A9s&#43;do&#43;blog&#43;intelig%C3%AAncia&#43;das&#43;coisas."  title="Whatsapp">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; inteligência das coisas 2020
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a
+                        href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if ($('#tag_cloud').length !== 0) {
+        async("/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                
+                color: { start: '#bbbbee', end: '#0085a1' },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165857578-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>equipamento on inteligência das coisas</title>
+    <link>https://inteligenciadascoisas.com/categories/equipamento/</link>
+    <description>Recent content in equipamento on inteligência das coisas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 28 Jun 2020 01:22:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://inteligenciadascoisas.com/categories/equipamento/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Modelagem otimizada para impressão 3D FDM</title>
+      <link>https://inteligenciadascoisas.com/post/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/post/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm/</guid>
+      <description>Introdução Existem diferentes formas de modelar um mesmo objeto em 3D porém quando se trata de tornar esse modelo algo palpável precisamos conhecer muito bem as capacidades e limitações da técnica de fabricação digital que iremos empregar caso contrário essa tarefa pode se tornar demorada, custosa e ineficiente. Vamos primeiramente compreender o funcionamento da tecnologia e seguimos para um exemplo prático
+Impressão 3D FDM A impressão FDM (Fused Deposition Modeling) é uma das técnicas impressão mais amplamente utilizadas para fabricação de protótipos e peças funcionais.</description>
+    </item>
+    
+    <item>
+      <title>Introdução rápida a modelagem 3D com Fusion 360</title>
+      <link>https://inteligenciadascoisas.com/post/20200611-intro3d/</link>
+      <pubDate>Thu, 11 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/post/20200611-intro3d/</guid>
+      <description>Indrodução Modelagem 3D é o processo que usa software para criar uma representação matemática de um objeto ou forma tridimensional. O objeto criado é chamado de modelo 3D e tais modelos são utilizados em vários setores como: Engenharia, medicina, cinema, videogames, arquitetura entre vários outros.
+Nesse artigo vamos utilizar o Fusion 360 da Autodesk, um software moderno e versátil para demonstrar os princípios da modelagem 3D. Não se preocupe, ele grátis para estudantes e para pessoas que queiram fazer projetos pessoais sem fins lucrativos.</description>
+    </item>
+    
+  </channel>
+</rss>

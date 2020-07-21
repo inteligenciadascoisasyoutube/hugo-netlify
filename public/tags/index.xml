@@ -6,10 +6,100 @@
     <description>Recent content in Tags on inteligência das coisas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 28 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2020 01:22:21 +0000</lastBuildDate>
     
 	<atom:link href="https://inteligenciadascoisas.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>autodesk</title>
+      <link>https://inteligenciadascoisas.com/tags/autodesk/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/autodesk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>equipamento</title>
+      <link>https://inteligenciadascoisas.com/tags/equipamento/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/equipamento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fusion360</title>
+      <link>https://inteligenciadascoisas.com/tags/fusion360/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/fusion360/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>impressão 3d</title>
+      <link>https://inteligenciadascoisas.com/tags/impress%C3%A3o-3d/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/impress%C3%A3o-3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>modelagem3d</title>
+      <link>https://inteligenciadascoisas.com/tags/modelagem3d/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/modelagem3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projeto</title>
+      <link>https://inteligenciadascoisas.com/tags/projeto/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/projeto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prototipação</title>
+      <link>https://inteligenciadascoisas.com/tags/prototipa%C3%A7%C3%A3o/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/prototipa%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flutter</title>
+      <link>https://inteligenciadascoisas.com/tags/flutter/</link>
+      <pubDate>Fri, 26 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/flutter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iniciante</title>
+      <link>https://inteligenciadascoisas.com/tags/iniciante/</link>
+      <pubDate>Fri, 26 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/iniciante/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://inteligenciadascoisas.com/tags/tutorial/</link>
+      <pubDate>Fri, 26 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>dlib</title>
@@ -48,29 +138,11 @@
     </item>
     
     <item>
-      <title>prototipação</title>
-      <link>https://inteligenciadascoisas.com/tags/prototipa%C3%A7%C3%A3o/</link>
-      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://inteligenciadascoisas.com/tags/prototipa%C3%A7%C3%A3o/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>raspberrypi</title>
       <link>https://inteligenciadascoisas.com/tags/raspberrypi/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://inteligenciadascoisas.com/tags/raspberrypi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://inteligenciadascoisas.com/tags/tutorial/</link>
-      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://inteligenciadascoisas.com/tags/tutorial/</guid>
       <description></description>
     </item>
     
@@ -98,15 +170,6 @@
       <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://inteligenciadascoisas.com/tags/eletr%C3%B4nica/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>iniciante</title>
-      <link>https://inteligenciadascoisas.com/tags/iniciante/</link>
-      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://inteligenciadascoisas.com/tags/iniciante/</guid>
       <description></description>
     </item>
     

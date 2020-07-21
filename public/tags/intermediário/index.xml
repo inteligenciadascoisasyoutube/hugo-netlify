@@ -13,10 +13,10 @@
     
     <item>
       <title>O Arduino Uno tem 2 microcontroladores!</title>
-      <link>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200407-hoodloader/</link>
+      <link>https://inteligenciadascoisas.com/post/20200407-hoodloader/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200407-hoodloader/</guid>
+      <guid>https://inteligenciadascoisas.com/post/20200407-hoodloader/</guid>
       <description>Introdução O Arduino é uma plataforma de eletrônica de baixo custo, open source, baseada em hardware e software fáceis de usar.
 As placas do Arduino são capazes de ler entradas - luz em um sensor, um dedo em um botão, uma mensagem no Twitter - e transformá-las em uma saída - ativando um motor, ligando um LED, publicando algo online.
 Por padrão, a programação é feita utilizando uma linguagem baseada em C/C++, sem a necessidade de equipamentos extras além de um cabo USB.</description>

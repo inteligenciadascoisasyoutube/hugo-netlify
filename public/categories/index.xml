@@ -6,17 +6,71 @@
     <description>Recent content in Categories on inteligência das coisas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 28 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2020 01:22:21 +0000</lastBuildDate>
     
 	<atom:link href="https://inteligenciadascoisas.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>VisãoComputacional</title>
-      <link>https://inteligenciadascoisas.com/categories/vis%C3%A3ocomputacional/</link>
+      <title>3D</title>
+      <link>https://inteligenciadascoisas.com/categories/3d/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/categories/3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>equipamento</title>
+      <link>https://inteligenciadascoisas.com/categories/equipamento/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/categories/equipamento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>modelagem</title>
+      <link>https://inteligenciadascoisas.com/categories/modelagem/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/categories/modelagem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flutter</title>
+      <link>https://inteligenciadascoisas.com/categories/flutter/</link>
+      <pubDate>Fri, 26 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/categories/flutter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linter</title>
+      <link>https://inteligenciadascoisas.com/categories/linter/</link>
+      <pubDate>Fri, 26 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/categories/linter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry</title>
+      <link>https://inteligenciadascoisas.com/categories/raspberry/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://inteligenciadascoisas.com/categories/vis%C3%A3ocomputacional/</guid>
+      <guid>https://inteligenciadascoisas.com/categories/raspberry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visão Computacional</title>
+      <link>https://inteligenciadascoisas.com/categories/vis%C3%A3o-computacional/</link>
+      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/categories/vis%C3%A3o-computacional/</guid>
       <description></description>
     </item>
     

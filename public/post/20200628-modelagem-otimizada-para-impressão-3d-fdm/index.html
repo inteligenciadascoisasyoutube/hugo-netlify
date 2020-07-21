@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="inteligência das coisas">
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="Modelagem otimizada para impressão 3D FDM" />
+<meta property="og:description" content="Introdução Existem diferentes formas de modelar um mesmo objeto em 3D porém quando se trata de tornar esse modelo algo palpável precisamos conhecer muito bem as capacidades e limitações da técnica de fabricação digital que iremos empregar caso contrário essa tarefa pode se tornar demorada, custosa e ineficiente. Vamos primeiramente compreender o funcionamento da tecnologia e seguimos para um exemplo prático
+Impressão 3D FDM A impressão FDM (Fused Deposition Modeling) é uma das técnicas impressão mais amplamente utilizadas para fabricação de protótipos e peças funcionais." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://inteligenciadascoisas.com/post/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm/" /><meta property="og:image" content="/post/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm/thumbnail.gif"/>
+<meta property="og:image:secure_url" content="https://inteligenciadascoisas.com/post/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm/thumbnail.gif"/>
+<meta property="article:published_time" content="2020-06-28T01:22:21+00:00" />
+<meta property="article:modified_time" content="2020-06-28T01:22:21+00:00" />
+
+    
+    <meta property="og:image" content="https://inteligenciadascoisas.com//post/20200628-modelagem-otimizada-para-impressão-3d-fdm/thumb.jpg">
+    <meta property="twitter:image" content="https://inteligenciadascoisas.com//post/20200628-modelagem-otimizada-para-impressão-3d-fdm/thumb.jpg" />
+    
+
+    
+    <meta name="title" content="Modelagem otimizada para impressão 3D FDM" />
+    <meta property="og:title" content="Modelagem otimizada para impressão 3D FDM" />
+    <meta property="twitter:title" content="Modelagem otimizada para impressão 3D FDM" />
+    
+
+    
+    <meta name="description" content="Conheça boas práticas para produzir objetos de forma ágil e resistente">
+    <meta property="og:description" content="Conheça boas práticas para produzir objetos de forma ágil e resistente" />
+    <meta property="twitter:description" content="Conheça boas práticas para produzir objetos de forma ágil e resistente" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword" content="blog, iot, internet das coisas, desenvolvimento, frontend, algoritmos, eletrônica, embarcados, protótipos, visão computacional, automação, design, motion graphics">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Modelagem otimizada para impressão 3D FDM</title>
+
+    <link rel="canonical" href="/post/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css" />
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+
+    
+    <link rel="stylesheet" href="/css/web-post-001.css">
+
+    <link rel="stylesheet" href="/css/my.css">
+
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+</head>
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+            </button>
+
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/" style="color: white;">Início</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/3d" style="color: white;">3d</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/arduino" style="color: white;">arduino</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/equipamento" style="color: white;">equipamento</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/flutter" style="color: white;">flutter</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linter" style="color: white;">linter</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/modelagem" style="color: white;">modelagem</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/raspberry" style="color: white;">raspberry</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/vis%C3%A3o-computacional" style="color: white;">visão-computacional</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/web" style="color: white;">web</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/post/20200628-modelagem-otimizada-para-impress%c3%a3o-3d-fdm/capa.jpg')
+    }
+
+    .post-container img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+  
+  <a class="tag" href="/tags/impress%C3%A3o-3d" title="impressão 3d">
+    impressão 3d
+  </a>
+  
+  <a class="tag" href="/tags/modelagem3d" title="modelagem3d">
+    modelagem3d
+  </a>
+  
+  <a class="tag" href="/tags/fusion360" title="fusion360">
+    fusion360
+  </a>
+  
+  <a class="tag" href="/tags/autodesk" title="autodesk">
+    autodesk
+  </a>
+  
+  <a class="tag" href="/tags/prototipa%C3%A7%C3%A3o" title="prototipação">
+    prototipação
+  </a>
+  
+  <a class="tag" href="/tags/projeto" title="projeto">
+    projeto
+  </a>
+  
+  <a class="tag" href="/tags/equipamento" title="equipamento">
+    equipamento
+  </a>
+  
+</div>
+<h1>Modelagem otimizada para impressão 3D FDM</h1>
+<h2 class="subheading">Como modelar um objeto de forma eficiente para imprimir em 3D?</h2>
+
+<div class="post__meta tags">
+  Escrito por
+      <a href="https://inteligenciadascoisas.com/authors/pedro-emmel/">Pedro Emmel</a>
+    
+  
+  em
+  
+  
+  28
+
+ de 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    Junho, 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+2020
+  
+  
+  
+  
+  
+  | Categorias: 
+  
+  
+  <a class="tag" href="/categories/3d">3D</a>
+  •
+  
+  <a class="tag" href="/categories/equipamento">EQUIPAMENTO</a>
+  •
+  
+  <a class="tag" href="/categories/modelagem">MODELAGEM</a>
+  
+  
+  
+  
+
+  <br />
+  <i class="fa fa-clock-o"></i> 5 min de leitura
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h4>Tópicos neste artigo</h4>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introdução">Introdução</a></li>
+    <li><a href="#impressão-3d-fdm">Impressão 3D FDM</a></li>
+    <li><a href="#boas-práticas-para-fabricação-fdm">Boas práticas para fabricação FDM</a></li>
+    <li><a href="#exemplo-prático---dispenser-de-álcool-gel">Exemplo prático - Dispenser de álcool gel</a></li>
+    <li><a href="#diferença-no-tempo-de-impressão">Diferença no tempo de impressão</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#conclusão">Conclusão</a></li>
+  </ul>
+</nav>
+                
+
+                <hr>
+
+                <h1 id="introdução">Introdução</h1>
+<p>Existem diferentes formas de modelar um mesmo objeto em 3D porém quando se trata de tornar esse modelo algo palpável precisamos conhecer muito bem as capacidades e limitações da técnica de fabricação digital que iremos empregar caso contrário essa tarefa pode se tornar demorada, custosa e ineficiente.  Vamos primeiramente compreender o funcionamento da tecnologia e seguimos para um exemplo prático</p>
+<h1 id="impressão-3d-fdm">Impressão 3D FDM</h1>
+<p>A impressão FDM (Fused Deposition Modeling) é uma das técnicas impressão mais amplamente utilizadas para fabricação de protótipos e peças funcionais. O processo é baseado na extrusão de polímero através de um bico aquecido, o material é depositado em uma plataforma formando a camada inicial que serve de base para a deposição das demais camadas acima. Todo o processo funciona através de coordenadas e comandos gerados por um software específico para esta tarefa. A simplicidade, confiabilidade e custo da impressão FDM tornou esta tecnologia amplamente adotada e reconhecida no meio industrial, acadêmico e até mesmo comercial.  Sua grande vantagem está na eficiência e flexibilidade de produção, enquanto outras tecnologias levariam meses para materializar uma prova de conceito a impressão 3d é capaz de realizar esta tarefa em algumas horas. Outra grande vantagem é a possibilidade de realizar rápidas alterações aos modelos e em uma mesma máquina, inclusive ao mesmo tempo imprimir diferentes objetos. Seu uso em departamentos de P&amp;D tornou-se indispensável devido ao volume de testes e alterações que rotineiramente acontecem ao desenvolver um novo produto.</p>
+<p><img src="c2c56986e5242fca-3d-printing-a-look-at-four-types-of-additive-manufacturing.gif" alt=""></p>
+<h1 id="boas-práticas-para-fabricação-fdm">Boas práticas para fabricação FDM</h1>
+<p>Como a impressão FDM é feita em camadas e o material depositado através de um bico que geralmente tem diâmetro inferior a 1mm, a resistência dessa peça pode ser diferente de um local para o outro dependendo da orientação da peça no momento da impressão. Um fator característico dessa tecnologia é que as peças são mais resistentes a tração no sentido XY (horizontal) do que no sentido Z (vertical), isto acontece porque a impressora quando realiza uma camada está na maior parte do tempo extrudando o polímero em fluxo contínuo, o material dessa camada sofre poucas emendas. Quando uma nova camada é depositada ela é extrudada em cima da anterior, porém se trata de uma nova deposição, a junção das camadas se dá exclusivamente pela fusão do material aquecido quando depositado.</p>
+<p>Outra característica decorrente deste método é que quando imprimimos um objeto, digamos um retângulo na vertical, ele leva mais tempo para ser impresso do que o mesmo quando colocado na horizontal. Isso ocorre pois a cada nova camada a impressora precisa &ldquo;aguardar&rdquo; enquanto movimenta seu eixo Z e se prepara para iniciar a nova camada.</p>
+<p><img src="3d-printing-timeline-header.gif" alt=""></p>
+<p>O material extrudado precisa de uma base para se depositar, quando o modelo tem alguma saliência como no exemplo abaixo é necessário o uso de material de suporte que é posteriormente removido. Vale lembrar que os suportes adicionam tempo de fabricação e aumentam o desperdício de matéria prima no processo.</p>
+<p><img src="sparkyface5-pinky.gif" alt=""></p>
+<p>Se existir algum vão entre dois pontos na impressão ainda é possível utilizar um recurso chamado de Bridging que altera fatores como velocidade, extrusão e temperatura para garantir que o material ligue os pontos de forma uniforme sem a necessidade de suportes. Abaixo também é possível observar que é possível imprimir com certa inclinação, mas existem limites dependendo do material, temperatura, ventilação e velocidade para isso, ultrapassando o limite de inclinação também se faz necessário o uso de suportes.</p>
+<p><img src="overhangs_bridges.jpg" alt=""></p>
+<h1 id="exemplo-prático---dispenser-de-álcool-gel">Exemplo prático - Dispenser de álcool gel</h1>
+<p><img src="reservat%C3%B3rio-%C3%A1lcool-gel-v3-copia.png" alt=""></p>
+<p>Para demonstrar a importância dos conceitos acima realizei o projeto de um dispenser de álcool gel automático, no projeto basicamente possui um sensor ultrassônico que conectado a um Arduíno  aciona um servo motor acoplado a uma alavanca de força pressionando o dosador. O intuito do projeto ao fazer um sistema de acionamento basicamente mecânico foi justamente demonstrar a importância de produzir peças robustas utilizando a orientação de impressão ideal para este caso.</p>
+<p><img src="exploded-view-geral3.gif" alt=""></p>
+<p><img src="mecanismo2.gif" alt=""></p>
+<p>A estrutura de suporte do dispositivo e componentes foi projetada em 3 peças diferentes conforme imagem abaixo, uma <strong>base</strong> que é acoplada ao bocal do reservatório, uma <strong>placa</strong> que suporta o servo motor bem como a base da alavanca e o <strong>suporte</strong> do sensor ultrassônico. As peças será unidas posteriormente utilizando parafusos.<br>
+Com esse projeto podemos imprimir as peças separadas cada uma com sua orientação ideal, com isso temos peças mais resistentes com menor tempo de produção, manos matéria prima e com menos desperdício.</p>
+<p><img src="explos%C3%A3o-suportes.gif.gif" alt=""></p>
+<h1 id="diferença-no-tempo-de-impressão">Diferença no tempo de impressão</h1>
+<p>Vamos simular o tempo de impressão dos dois modelos para que possamos ver o tempo de impressão de cada um bem como a quantidade de matéria prima necessária para fabricação.</p>
+<p>Para esta simulação utilizei o software de fatiamento <strong>Cura</strong> que é free e está configurado para uso de uma impressora Tevo tarantula.</p>
+<p><strong>Parâmetros utilizados:</strong></p>
+<p><br>
+Velocidade: 60mm/s</p>
+<p>Preenchimento: 15%</p>
+<p>Altura de camada: 0.20mm</p>
+<p>.</p>
+<h3 id="simulação-1-estrutura-de-suporte-modelada-em-peça-única">Simulação 1: Estrutura de suporte modelada em peça única:</h3>
+<p>Tempo de impressão elevado, grande quantidade de material de suporte e baixa resistência mecânica.</p>
+<p>Tempo de impressão: 7h 42min</p>
+<p>Matéria prima: 116g</p>
+<p><img src="slicing-1.gif" alt=""></p>
+<p>.</p>
+<p>.</p>
+<h4 id="simulação-2-estrutura-de-suporte-modelada-em-peças-separadas">Simulação 2: Estrutura de suporte modelada em peças separadas</h4>
+<p>Tempo de impressão: 3h 9min</p>
+<p>Matéria prima: 40g</p>
+<p><img src="slicing3.1.gif" alt=""></p>
+<h1 id="conclusão">Conclusão</h1>
+<p>Podemos comprovar através das simulações os benefícios da modelagem otimizada, o tempo de impressão na primeira simulação foi muito elevado, necessitou grande quantidade de material de suporte e resultou em uma peça de baixa resistência mecânica. Já na segunda simulação conseguimos reduzir o tempo de impressão em 59%, o gasto de matéria prima em 75% utilizando pouco material de suporte, e com alta resistência mecânica.</p>
+<p>Sempre que modelarmos um objeto devemos pensar em como o fabricaremos, quanto mais técnicas de fabricação conhecermos melhores protótipos e até mesmo produtos finais poderemos fabricar.</p>
+
+
+                <hr>
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="list-inline ">
+    <li><b>Compartilhar publicação: </b></li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('http://www.facebook.com/share.php?href=https:\/\/inteligenciadascoisas.com\/post\/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm\/', 'sharer', 'width=626,height=436');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('http://twitter.com/share?text=Modelagem otimizada para impressão 3D FDM&url=https:\/\/inteligenciadascoisas.com\/post\/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm\/&hashtags=impressão3d,modelagem3d,fusion360,autodesk,prototipação,projeto,equipamento');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/inteligenciadascoisas.com\/post\/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm\/ &title=Modelagem otimizada para impressão 3D FDM &summary=Como modelar um objeto de forma eficiente para imprimir em 3D?&source=inteligencia-das-coisas');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;"
+            onclick="window.open('mailto:?&body=Olha que interessante este artigo: https:\/\/inteligenciadascoisas.com\/post\/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm\/&subject=Artigo: Modelagem otimizada para impressão 3D FDM - Como modelar um objeto de forma eficiente para imprimir em 3D?');">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+</ul>
+
+                <hr>
+                        <b>Escrito por:</b>
+                        <figure>
+                            <img width="150px" src="/img/pepe-profile.jpg" alt=""/>
+                            <figcaption>
+                                <a href="https://inteligenciadascoisas.com/authors/pedro-emmel/">Pedro Emmel</a>
+                            </figcaption>
+                        </figure>
+                    
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/20200627-flutterlint/" data-toggle="tooltip" data-placement="top"
+                            title="Utilizando um Linter em seus projetos Flutter">&larr;
+                            Post Anterior</a>
+                    </li>
+                    
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "inteligenciadascoisas" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">TAGS EM DESTAQUE</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/arduino" title="arduino">
+                            arduino
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/autodesk" title="autodesk">
+                            autodesk
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/eletr%C3%B4nica" title="eletrônica">
+                            eletrônica
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/equipamento" title="equipamento">
+                            equipamento
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/fusion360" title="fusion360">
+                            fusion360
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/iniciante" title="iniciante">
+                            iniciante
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/interativo" title="interativo">
+                            interativo
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/iot" title="iot">
+                            iot
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/modelagem3d" title="modelagem3d">
+                            modelagem3d
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/projeto" title="projeto">
+                            projeto
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/prototipa%C3%A7%C3%A3o" title="prototipação">
+                            prototipação
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tutorial" title="tutorial">
+                            tutorial
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<hr>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div style="text-align: center;">
+                        <img height="200px" src="/img/mascot-2.gif" alt="ia" />
+                    </div>
+                
+                <h3 class="copyright text-muted">Tá empolgado? Não consegue dormir? Aproveita pra dar uma conferida nas minhas redes sociais:</h3>
+                <br>
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a href='https://alexandremendoncaalvaro.github.io' title="Resume/ Portifolio" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:alexandre.alvaro@hotmail.com"  title="e-mail">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/peritto"  title="Facebook">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/alexandremendoncaalvaro"  title="Github">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/alexandre-mendon%C3%A7a-%C3%A1lvaro-273b0050"  title="Linkedin">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/alemendalvaro"  title="Instagram">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.deviantart.com/peritto/gallery" title="DeviantArt">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-deviantart fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://soundcloud.com/peritto-1"  title="Soundcloud">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-soundcloud fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5547991512508&amp;amp;text=Tudo&#43;bom%3F&#43;Encontrei&#43;seu&#43;contato&#43;atrav%C3%A9s&#43;do&#43;blog&#43;intelig%C3%AAncia&#43;das&#43;coisas."  title="Whatsapp">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; inteligência das coisas 2020
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a
+                        href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if ($('#tag_cloud').length !== 0) {
+        async("/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                
+                color: { start: '#bbbbee', end: '#0085a1' },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165857578-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+    
+    
+</body>
+
+</html>

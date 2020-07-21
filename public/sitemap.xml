@@ -3,17 +3,137 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://inteligenciadascoisas.com/authors/pedro-emmel/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/categories/3d/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/authors/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/autodesk/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://inteligenciadascoisas.com/categories/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/equipamento/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/categories/equipamento/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/fusion360/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/impress%C3%A3o-3d/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/categories/modelagem/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/post/20200628-modelagem-otimizada-para-impress%C3%A3o-3d-fdm/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/modelagem3d/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/post/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/projeto/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/prototipa%C3%A7%C3%A3o/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/</loc>
+    <lastmod>2020-06-28T01:22:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/authors/marcelo-wippel/</loc>
+    <lastmod>2020-06-26T23:47:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/flutter/</loc>
+    <lastmod>2020-06-26T23:47:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/categories/flutter/</loc>
+    <lastmod>2020-06-26T23:47:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/iniciante/</loc>
+    <lastmod>2020-06-26T23:47:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/categories/linter/</loc>
+    <lastmod>2020-06-26T23:47:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/tags/tutorial/</loc>
+    <lastmod>2020-06-26T23:47:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/post/20200627-flutterlint/</loc>
+    <lastmod>2020-06-26T23:47:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/post/20200611-intro3d/</loc>
+    <lastmod>2020-06-11T23:47:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inteligenciadascoisas.com/authors/alexandre-alvaro/</loc>
     <lastmod>2020-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://inteligenciadascoisas.com/tags/dlib/</loc>
-    <lastmod>2020-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://inteligenciadascoisas.com/</loc>
     <lastmod>2020-05-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,17 +153,12 @@
   </url>
   
   <url>
-    <loc>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200528-opencvdlib/</loc>
+    <loc>https://inteligenciadascoisas.com/post/20200528-opencvdlib/</loc>
     <lastmod>2020-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://inteligenciadascoisas.com/post/</loc>
-    <lastmod>2020-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://inteligenciadascoisas.com/tags/prototipa%C3%A7%C3%A3o/</loc>
+    <loc>https://inteligenciadascoisas.com/categories/raspberry/</loc>
     <lastmod>2020-05-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -53,22 +168,12 @@
   </url>
   
   <url>
-    <loc>https://inteligenciadascoisas.com/tags/</loc>
-    <lastmod>2020-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://inteligenciadascoisas.com/tags/tutorial/</loc>
-    <lastmod>2020-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://inteligenciadascoisas.com/tags/visaocomputacional/</loc>
     <lastmod>2020-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://inteligenciadascoisas.com/categories/vis%C3%A3ocomputacional/</loc>
+    <loc>https://inteligenciadascoisas.com/categories/vis%C3%A3o-computacional/</loc>
     <lastmod>2020-05-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -88,17 +193,12 @@
   </url>
   
   <url>
-    <loc>https://inteligenciadascoisas.com/tags/iniciante/</loc>
-    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://inteligenciadascoisas.com/tags/interativo/</loc>
     <lastmod>2020-05-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200517-pullup/</loc>
+    <loc>https://inteligenciadascoisas.com/post/20200517-pullup/</loc>
     <lastmod>2020-05-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -108,7 +208,7 @@
   </url>
   
   <url>
-    <loc>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200504-greensock/</loc>
+    <loc>https://inteligenciadascoisas.com/post/20200504-greensock/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -143,7 +243,7 @@
   </url>
   
   <url>
-    <loc>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200407-hoodloader/</loc>
+    <loc>https://inteligenciadascoisas.com/post/20200407-hoodloader/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   

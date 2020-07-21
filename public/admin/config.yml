@@ -1,19 +1,22 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
 
 publish_mode: editorial_workflow
 
-media_folder: "static/img/upload" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/img/upload" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
 
   - name: "post" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
+    label: "Posts" # Used in the UI
     folder: "content/post" # The path to the folder where the documents are stored
+    path: '{{slug}}/index'
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}{{month}}{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: ""
+    public_folder: ""
     fields: # The fields for each document, usually in front matter
 
       - label: "Titulo"
@@ -36,10 +39,10 @@ collections:
         required: true
         widget: "datetime"
 
-      - label: "Autor"
-        name: "author"
+      - label: "Autores"
+        name: "authors"
         required: true
-        widget: "string"
+        widget: "list"
 
       - label: "Capa"
         name: "image"
@@ -60,6 +63,76 @@ collections:
         name: "tags"
         required: true
         widget: "list"
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+
+  - name: "authors" # Used in routes, e.g., /admin/collections/blog
+    label: "Autores" # Used in the UI
+    folder: "content/authors" # The path to the folder where the documents are stored
+    media_folder: "static/img"
+    public_folder: "/img"
+    path: '{{slug}}/_index'
+    create: false # Allow users to create new documents in this collection
+    slug: "{{name}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+
+      - label: "Nome"
+        name: "name"
+        required: true
+        widget: "string"
+
+      - label: "URL Foto Perfil (/img/nome.jpg)"
+        name: "image"
+        required: true
+        widget: "string"
+
+      - label: "Site Pessoal"
+        name: "resume"
+        required: false
+        widget: "string"
+
+      - label: "e-mail"
+        name: "email"
+        required: false
+        widget: "string"
+
+      - label: "Facebook"
+        name: "facebook"
+        required: false
+        widget: "string"
+
+      - label: "Linkedin"
+        name: "linkedin"
+        required: true
+        widget: "string"
+
+      - label: "Github"
+        name: "github"
+        required: false
+        widget: "string"
+
+      - label: "Instagram"
+        name: "instagram"
+        required: false
+        widget: "string"
+
+      - label: "Deviantart"
+        name: "deviantart"
+        required: false
+        widget: "string"
+
+      - label: "Soundcloud"
+        name: "soundcloud"
+        required: false
+        widget: "string"
+
+      - label: "Whatsapp"
+        name: "whatsapp"
+        required: false
+        widget: "string"
 
       - label: "Body"
         name: "body"

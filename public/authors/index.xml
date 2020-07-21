@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on inteligência das coisas</title>
+    <link>https://inteligenciadascoisas.com/authors/</link>
+    <description>Recent content in Authors on inteligência das coisas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 28 Jun 2020 01:22:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://inteligenciadascoisas.com/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://inteligenciadascoisas.com/authors/pedro-emmel/</link>
+      <pubDate>Sun, 28 Jun 2020 01:22:21 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/authors/pedro-emmel/</guid>
+      <description>Pesquisador na HBSIS Ambev, Maker, Entusiasta de Impressão 3D, apaixonado por elaboração de produtos e engenharia de produção.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://inteligenciadascoisas.com/authors/marcelo-wippel/</link>
+      <pubDate>Fri, 26 Jun 2020 23:47:59 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/authors/marcelo-wippel/</guid>
+      <description>Desenvolvedor FullStack na HBSIS Ambev, com foco em Backend/Mobile. Apaixonado por Arquitetura de Software e Desenvolvimento de projetos Open Source.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://inteligenciadascoisas.com/authors/alexandre-alvaro/</link>
+      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://inteligenciadascoisas.com/authors/alexandre-alvaro/</guid>
+      <description>Fundador do Inteligência das coisas
+Pesquisador na HBSIS Ambev, Maker, Desenvolvedor, Ilustrador, Violeiro, Entusiasta Open Source e apaixonado por aprender e compartilhar.</description>
+    </item>
+    
+  </channel>
+</rss>

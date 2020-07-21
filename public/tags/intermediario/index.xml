@@ -13,10 +13,10 @@
     
     <item>
       <title>OpenCV e Dlib no Raspberry Pi</title>
-      <link>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200528-opencvdlib/</link>
+      <link>https://inteligenciadascoisas.com/post/20200528-opencvdlib/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://inteligenciadascoisas.com/post/alexandre-alvaro/20200528-opencvdlib/</guid>
+      <guid>https://inteligenciadascoisas.com/post/20200528-opencvdlib/</guid>
       <description>UPDATE: Adicionei o processo fácil de instalação. Veja abaixo em INSTALAÇÃO SIMPLES.
 Introdução Assim como muita gente, tive problemas para instalar o OpenCV e a bilioteca Dlib pra trabalhar com visão computacional no Raspberry Pi.
 Exatamente por isso decidir ajudar, dei uma bela lida nos tutoriais disponíveis e documentação oficial e resolvi compartilhar este processo com alguns scripts pra facilitar e a automatizar bastante esta instalação, deixando quase fácil.
