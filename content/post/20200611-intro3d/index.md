@@ -20,7 +20,7 @@ tags:
   - projeto
   - equipamento
 ---
-# Indrodução
+# Introdução
 
 Modelagem 3D é o processo que usa software para criar uma representação matemática de um objeto ou forma tridimensional. O objeto criado é chamado de modelo 3D e tais modelos são utilizados em vários setores como: Engenharia, medicina, cinema, videogames, arquitetura entre vários outros.\
 Nesse artigo vamos utilizar o Fusion 360 da Autodesk, um software moderno e versátil para demonstrar os princípios da modelagem 3D. Não se preocupe, ele grátis para estudantes e para pessoas que queiram fazer projetos pessoais sem fins lucrativos. Outra grande vantagem do Fusion é ser baseado em nuvem o que permite trabalhar de modo colaborativo.

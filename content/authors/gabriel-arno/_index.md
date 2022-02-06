@@ -8,4 +8,4 @@ instagram: https://www.instagram.com/gabrielarnovoltolini
 whatsapp: "5547996981917" 
 --- 
 
-Desenvolvedor fullstack na Ambevtech, com foco em inovação. Maker, entusiasta em micro eletrônica e projetos na área aeroespacial
+Desenvolvedor fullstack na Ambevtech, com foco em inovação. Maker, entusiasta em micro eletrônica e projetos na área aeroespacial.
