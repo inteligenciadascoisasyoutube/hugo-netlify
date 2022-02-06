@@ -7,7 +7,7 @@ authors:
   - Marcelo Wippel
 image: /post/20200627-flutterlint/capa.png
 thumbnail: /post/20200627-flutterlint/thumb.jpg
-categories: [ flutter ]
+categories: [ mobile ]
 tags:
   - tutorial
   - iniciante
