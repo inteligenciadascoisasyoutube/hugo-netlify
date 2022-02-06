@@ -8,7 +8,7 @@ authors:
                 - Alexandre Alvaro
 image:          "/post/20200407-hoodloader/capa.jpg"
 thumbnail:      "/post/20200407-hoodloader/thumb.jpg"
-categories:     [ Arduino ]
+categories:     [ Embarcados ]
 tags:
                 - arduino
                 - tutorial

@@ -7,10 +7,7 @@ authors:
   - Pedro Emmel
 image: /post/20200628-modelagem-otimizada-para-impressão-3d-fdm/capa.jpg
 thumbnail: /post/20200628-modelagem-otimizada-para-impressão-3d-fdm/thumb.jpg
-categories:
-  - 3D
-  - equipamento
-  - modelagem
+categories: [ 3D ]
 tags:
   - impressão 3d
   - modelagem3d

@@ -8,9 +8,7 @@ authors:
   - Alexandre Alvaro
 image: /post/20200528-opencvdlib/capa.jpg
 thumbnail: /post/20200528-opencvdlib/thumb.jpg
-categories:
-  - Visão Computacional
-  - Raspberry
+categories: [ Embarcados ]
 tags:
   - raspberrypi
   - tutorial

@@ -8,7 +8,7 @@ authors:
                 - Alexandre Alvaro
 image:          "/post/20200517-pullup/capa.jpg"
 thumbnail:      "/post/20200517-pullup/thumb.jpg"
-categories:     [ Arduino ]
+categories:     [ Embarcados ]
 tags:
                 - arduino
                 - tutorial

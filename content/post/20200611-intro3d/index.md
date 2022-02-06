@@ -7,9 +7,7 @@ authors:
   - Pedro Emmel
 image: /post/20200611-intro3d/capa.jpg
 thumbnail: /post/20200611-intro3d/thumb.jpg
-categories:
-  - 3D
-  - equipamento
+categories: [ 3D ]
 tags:
   - tutorial
   - iniciante
