@@ -61,7 +61,11 @@ Mova a barra abaixo das imagens para ver o resultado:
 Mova os pontos azuis abaixo (ancoras) para entender melhor como as curvas são calculadas:  
 
 {{< rawhtml >}}
-    <iframe width="100%" height="400" src="https://two.js.org/examples/advanced-anchors.html" frameborder="0"></iframe>
+    <iframe height="400" style="width: 100%;" scrolling="no" title="Advanced Anchors" src="https://codepen.io/jonobr1/embed/jOLQoov?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+        See the Pen <a href="https://codepen.io/jonobr1/pen/jOLQoov">
+        Advanced Anchors</a> by Jono Brandel (<a href="https://codepen.io/jonobr1">@jonobr1</a>)
+        on <a href="https://codepen.io">CodePen</a>.
+    </iframe>
 {{< /rawhtml >}}
 
 ## SVG

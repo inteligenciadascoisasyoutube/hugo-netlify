@@ -1,7 +1,7 @@
 ---
 name: Alexandre Alvaro
 image: /img/alexandrealvaro.png
-resume: https://alexandremendoncaalvaro.github.io
+resume: https://alexandrealvaro.com.br
 email: alexandre.alvaro@hotmail.com
 facebook: https://www.facebook.com/xambitow
 linkedin: https://www.linkedin.com/in/alexandrealvaro

@@ -37,14 +37,14 @@ googleAnalytics = "UA-165857578-1"
 
 [params.social]
     rss             = false 
-    resume          = "https://alexandremendoncaalvaro.github.io"
+    resume          = "https://alexandrealvaro.com.br"
     email           = "alexandre.alvaro@hotmail.com"
-    facebook        = "https://www.facebook.com/peritto"
-    linkedin        = "https://www.linkedin.com/in/alexandre-mendon%C3%A7a-%C3%A1lvaro-273b0050"
+    facebook        = "https://www.facebook.com/xambitow"
+    linkedin        = "https://www.linkedin.com/in/alexandrealvaro"
     github          = "https://github.com/alexandremendoncaalvaro"
-    instagram       = "https://www.instagram.com/alemendalvaro"
+    instagram       = "https://www.instagram.com/xambitow"
     deviantart      = "https://www.deviantart.com/peritto/gallery"
-    soundcloud      = "https://soundcloud.com/peritto-1"
+    soundcloud      = "https://soundcloud.com/xambitow"
     whatsapp        = "https://api.whatsapp.com/send?phone=5547991512508&amp;text=Tudo+bom%3F+Encontrei+seu+contato+atrav%C3%A9s+do+blog+intelig%C3%AAncia+das+coisas."
 
 
