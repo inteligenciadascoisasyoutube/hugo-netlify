@@ -3,12 +3,12 @@ name: Alexandre Alvaro
 image: /img/alexandrealvaro.png
 resume: https://alexandremendoncaalvaro.github.io
 email: alexandre.alvaro@hotmail.com
-facebook: https://www.facebook.com/peritto
-linkedin: https://www.linkedin.com/in/alexandre-mendon%C3%A7a-%C3%A1lvaro-273b0050
+facebook: https://www.facebook.com/xambitow
+linkedin: https://www.linkedin.com/in/alexandrealvaro
 github: https://github.com/alexandremendoncaalvaro
-instagram: https://www.instagram.com/alemendalvaro
+instagram: https://www.instagram.com/xambitow
 deviantart: https://www.deviantart.com/peritto/gallery
-soundcloud: https://soundcloud.com/peritto-1
+soundcloud: https://soundcloud.com/xambitow
 whatsapp: "5547991512508"
 ---
 
