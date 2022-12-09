@@ -5,8 +5,8 @@ description: Chat GTP da Open AI impressiona com o nível da conversa
 date: 2022-12-09T16:09:35.686Z
 authors:
   - Alexandre Alvaro
-image: capa.jpg
-thumbnail: thumb.jpg
+image: post/20221209-tá-assustado-com-as-evoluções-das-ias-olha-então-esse-chat-gtp/capa.jpg
+thumbnail: post/20221209-tá-assustado-com-as-evoluções-das-ias-olha-então-esse-chat-gtp/thumb.jpg
 categories:
   - IA
 tags:
