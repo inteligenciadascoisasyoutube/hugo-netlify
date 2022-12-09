@@ -10,8 +10,12 @@ authors:
 image: /post/20221209-n%c3%a3o-use-o-app-lensa/capa.jpg
 thumbnail: post/20221209-não-use-o-app-lensa/thumb.jpg
 categories:
-  - I.A.
-tags: []
+  - IA
+tags:
+  - StableDiffusion
+  - IA
+  - MachineLearning
+  - OpenSource
 ---
 Quem deu uma passada por uma rede social nas últimas semanas, se deparou com as imagens de perfil que parecem ter sido feitas por artistas muito talentosos. 
 É simplesmente impressionante o nível das imagens geradas por Inteligência Artificial!
