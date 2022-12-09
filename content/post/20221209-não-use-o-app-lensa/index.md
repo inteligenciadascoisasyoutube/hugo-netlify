@@ -23,16 +23,17 @@ Quem deu uma passada por uma rede social nas últimas semanas, se deparou com as
 ![Imagem do site Tecmundo](https://img.ibxk.com.br/2022/11/29/29171552456420.jpg)
 
 Acontece que o [Lensa](https://prisma-ai.com/lensa), app responsável pela façanha, tem gerado uma certa polêmica, por ter termos de uso um tanto quanto questionáveis em relação aos direitos sobre dados pessoais dos usuários.
-Basta você fazer algumas fotos virando o rosto em algumas direções e ***vender a alma pro capiroto*** para conseguir gerar as imagens.
-Brincadeiras a parte, se liga na tradução (feita pelo [Canaltech](https://canaltech.com.br/seguranca/lensa-e-seguro-entregar-dados-ao-aplicativo-de-edicao-de-fotos-por-ia-231825/)) deste trecho dos termos de uso do app:
+Basta você fazer algumas fotos virando o rosto em algumas direções e ***vender a alma pro capiroto*** para conseguir gerar as imagens. Brincadeiras a parte, se liga na tradução de parte dos termos de uso do app (feita pelo [Canaltech](https://canaltech.com.br/seguranca/lensa-e-seguro-entregar-dados-ao-aplicativo-de-edicao-de-fotos-por-ia-231825/)):
 
 >"Lensa pode permitir que você faça upload, edite, crie, armazene e compartilhe conteúdo, incluindo fotos e vídeos. (...) Exceto pela licença garantida abaixo, você tem todos os direitos pelo seu conteúdo de usuário (...).
 Você garante a nós licença perpétua, irrevogável, não-exclusiva, livre de royalties, mundial, totalmente paga, transferível e licenciável para usar, reproduzir, modificar, adaptar, traduzir, criar obras derivativas e transferir seu conteúdo de usuário, sem qualquer compensação adicional ou consentimento explícito (...). A licença é para propósitos limitados de operação, desenvolvimento, fornecimento e melhorias no Lensa e pesquisa, desenvolvimento e melhoria de produtos existentes ou novos, incluindo mas não limitado ao Lensa (...)."
 
 # Stable Diffusion
-De acordo com o site https://stablediffusionweb.com/, Stable Diffusion é um modelo latente de difusão de texto para imagem capaz de gerar imagens fotorrealistas a partir de qualquer entrada de texto. Ou seja, você digita em um prompt o que quer ver, ajusta alguns poucos parâmetros, e a I.A. gera as imagens pra você baseado no que foi escrito.
-Em uma analogia muito bacana o Niko (Corridor Digital) disse que o comportamento da I.A. é similar a uma pessoa tentando ver desenhos em nuvens gerando uma imagem cada vez mais definida a cada passada na imagem anterior.
-Partindo de um ruído aleatório, a cada passada vai se tendo mais definição da imagem gerada (Similar a técnica GAN em alguns aspectos).
+De acordo com o site https://stablediffusionweb.com/, em tradução livre:
+> Stable Diffusion é um modelo latente de difusão de texto para imagem capaz de gerar imagens fotorrealistas a partir de qualquer entrada de texto. Ou seja, você digita em um prompt o que quer ver, ajusta alguns poucos parâmetros, e a I.A. gera as imagens pra você baseado no que foi escrito.
+
+Em uma analogia muito bacana, o Niko (Corridor Digital) disse que o comportamento da I.A. é similar a uma pessoa tentando ver desenhos em nuvens, gerando uma imagem cada vez mais definida a cada passada na imagem anterior.
+Partindo de um ruído aleatório, a cada passada vai se obtendo mais definição da imagem gerada (similar ao GAN em alguns aspectos).
 ![](https://www.photoroom.com/tech/stable-diffusion-25-percent-faster-and-save-seconds/bananelemons.gif)
 
 O Stable Diffusion usa ***Textual Inversion*** para o treinamento dos modelos. De acordo com o site [huggingface.co](https://huggingface.co/docs/diffusers/training/text_inversion):
@@ -139,11 +140,11 @@ Se você seguir estes vídeos, vai conseguir instalar na sua máquina sem proble
         Deformed, blurry, bad anatomy, disfigured, poorly drawn face, mutation, mutated, extra limb, ugly, poorly drawn hands, missing limb, blurry, floating limbs, disconnected limbs, malformed hands, blur, out of focus, long neck, long body, ((((mutated hands and fingers)))), (((out of frame)))
         ```
 - Para buscar inspirações de prompts, use o https://lexica.art/
+- Lembrando que o [Playground AI](https://playgroundai.com/) que citei anteriormente também faz muito bem esse papel
 
 # Conclusão
 Existe um grande debate rolando sobre o assunto. Muita gente está com medo da tecnologia e acredita que vai perder seu emprego. Provavelmente vai mesmo. Mas a gente precisa se adaptar e entender onde nos encaixamos nisso tudo, aprendendo a usar as ferramentas ao nosso favor. É assim toda vez que surge algo inovador no mundo, por exemplo a invenção da máquina de costura: https://www.maquinasuniao.com.br/conheca-a-historia-da-invencao-da-maquina-de-costura/
 
 Ainda tenho muito a aprofundar no assunto e posso ter esquecido de algo no post. Mas caso eu lembre ou aprenda mais alguma coisa, irei complementando aqui. :)
 Espero que curtam os resultados!
-
-Como eu disse, precisamos aprender a usar estas coisas ao nosso favor. Mas se isso te assustou, espere pra ver o post que vou fazer sobre o **ChatGTP**.
+
