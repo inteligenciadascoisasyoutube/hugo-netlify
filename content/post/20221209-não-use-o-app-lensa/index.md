@@ -7,7 +7,7 @@ description: Artigo e tutorial de Stable Diffusion para criação de imagens com
 date: 2022-12-09T05:18:13.900Z
 authors:
   - Alexandre Alvaro
-image: post/20221209-não-use-o-app-lensa/capa.jpg
+image: /post/20221209-n%c3%a3o-use-o-app-lensa/capa.jpg
 thumbnail: post/20221209-não-use-o-app-lensa/thumb.jpg
 categories:
   - I.A.
