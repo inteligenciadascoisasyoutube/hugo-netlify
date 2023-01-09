@@ -43,24 +43,25 @@ O Stable Diffusion usa ***Textual Inversion*** para o treinamento dos modelos. D
 Eu já tinha visto o uso desta técnica de geração de imagens em alguns lugares, como o  [canal Corridor Crew](https://youtu.be/W4Mcuh38wyM), [Midjourney](https://midjourney.com/) e [Dall-E2](https://openai.com/dall-e-2/).
 
 Olha só estas imagens que misturam Cyberpunk com Egito antigo, geradas com o [Midjourney](https://midjourney.com/) e publicadas pelo usuário Everton Lisboa no [UNHIDE School Group no Facebook](https://www.facebook.com/groups/UNHIDE):
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/316822892_8318841394855750_4688621460999062111_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=01pp_y4riioAX9_787x&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfBfN-ohYZSi4wvhhBEcjk_mwJiCMmKElQkwGmzmyUUR5w&oe=63979F91)
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/316961990_8318842968188926_341595562750568683_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=XZdilMo5gpAAX95G8Wi&tn=uuuJbLogekLD2KXj&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfAuX2fGR7-L2zRhRvxRQ6iFSmySumyHupBnWDW4CkeCMQ&oe=63969A5F)
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/317096119_8318848534855036_4677663231434751462_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=0q75jrMzikAAX-LvgSB&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfCKLhzsJCeCbcx98sue3oLxsZk0c04kcI6aUN5Rz2uGWA&oe=6397C401)
+![](midjourney_01.jpg)
+![](midjourney_02.jpg)
+![](midjourney_03.jpg)
 
 Visto tudo isso, decidi então pesquisar um pouco mais a fundo sobre o assunto pra descobrir o quão viável treinar um modelo com meu rosto e gerar imagens pelo meu PC de casa.
-E o timming foi perfeito, pois o assunto está muito quente e a comunidade opensource tá entregando soluções cada vez mais otimizadas, com evolução exponecial a cada semana. Tá uma loucura o nível que já chegou!!
+E o timming foi perfeito, pois o assunto está muito quente e a comunidade opensource tá entregando soluções cada vez mais otimizadas, com evolução exponencial a cada semana. Tá uma loucura o nível que já chegou!!
 
 E consegui chegar em um resultado que me impressionou! 
 Para referência, este aqui sou eu:
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/310467334_5735245726496540_145431663394056055_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=HWNSwxxSvxMAX_Dgeku&tn=uuuJbLogekLD2KXj&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfDj2YKlNbvaUOj416xRUz4vZYsCu7-Vjq3zYiowG6H0wQ&oe=6397517F)
+![](ale.png)
 
 Olha aí algumas das minhas imagens geradas:
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/318844723_5916220118399099_163647761043441075_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=sJen_UbLCCIAX8ubrnf&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfDpxEMMAFqlgDWaB9u5o9neGNqWpNLEbprWbhNw8_256g&oe=6397B40B)
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/318937577_5916220125065765_3072599608692824234_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=1R05HyJ5b8EAX-5o26o&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfBDDvc3yfXlgCqKFObgpYXMxpaIqp2guafzuliF8wZt6g&oe=6396B78D)
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/319047514_5916220115065766_4056924718050864247_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=Zx_3kUKfdfwAX8pU2Pz&tn=uuuJbLogekLD2KXj&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfB1i7KlO6_4wChdwbFMRoldGf2UtfF_JA2mqxKN5X63EA&oe=6398674B)
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/318749668_5908420012512443_214606630909132004_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=x1P0mNXvqPAAX_e_Jnw&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfBVaDrIvZEAPorE18HwChfqLOwT_xzP6pEai66AFytQvQ&oe=63986A3C)
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/318488064_5908420025845775_3333054122079565525_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=0NGtKWe-QQIAX-3KWg8&tn=uuuJbLogekLD2KXj&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfCDRpVbxoksDyQuTZeq8xiZviWOOv6AU2S-J6j1vLtsfw&oe=6397151D)
-![](https://scontent.fbnu1-1.fna.fbcdn.net/v/t39.30808-6/318611152_5908420009179110_5746412480145117493_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=sN32Khcvj5kAX9wwg84&tn=uuuJbLogekLD2KXj&_nc_ht=scontent.fbnu1-1.fna&oh=00_AfCVrK2A6JR0fFywZhqeQXFmNjhQW-yLpCOk8ILaneSBzg&oe=639701D9)
+![](stablediffusion_1.jpg)
+![](stablediffusion_2.jpg)
+![](stablediffusion_3.jpg)
+![](stablediffusion_4.jpg)
+![](stablediffusion_5.jpg)
+![](stablediffusion_6.jpg)
+![](stablediffusion_7.jpg)
 
 ## Tá bom. Me explica melhor como funciona isso..
 Este vídeo feito pelo Leon do canal Coisa de Nerd, explica de forma muito didática, sem entrar na parte técnica, como funciona a coisa toda:
@@ -132,8 +133,8 @@ Se você seguir estes vídeos, vai conseguir instalar na sua máquina sem proble
 ### Sobre os parâmetros e prompts
 - Além dos prompts, os principais parâmetros para se observar são:
     - Sampling Steps: A quantidade de passadas feita na geração da imagem, quanto mais, mais pesado de processar. Esse parâmetro pode mudar bastante a imagem gerada.
-    - GFC Scale: Qunato maior esse número, mais literal a I.A. vai ser em relação ao prompt
-    - Seed: Número de base para o random do ruído inicial de geração da imagem. Se você mantiver o prompt e usar o mesmo seed de uma imagem já gerada, mundando um pouco os parâmetros anterirores (Sampling Steps e GFC Scale), vai conseguir refinar melhor uma imagem que te agradou.
+    - GFC Scale: Quanto maior esse número, mais literal a I.A. vai ser em relação ao prompt
+    - Seed: Número de base para o random do ruído inicial de geração da imagem. Se você mantiver o prompt e usar o mesmo seed de uma imagem já gerada, mudando um pouco os parâmetros anteriores (Sampling Steps e GFC Scale), vai conseguir refinar melhor uma imagem que te agradou.
     - Negative Prompts: São coisas que você não quer que sejam geradas na imagem. Eu recomendo fortemente usar este recurso para obter melhores resultados, evitando imagens distorcidas, com mutações malucas e outros problemas.
         - Negative Prompt para usar na maioria das imagens ([peguei daqui](https://github.com/cmdr2/stable-diffusion-ui/wiki/Writing-prompts#negative-prompts)):
         ```
@@ -147,4 +148,4 @@ Existe um grande debate rolando sobre o assunto. Muita gente está com medo da t
 
 Ainda tenho muito a aprofundar no assunto e posso ter esquecido de algo no post. Mas caso eu lembre ou aprenda mais alguma coisa, irei complementando aqui. :)
 Espero que curtam os resultados!
-
+
