@@ -51,7 +51,7 @@ Visto tudo isso, decidi então pesquisar um pouco mais a fundo sobre o assunto p
 E o timming foi perfeito, pois o assunto está muito quente e a comunidade opensource tá entregando soluções cada vez mais otimizadas, com evolução exponencial a cada semana. Tá uma loucura o nível que já chegou!!
 
 E consegui chegar em um resultado que me impressionou! 
-Para referência, este aqui sou eu:
+Para referência, este aqui sou eu:   
 ![](ale.png)
 
 Olha aí algumas das minhas imagens geradas:
@@ -63,9 +63,13 @@ Olha aí algumas das minhas imagens geradas:
 ![](stablediffusion_6.jpg)
 ![](stablediffusion_7.jpg)
 
+
+
 ## Tá bom. Me explica melhor como funciona isso..
 Este vídeo feito pelo Leon do canal Coisa de Nerd, explica de forma muito didática, sem entrar na parte técnica, como funciona a coisa toda:
-[![Vídeo feito pelo Leon do canal Coisa de Nerd](https://img.youtube.com/vi/soynpaMLtOE/0.jpg)](https://www.youtube.com/watch?v=soynpaMLtOE)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/soynpaMLtOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 
 # Um pouco mais mão na massa
 ## Quero ver isso funcionando agora!!
@@ -78,18 +82,16 @@ Além de contar com diversos exemplos de prompts pra você se inspirar!
 ## Show me the code!!!
 Existem alguns repositórios com o código fonte incluindo uma interface web que você pode utilizar para gerar imagens com os prompts e até mesmo treinar seus próprios modelos.
 Gostei muito de 2!
-* O mais completo e relativamente amigável: [Automatic 1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
-[![Automatic 1111](https://img.youtube.com/vi/3cvP7yJotUM/0.jpg)](https://www.youtube.com/watch?v=3cvP7yJotUM)
+* O mais completo e relativamente amigável: [Automatic 1111]<iframe width="560" height="315" src="https://www.youtube.com/embed/3cvP7yJotUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-* O mais amigável (porém ainda não tem treinamento pela interface): [Invoke AI](https://github.com/invoke-ai/InvokeAI)
-[![Invoke AI](https://img.youtube.com/vi/hIYBfDtKaus/0.jpg)](https://www.youtube.com/watch?v=hIYBfDtKaus)
+* O mais amigável (porém ainda não tem treinamento pela interface): [Invoke AI]<iframe width="560" height="315" src="https://www.youtube.com/embed/hIYBfDtKaus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Se você seguir estes vídeos, vai conseguir instalar na sua máquina sem problemas.
 
 ## Agumas dicas e observações minhas:
 ### Sobre a instalação (Automatic 1111):
 - Caso não tenha uma placa de vídeo, dá pra rodar diretamente do Google Colab!!! Encontrei um vídeo em português que afirma explicar o processo passo a passo (mas não assisti a este vídeo especificamente):
-    - [![Não Morra](https://img.youtube.com/vi/QKUXEZhRZQY/0.jpg)](https://www.youtube.com/watch?v=QKUXEZhRZQY)
+    - <iframe width="560" height="315" src="https://www.youtube.com/embed/QKUXEZhRZQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 - Pra rodar diretamente no seu PC, você vai precisar de uma placa de vídeo razoável, preferencialmente NVIDIA, das séries 20, 30 ou 40, com pelo menos uns 8GB de memória VRAM.
 - Um pouco na contramão dos tutoriais, eu preferi instalar e manter no WSL2 do Windows com Linux Ubuntu, ao invés de diretamente no Windows. O que funciona perfeitamente bem.
 - Cheguei a instalar no Windows 11 apenas pra teste, mas removi depois de constatar que também funciona.
@@ -120,10 +122,10 @@ Se você seguir estes vídeos, vai conseguir instalar na sua máquina sem proble
     - Hypernetwork: Ele adiciona as informações treinadas ao modelo atual de forma não invasiva, funcionado como uma camada a mais que você habilita ou desabilita a qualquer momento (Este processo é feito na aba Settings na interface do Automatic 1111).
         - É necessário treinar algumas vezes, refinando com base nos seus resultados preferidos.
         - Este é o melhor guia que achei sobre treinamento com a técnica de Hypernetwork (apesar de eu ter preferido usar Dreambooth, muita coisa daqui é aproveitável):
-        - [![JAMES CUNLIFFE](https://img.youtube.com/vi/P1dfwViVOIU/0.jpg)](https://www.youtube.com/watch?v=P1dfwViVOIU)
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/P1dfwViVOIU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     - Dreambooth: Uma interface de treinamento mais facilitada e automatizada. Gera automaticamente os arquivos de Checkpoint (.ckpt) que são o modelo que vc seleciona no topo da interface.
         - Este é o melhor guia que achei sobre treinamento com a técnica de Dreambooth:
-        - [![Sebastian Kamph](https://img.youtube.com/vi/_GmGnMO8aGs/0.jpg)](https://www.youtube.com/watch?v=_GmGnMO8aGs)
+        - <iframe width="560" height="315" src="https://www.youtube.com/embed/_GmGnMO8aGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         - No repositório do Joe Penna (Lembra do MysteryGuitarMan? O Brasileiro que fazia uns vídeos muito loucos e fez sucesso mundial... É ele mesmo!!) tem umas informações bem legais sobre o Dreambooth: https://github.com/JoePenna/Dreambooth-Stable-Diffusion
         - Imagens de regularização de classes: Quando você treina um modelo, você pode (e deve) definir classes para a imagem treinada, por exemplo: homem, mulher, pessoa, avião, cachorro, gato. Para que o seu treinamento seja mais efetivo, o uso de imagens de referência de classe (regularização) é essencial.
         O Dreambooth pode gerar automaticamente estas imagens (cerca de 200), ou você pode baixar para economizar tempo e processamento (lembre-se de usar apenas umas 200 imagens):
