@@ -66,7 +66,7 @@ Olha aí algumas das minhas imagens geradas:
 
 
 ## Tá bom. Me explica melhor como funciona isso..
-Este vídeo feito pelo Leon do canal Coisa de Nerd, explica de forma muito didática, sem entrar na parte técnica, como funciona a coisa toda:
+Este vídeo feito pelo Leon do canal Coisa de Nerd, explica de forma muito didática, sem entrar na parte técnica, como funciona a coisa toda:   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/soynpaMLtOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
